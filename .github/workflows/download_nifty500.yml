@@ -1,4 +1,4 @@
-name: Download Nifty500 EOD & Build Gann Reports
+name: Download Nifty500 EOD & Build Reports
 
 on:
   # Manual trigger from the Actions tab
@@ -26,45 +26,35 @@ jobs:
         with:
           python-version: "3.10"
 
-      # Install all Python deps (pandas, requests, numpy, matplotlib, plotly, kaleido, etc.)
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 1) Download / update Nifty500 + indices EOD from Upstox into data/eod/**
       - name: Run Nifty500 EOD downloader
         env:
           UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
         run: |
           python scripts/download_nifty500_eod_upstox.py
 
-      # 2) Run Gann multi-stock backtest for all symbols in data/eod/**
-      #    - reads data/eod/**
-      #    - writes data/gann_trades/*.csv
-      #    - writes docs/stocks/<SYMBOL>/index.html + charts
       - name: Run Gann multi-stock backtest
         run: |
           python scripts/build_all_gann_reports.py
 
-      # 3) Commit & push all updated data + docs
-      - name: Commit & Push EOD data and Gann reports
+      - name: Build historical performance
+        run: |
+          python scripts/build_historical_test.py
+
+      - name: Commit & Push EOD data and reports
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name  "GitHub Actions"
 
-          # Stage updated files
           git add data/eod data/gann_trades docs || true
-
-          # Show what changed
           git status
 
-          # Commit only if there are actual changes
-          git commit -m "Update EOD & Gann reports $(date)" || echo "No changes to commit"
+          git commit -m "Update EOD & reports $(date)" || echo "No changes to commit"
 
-          # Sync with remote main (avoid non-fast-forward errors)
           git fetch origin
           git pull --rebase origin main || echo "Nothing to rebase"
-
-          # Push updated main
           git push origin main
