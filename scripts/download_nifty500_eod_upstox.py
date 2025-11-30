@@ -16,7 +16,8 @@ EOD_ROOT = os.path.join(REPO_ROOT, "data", "eod")
 BASE_URL_V3 = "https://api.upstox.com/v3"
 
 # Access token from environment (GitHub secret)
-ACCESS_TOKEN = os.environ.get("eyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiIzODEyNDkiLCJqdGkiOiI2OTJhYTM5NmIzNGEzMTEzNGI4Njg0OGYiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaXNQbHVzUGxhbiI6ZmFsc2UsImlhdCI6MTc2NDQwMjA3MCwiaXNzIjoidWRhcGktZ2F0ZXdheS1zZXJ2aWNlIiwiZXhwIjoxNzY0NDUzNjAwfQ.-BH0tUUlqTdVoYBxwsNdErbTzkGzarEZUJ8OSkJeufU")
+ACCESS_TOKEN = os.environ.get("UPSTOX_ACCESS_TOKEN")
+
 
 MAX_RETRIES = 3
 
@@ -239,4 +240,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
