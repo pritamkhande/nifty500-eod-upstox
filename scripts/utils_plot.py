@@ -48,6 +48,17 @@ def make_equity_and_dd_plots(
     plt.close()
 
 
+def _save_fig_html(fig: go.Figure, out_path: str) -> None:
+    """
+    Helper: save Plotly figure as standalone HTML using to_html().
+    This avoids any signature issues with plotly.io.write_html.
+    """
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    html_str = pio.to_html(fig, include_plotlyjs="cdn", full_html=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(html_str)
+
+
 def generate_trade_charts(
     price_df: pd.DataFrame,
     trades_df: pd.DataFrame,
@@ -59,7 +70,7 @@ def generate_trade_charts(
     out_dir: str = "docs/trades",
 ) -> None:
     """
-    Existing per-trade charts:
+    Per-trade charts:
     one HTML candlestick chart per trade with Signal / Entry / Exit markers.
     """
     if trades_df.empty:
@@ -149,7 +160,7 @@ def generate_trade_charts(
         )
 
         out_path = os.path.join(out_dir, f"trade_{trade_no:03d}.html")
-        pio.write_html(fig, file=out_path, auto_open=False, include_plotlyjs="cdn")
+        _save_fig_html(fig, out_path)
 
 
 def generate_all_trades_chart(
@@ -261,5 +272,4 @@ def generate_all_trades_chart(
         ),
     )
 
-    # FIXED: pass figure as first argument, file as keyword
-    pio.write_html(fig, file=out_html, auto_open=False, include_plotlyjs="cdn")
+    _save_fig_html(fig, out_html)
