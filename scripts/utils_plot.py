@@ -58,6 +58,10 @@ def generate_trade_charts(
     close_col: str,
     out_dir: str = "docs/trades",
 ) -> None:
+    """
+    Existing per-trade charts (unchanged):
+    one HTML candlestick chart per trade with Signal / Entry / Exit markers.
+    """
     if trades_df.empty:
         return
 
@@ -98,7 +102,7 @@ def generate_trade_charts(
             ]
         )
 
-        # Markers
+        # Signal (square)
         if local_sig is not None:
             fig.add_trace(
                 go.Scatter(
@@ -111,6 +115,7 @@ def generate_trade_charts(
                 )
             )
 
+        # Entry
         if local_entry is not None:
             fig.add_trace(
                 go.Scatter(
@@ -123,6 +128,7 @@ def generate_trade_charts(
                 )
             )
 
+        # Exit
         if local_exit is not None:
             fig.add_trace(
                 go.Scatter(
@@ -144,3 +150,115 @@ def generate_trade_charts(
 
         out_path = os.path.join(out_dir, f"trade_{trade_no:03d}.html")
         pio.write_html(fig, file=out_path, auto_open=False, include_plotlyjs="cdn")
+
+
+def generate_all_trades_chart(
+    price_df: pd.DataFrame,
+    trades_df: pd.DataFrame,
+    date_col: str,
+    open_col: str,
+    high_col: str,
+    low_col: str,
+    close_col: str,
+    out_html: str,
+) -> None:
+    """
+    Single combined interactive chart for ALL trades of one symbol.
+
+    Background: full candlestick for entire history.
+    Markers:
+      * Signal (Square) at signal_index
+      * Entry at entry_index
+      * Exit at exit_index
+    """
+    if trades_df.empty or price_df.empty:
+        return
+
+    os.makedirs(os.path.dirname(out_html), exist_ok=True)
+
+    # Base candlestick for entire price history
+    fig = go.Figure(
+        data=[
+            go.Candlestick(
+                x=price_df[date_col],
+                open=price_df[open_col],
+                high=price_df[high_col],
+                low=price_df[low_col],
+                close=price_df[close_col],
+                name="Price",
+            )
+        ]
+    )
+
+    # Collect markers in 3 traces for performance
+    square_x, square_y = [], []
+    entry_x, entry_y = [], []
+    exit_x, exit_y = [], []
+
+    for _, tr in trades_df.iterrows():
+        sig_idx = int(tr["signal_index"])
+        entry_idx = int(tr["entry_index"])
+        exit_idx = int(tr["exit_index"])
+
+        # Bounds check
+        if 0 <= sig_idx < len(price_df):
+            square_x.append(price_df.loc[sig_idx, date_col])
+            square_y.append(price_df.loc[sig_idx, close_col])
+
+        if 0 <= entry_idx < len(price_df):
+            entry_x.append(price_df.loc[entry_idx, date_col])
+            entry_y.append(price_df.loc[entry_idx, close_col])
+
+        if 0 <= exit_idx < len(price_df):
+            exit_x.append(price_df.loc[exit_idx, date_col])
+            exit_y.append(price_df.loc[exit_idx, close_col])
+
+    if square_x:
+        fig.add_trace(
+            go.Scatter(
+                x=square_x,
+                y=square_y,
+                mode="markers",
+                marker=dict(symbol="triangle-up", size=9, color="yellow"),
+                name="Signal (Square)",
+            )
+        )
+
+    if entry_x:
+        fig.add_trace(
+            go.Scatter(
+                x=entry_x,
+                y=entry_y,
+                mode="markers",
+                marker=dict(symbol="circle", size=8, color="lime"),
+                name="Entry",
+            )
+        )
+
+    if exit_x:
+        fig.add_trace(
+            go.Scatter(
+                x=exit_x,
+                y=exit_y,
+                mode="markers",
+                marker=dict(symbol="x", size=8, color="red"),
+                name="Exit",
+            )
+        )
+
+    fig.update_layout(
+        title="All Trades – Combined View",
+        xaxis_title="Date",
+        yaxis_title="Price",
+        xaxis_rangeslider_visible=True,  # horizontal scroll / zoom
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1.0,
+        ),
+    )
+
+    pio.write_html(out_html, auto_open=False, include_plotlyjs="cdn")
