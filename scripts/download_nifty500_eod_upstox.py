@@ -28,6 +28,19 @@ MAX_RETRIES = 3
 # Global earliest date for the very first run
 GLOBAL_START_DATE = "2000-01-01"
 
+# Explicit mapping for key NSE indices we want
+INDEX_INSTRUMENT_KEYS = {
+    # Adjust left side to match your TckrSymb values in nifty500_list.csv
+    "Nifty": "NSE_INDEX|Nifty 50",
+    "Nifty 50": "NSE_INDEX|Nifty 50",
+    "Nifty Bank": "NSE_INDEX|Nifty Bank",
+    "Nifty Financial Services": "NSE_INDEX|Nifty Fin Service",
+    "Nifty Fin Service": "NSE_INDEX|Nifty Fin Service",
+    "Nifty IT": "NSE_INDEX|Nifty IT",
+    "Nifty Midcap 100": "NSE_INDEX|Nifty Midcap 100",
+    "Nifty Smallcap 100": "NSE_INDEX|Nifty Smallcap 100",
+}
+
 # ===============================================
 
 
@@ -75,6 +88,28 @@ def get_existing_last_date(symbol: str) -> Optional[date]:
 
     df["Date"] = pd.to_datetime(df["Date"]).dt.date
     return df["Date"].max()
+
+
+def get_instrument_key_for_row(isin: str, symbol: str) -> Optional[str]:
+    """
+    Decide correct instrument_key for a row:
+    - For equities: NSE_EQ|<ISIN> (ISIN starts with 'INE' and length 12)
+    - For certain indices: use fixed NSE_INDEX|<Name> mapping
+    - Otherwise: return None to skip
+    """
+    isin = (isin or "").strip()
+    symbol = (symbol or "").strip()
+
+    # Equity: real ISIN starts with 'INE' and length 12
+    if isin.startswith("INE") and len(isin) == 12:
+        return f"NSE_EQ|{isin}"
+
+    # Try index mapping by symbol name
+    if symbol in INDEX_INSTRUMENT_KEYS:
+        return INDEX_INSTRUMENT_KEYS[symbol]
+
+    # Nothing matched → skip this row
+    return None
 
 
 def generate_date_windows(from_date_str: str, to_date_str: str, max_year_span: int = 10):
@@ -235,14 +270,18 @@ def main() -> None:
     print("Today (UTC):", today_str)
 
     nifty_df = load_nifty500_list(NIFTY500_LIST_FILE)
-    print(f"Total Nifty500 symbols: {len(nifty_df)}")
+    print(f"Total rows in nifty500_list: {len(nifty_df)}")
 
     ensure_dir(EOD_ROOT)
 
     for idx, row in nifty_df.iterrows():
         isin = row["ISIN"]
         symbol = row["TckrSymb"]
-        instrument_key = f"NSE_EQ|{isin}"
+
+        instrument_key = get_instrument_key_for_row(isin, symbol)
+        if not instrument_key:
+            print(f"\n[{idx+1}/{len(nifty_df)}] {symbol}: Skipping (no valid instrument_key mapping)")
+            continue
 
         print(f"\n[{idx+1}/{len(nifty_df)}] {symbol} ({instrument_key})")
 
