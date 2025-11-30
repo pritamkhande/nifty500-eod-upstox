@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alerts & Early Close Margins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Alerts & Early Close Margins</h1>
+  <p>High-priority Gann signals with early-close safety margins for intraday decision-making.</p>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Indices</a>
+    <a href="gann-index.html" class="nav-link">Gann Reports</a>
+    <a href="scan-today.html" class="nav-link">Scan Today</a>
+    <a href="alerts.html" class="nav-link nav-link-active">Alerts</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 class="section-title">Alert Summary</h2>
+    <p class="section-subtitle">
+      This table will list the most actionable trades for today, after combining:
+    </p>
+    <ul class="section-subtitle">
+      <li>Fresh Gann square signals</li>
+      <li>Early-close margins (safe range vs flip range)</li>
+      <li>Basic filters (trend, volume, min R, etc., as you define)</li>
+    </ul>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Side</th>
+            <th>Signal Date</th>
+            <th>Early Close</th>
+            <th>Safe Margin (pts)</th>
+            <th>Flip Margin (pts)</th>
+            <th>Backtest Edge</th>
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="8" style="text-align:center; color:#aaa;">
+              Alert engine will populate this table from a daily summary file (built on top of Gann trades + early-close margins).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
