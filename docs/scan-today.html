@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scan Today – Gann Live Signals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Scan Today – Gann Live Signals</h1>
+  <p>Daily list of fresh Gann square signals across all stocks (based on latest EOD).</p>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Indices</a>
+    <a href="gann-index.html" class="nav-link">Gann Reports</a>
+    <a href="scan-today.html" class="nav-link nav-link-active">Scan Today</a>
+    <a href="alerts.html" class="nav-link">Alerts</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 class="section-title">Today’s Signals</h2>
+    <p class="section-subtitle">
+      This table is where we will display all symbols that generated a new Gann square signal today
+      (long / short), using the same swing and squaring logic as the backtest.
+    </p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Side</th>
+            <th>Signal Date</th>
+            <th>Entry Price</th>
+            <th>Square Type</th>
+            <th>R-Multiple (Backtest)</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="7" style="text-align:center; color:#aaa;">
+              Backend scan will populate this table from a daily JSON/CSV file (e.g. data/scan_today_all.csv).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
