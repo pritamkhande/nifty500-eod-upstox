@@ -1,0 +1,50 @@
+name: Deploy GitHub Pages – Nifty500 EOD
+
+on:
+  # Deploy when docs change, or when this workflow file changes
+  push:
+    branches: [ main ]
+    paths:
+      - "docs/**"
+      - ".github/workflows/pages.yml"
+
+  # Allow manual runs from Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read       # read repo content
+  pages: write         # deploy to Pages
+  id-token: write      # required by deploy-pages
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This is the folder that will be served as the website
+          path: "./docs"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
