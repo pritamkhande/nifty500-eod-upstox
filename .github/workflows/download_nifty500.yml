@@ -1,0 +1,51 @@
+name: Download Nifty500 EOD – Upstox
+
+on:
+  workflow_dispatch:    # manual trigger
+  schedule:
+    # Mon–Fri at 10:10 UTC (~15:40 IST)
+    - cron: "10 10 * * 1-5"
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  download-and-commit:
+    runs-on: ubuntu-latest
+
+    env:
+      UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests
+
+      - name: Run Nifty500 EOD downloader
+        run: |
+          python scripts/download_nifty500_eod_upstox.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/eod
+            git commit -m "Update Nifty500 EOD data [skip ci]" || echo "Nothing to commit"
+            git push
+          else
+            echo "No changes to commit."
+          fi
