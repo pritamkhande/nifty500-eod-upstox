@@ -59,7 +59,7 @@ def generate_trade_charts(
     out_dir: str = "docs/trades",
 ) -> None:
     """
-    Existing per-trade charts (unchanged):
+    Existing per-trade charts:
     one HTML candlestick chart per trade with Signal / Entry / Exit markers.
     """
     if trades_df.empty:
@@ -261,4 +261,5 @@ def generate_all_trades_chart(
         ),
     )
 
-    pio.write_html(out_html, auto_open=False, include_plotlyjs="cdn")
+    # FIXED: pass figure as first argument, file as keyword
+    pio.write_html(fig, file=out_html, auto_open=False, include_plotlyjs="cdn")
