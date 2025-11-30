@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nifty Gann Price–Time Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Nifty Gann Price–Time Dashboard</h1>
+    <p class="subtitle">
+      Daily EOD data from Upstox – auto-updated via GitHub Actions.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <div class="card" data-symbol="Nifty">
+        <h2>Nifty 50</h2>
+        <p class="card-sub">Index: NSE_INDEX | Nifty 50</p>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas class="chart" id="chart-Nifty"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty Bank">
+        <h2>Nifty Bank</h2>
+        <p class="card-sub">Index: NSE_INDEX | Nifty Bank</p>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas class="chart" id="chart-Nifty Bank"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty IT">
+        <h2>Nifty IT</h2>
+        <p class="card-sub">Index: NSE_INDEX | Nifty IT</p>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas class="chart" id="chart-Nifty IT"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty Midcap 100">
+        <h2>Nifty Midcap 100</h2>
+        <p class="card-sub">Index: NSE_INDEX | Nifty Midcap 100</p>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas class="chart" id="chart-Nifty Midcap 100"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty Smallcap 100">
+        <h2>Nifty Smallcap 100</h2>
+        <p class="card-sub">Index: NSE_INDEX | Nifty Smallcap 100</p>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas class="chart" id="chart-Nifty Smallcap 100"></canvas>
+      </div>
+    </section>
+
+    <section class="footer-note">
+      <p>
+        Data source: <code>nifty500-eod-upstox/data/eod</code>.
+        Charts show last ~120 trading days (for a Gann-style swing view).
+      </p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
