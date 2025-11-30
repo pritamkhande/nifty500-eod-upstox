@@ -9,7 +9,7 @@ on:
     - cron: "0 10 * * 1-5"
 
 permissions:
-  contents: write   # <--- IMPORTANT: allow github-actions[bot] to push
+  contents: write   # allow github-actions[bot] to push
 
 jobs:
   download-and-commit:
@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # full history so rebase works
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -41,7 +41,19 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name  "GitHub Actions"
+
+          # Stage all EOD files
           git add data/eod
+
+          # Show what changed
           git status
+
+          # Commit only if there are changes
           git commit -m "Update EOD data $(date)" || echo "No changes to commit"
+
+          # Sync with remote main (handle non-fast-forward)
+          git fetch origin
+          git pull --rebase origin main || echo "Nothing to rebase"
+
+          # Push updated main
           git push origin main
