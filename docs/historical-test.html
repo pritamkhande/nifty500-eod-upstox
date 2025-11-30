@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Historical Gann Test – All Stocks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="historical-test.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <h1>Historical Backtest – All Stocks</h1>
+  <p>Gann Performance (2000 → Today)</p>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Indices</a>
+    <a href="gann-index.html" class="nav-link">Gann Reports</a>
+    <a href="scan-today.html" class="nav-link">Scan Today</a>
+    <a href="alerts.html" class="nav-link">Alerts</a>
+    <a href="historical-test.html" class="nav-link nav-link-active">Historical Test</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section class="panel">
+    <h2 class="section-title">Historical Gann Test (All Stocks)</h2>
+
+    <input id="search" placeholder="Search symbol..." style="margin-bottom:10px; width:200px; padding:5px;">
+
+    <div class="table-wrapper">
+      <table id="historical-table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Total Trades</th>
+            <th>Win %</th>
+            <th>Avg R</th>
+            <th>Profit Factor</th>
+            <th>Max DD %</th>
+            <th>Last 3 Yr Win %</th>
+            <th>Last 1 Yr Win %</th>
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="9" style="text-align:center;color:#aaa;">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
