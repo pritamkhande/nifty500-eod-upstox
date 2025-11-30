@@ -1,5 +1,6 @@
-numpy
+requests
 pandas
+numpy
 matplotlib
 plotly
 kaleido
