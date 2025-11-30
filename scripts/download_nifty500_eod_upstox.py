@@ -50,13 +50,22 @@ def ensure_dir(path: str) -> None:
 
 
 def load_nifty500_list(path: str) -> pd.DataFrame:
-    """Load ISIN and ticker symbol from nifty500_list.csv."""
+    """
+    Load ISIN and ticker symbol from nifty500_list.csv, keeping index rows too.
+    ISIN may be blank for indices like 'Nifty Bank', 'Nifty IT', etc.
+    """
     df = pd.read_csv(path)
     if "ISIN" not in df.columns or "TckrSymb" not in df.columns:
         raise ValueError("nifty500_list.csv must have columns 'ISIN' and 'TckrSymb'")
-    df = df[["ISIN", "TckrSymb"]].dropna()
-    df["ISIN"] = df["ISIN"].astype(str).str.strip()
+
+    # Keep rows where TckrSymb is present; ISIN can be empty
+    df = df[["ISIN", "TckrSymb"]]
+    df = df[df["TckrSymb"].notna()]
+
+    # Normalise strings
+    df["ISIN"] = df["ISIN"].fillna("").astype(str).str.strip()
     df["TckrSymb"] = df["TckrSymb"].astype(str).str.strip()
+
     return df
 
 
