@@ -9,7 +9,7 @@ from utils_gann import find_square_from_swing_low, find_square_from_swing_high
 from utils_plot import make_equity_and_dd_plots, generate_trade_charts
 
 # ==========================
-# PATH CONFIG (adapted for nifty500-eod-upstox)
+# PATH CONFIG
 # ==========================
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +25,7 @@ CLOSE_COL = "Close"
 VOL_COL = "Volume"
 
 ATR_PERIOD = 14
-RISK_PER_TRADE = 0.02     # 2% risk
+RISK_PER_TRADE = 0.02
 SLOPE_TOL = 0.25
 MAX_LOOKAHEAD = 160
 
@@ -42,22 +42,12 @@ os.makedirs(TRADES_CSV_DIR, exist_ok=True)
 # ==========================
 
 def load_symbol_data(path: str) -> pd.DataFrame:
-    """
-    Load one symbol CSV from data/eod/*/*_EOD.csv.
-
-    Expected columns:
-      Symbol, Date, Open, High, Low, Close, Volume
-
-    Date examples:
-      2008-10-06 00:00:00+05:30
-    """
     df = pd.read_csv(path)
 
     if "Date" not in df.columns:
         raise ValueError(f"No 'Date' column in {path}")
 
     df[DATE_COL] = pd.to_datetime(df["Date"], errors="coerce")
-    # Remove timezone if present
     try:
         df[DATE_COL] = df[DATE_COL].dt.tz_localize(None)
     except TypeError:
@@ -90,19 +80,6 @@ def compute_atr(df: pd.DataFrame, period: int = ATR_PERIOD) -> pd.DataFrame:
 
 
 def load_early_close_for_symbol(symbol: str) -> pd.DataFrame | None:
-    """
-    For each symbol, optional early close file:
-
-      Early_Data/<SYMBOL>_early.csv   (generic)
-    or for Nifty specifically (your existing file):
-      Early_Data/nifty_early_close.csv
-
-    Format:
-      Date,EarlyClose
-      2008-10-06,16.20
-      2008-10-07,15.90
-      ...
-    """
     candidates = []
 
     # Generic per-symbol file (if you ever create them)
@@ -110,7 +87,6 @@ def load_early_close_for_symbol(symbol: str) -> pd.DataFrame | None:
 
     # Special case: your current Nifty early-close file
     if symbol.lower() in ("nifty", "nifty 50"):
-
         candidates.append(os.path.join(EARLY_DIR, "nifty_early_close.csv"))
 
     for path in candidates:
@@ -241,7 +217,6 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             i += 1
 
         else:
-            # manage open trade with ATR trailing stop x3
             atr = df.loc[i, "ATR"]
             close = df.loc[i, CLOSE_COL]
             high = df.loc[i, HIGH_COL]
@@ -252,7 +227,7 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
                 trail = close - 3 * atr
                 if trail > stop_price:
                     stop_price = trail
-            else:  # short
+            else:
                 trail = close + 3 * atr
                 if trail < stop_price:
                     stop_price = trail
@@ -332,7 +307,6 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     trades_df = pd.DataFrame(trades)
 
-    # equity curve for symbol
     df["equity"] = np.nan
     equity = 1.0
     trade_iter = iter(trades)
@@ -830,7 +804,7 @@ def render_master_index(summaries: list[dict]) -> str:
 
 
 # ==========================
-# MAIN LOOP: walk data/eod/*
+# MAIN LOOP
 # ==========================
 
 def main():
@@ -840,7 +814,6 @@ def main():
         print("EOD directory not found:", EOD_DIR)
         return
 
-    # Walk nested folders and find *_EOD.csv
     all_files = []
     for root, _, files in os.walk(EOD_DIR):
         for f in files:
@@ -873,14 +846,12 @@ def main():
         if early_df is not None and not trades_df.empty:
             trades_df = attach_early_margins(trades_df, price_df, early_df)
 
-        # save trades CSV per symbol
         out_csv = os.path.join(TRADES_CSV_DIR, f"{symbol}_gann_trades.csv")
         trades_df.to_csv(out_csv, index=False)
 
         metrics = compute_metrics(trades_df, price_df)
         commentary = build_system_commentary(symbol, metrics, trades_df)
 
-        # per-symbol output dirs under docs/stocks/<SYMBOL>
         sym_dir = os.path.join(DOCS_ROOT, "stocks", symbol)
         os.makedirs(sym_dir, exist_ok=True)
         eq_png = os.path.join(sym_dir, "equity_curve.png")
@@ -910,7 +881,6 @@ def main():
             }
         )
 
-    # Master Gann index under docs/gann-index.html
     master_html = render_master_index(summaries)
     with open(MASTER_INDEX_HTML, "w", encoding="utf-8") as f:
         f.write(master_html)
