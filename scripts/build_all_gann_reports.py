@@ -6,7 +6,11 @@ import pandas as pd
 
 from utils_swing import detect_swings
 from utils_gann import find_square_from_swing_low, find_square_from_swing_high
-from utils_plot import make_equity_and_dd_plots, generate_trade_charts
+from utils_plot import (
+    make_equity_and_dd_plots,
+    generate_trade_charts,
+    generate_all_trades_chart,
+)
 
 # ==========================
 # PATH CONFIG
@@ -80,12 +84,16 @@ def compute_atr(df: pd.DataFrame, period: int = ATR_PERIOD) -> pd.DataFrame:
 
 
 def load_early_close_for_symbol(symbol: str) -> pd.DataFrame | None:
+    """
+    Returns early-close dataframe with columns: Date, EarlyClose
+    if available. Right now special-cased for Nifty via nifty_early_close.csv.
+    """
     candidates = []
 
-    # Generic per-symbol file (if you ever create them)
+    # Generic per-symbol file (if you later create them)
     candidates.append(os.path.join(EARLY_DIR, f"{symbol}_early.csv"))
 
-    # Special case: your current Nifty early-close file
+    # Special case: current Nifty early-close file
     if symbol.lower() in ("nifty", "nifty 50"):
         candidates.append(os.path.join(EARLY_DIR, "nifty_early_close.csv"))
 
@@ -177,7 +185,8 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             # SHORT setup from swing low
             if df.loc[i, "swing_low"]:
                 sq_idx, sq_type = find_square_from_swing_low(
-                    df, i, DATE_COL, CLOSE_COL, slope_tol=SLOPE_TOL, max_lookahead=MAX_LOOKAHEAD
+                    df, i, DATE_COL, CLOSE_COL,
+                    slope_tol=SLOPE_TOL, max_lookahead=MAX_LOOKAHEAD
                 )
                 if sq_idx is not None and sq_idx < n - 1:
                     if df.loc[sq_idx + 1, CLOSE_COL] < df.loc[sq_idx, LOW_COL]:
@@ -197,7 +206,8 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             # LONG setup from swing high
             if df.loc[i, "swing_high"]:
                 sq_idx, sq_type = find_square_from_swing_high(
-                    df, i, DATE_COL, CLOSE_COL, slope_tol=SLOPE_TOL, max_lookahead=MAX_LOOKAHEAD
+                    df, i, DATE_COL, CLOSE_COL,
+                    slope_tol=SLOPE_TOL, max_lookahead=MAX_LOOKAHEAD
                 )
                 if sq_idx is not None and sq_idx < n - 1:
                     if df.loc[sq_idx + 1, CLOSE_COL] > df.loc[sq_idx, HIGH_COL]:
@@ -307,6 +317,7 @@ def backtest_symbol(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     trades_df = pd.DataFrame(trades)
 
+    # Equity curve reconstruction (for plotting)
     df["equity"] = np.nan
     equity = 1.0
     trade_iter = iter(trades)
@@ -616,6 +627,19 @@ def render_stock_html(symbol: str, metrics: dict, trades_df: pd.DataFrame, comme
   </div>
 
   <div class="card">
+    <h2>All Trades – Combined Price Chart</h2>
+    <p>
+      Full price history with every Gann signal (square), entry and exit overlaid.
+      Use zoom and pan to move horizontally and vertically through all trades.
+    </p>
+    <iframe
+      src="all_trades.html"
+      style="width: 100%; height: 480px; border: none; border-radius: 8px; background: #ffffff;"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <div class="card">
     <h2>Equity Curve and Drawdown</h2>
     <p>Equity starts at 1.0 and changes based on realized R-multiples with 2% risk per trade.</p>
     <img src="equity_curve.png" alt="Equity curve">
@@ -837,8 +861,13 @@ def main():
             continue
 
         df = compute_atr(df)
-        df = detect_swings(df, low_col=LOW_COL, high_col=HIGH_COL,
-                           lookback_main=1, lookback_fractal=2)
+        df = detect_swings(
+            df,
+            low_col=LOW_COL,
+            high_col=HIGH_COL,
+            lookback_main=1,
+            lookback_fractal=2,
+        )
 
         trades_df, price_df = backtest_symbol(df)
 
@@ -859,9 +888,29 @@ def main():
         trades_dir = os.path.join(sym_dir, "trades")
 
         make_equity_and_dd_plots(price_df, DATE_COL, "equity", eq_png, dd_png)
-        generate_trade_charts(price_df, trades_df, DATE_COL,
-                              OPEN_COL, HIGH_COL, LOW_COL, CLOSE_COL,
-                              out_dir=trades_dir)
+        generate_trade_charts(
+            price_df,
+            trades_df,
+            DATE_COL,
+            OPEN_COL,
+            HIGH_COL,
+            LOW_COL,
+            CLOSE_COL,
+            out_dir=trades_dir,
+        )
+
+        # NEW: combined all-trades chart for this symbol
+        all_trades_html = os.path.join(sym_dir, "all_trades.html")
+        generate_all_trades_chart(
+            price_df,
+            trades_df,
+            DATE_COL,
+            OPEN_COL,
+            HIGH_COL,
+            LOW_COL,
+            CLOSE_COL,
+            out_html=all_trades_html,
+        )
 
         html = render_stock_html(symbol, metrics, trades_df, commentary)
         out_html = os.path.join(sym_dir, "index.html")
