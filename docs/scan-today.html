@@ -21,12 +21,12 @@
     <a href="gann-index.html" class="nav-link">Gann Reports</a>
     <a href="scan-today.html" class="nav-link nav-link-active">Scan Today</a>
     <a href="alerts.html" class="nav-link">Alerts</a>
+    <a href="historical-test.html" class="nav-link">Historical Test</a>
   </nav>
 </header>
 
 <main class="container">
 
-  <!-- Explanation of logic: EOD vs early close -->
   <section class="panel">
     <h2 class="section-title">How this scan works</h2>
     <p class="section-subtitle">
@@ -48,7 +48,6 @@
     </p>
   </section>
 
-  <!-- Section 1: Today's signals -->
   <section class="panel">
     <h2 class="section-title">Today’s Signals (latest trading day)</h2>
     <p class="section-subtitle">
@@ -75,8 +74,6 @@
           </tr>
         </thead>
         <tbody id="today-signals-body">
-          <!-- Backend will populate this from scan_today_all JSON.
-               For now, a placeholder row so the UI is visible. -->
           <tr>
             <td colspan="11" style="text-align:center; color:#aaa;">
               Today’s live signals will appear here after we connect the daily scan script.
@@ -96,7 +93,6 @@
     </p>
   </section>
 
-  <!-- Section 2: Signals in current month -->
   <section class="panel">
     <h2 class="section-title">Signals in Current Month</h2>
     <p class="section-subtitle">
@@ -122,8 +118,6 @@
           </tr>
         </thead>
         <tbody id="month-signals-body">
-          <!-- Backend will populate this from scan_today_all JSON.
-               For now, a placeholder row so the UI is visible. -->
           <tr>
             <td colspan="10" style="text-align:center; color:#aaa;">
               Current-month signals will appear here once the monthly scan is connected.
