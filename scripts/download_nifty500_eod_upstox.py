@@ -1,6 +1,7 @@
 import os
 import time
 from datetime import datetime, date, timedelta
+from typing import Optional
 
 import pandas as pd
 import requests
@@ -8,31 +9,35 @@ from requests.exceptions import RequestException
 
 # ============= USER / ENV SETTINGS =============
 
+# Repo root: one level up from this script
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Input list of Nifty500 stocks (ISIN + TckrSymb)
 NIFTY500_LIST_FILE = os.path.join(REPO_ROOT, "data", "nifty500_list.csv")
+
+# Root folder for EOD output (subfolders A, B, ..., 0-9)
 EOD_ROOT = os.path.join(REPO_ROOT, "data", "eod")
 
 BASE_URL_V3 = "https://api.upstox.com/v3"
 
-# Access token from environment (GitHub secret)
+# Access token is passed via environment (GitHub secret UPSTOX_ACCESS_TOKEN)
 ACCESS_TOKEN = os.environ.get("UPSTOX_ACCESS_TOKEN")
-
 
 MAX_RETRIES = 3
 
-# Global earliest date (for first ever run)
+# Global earliest date for the very first run
 GLOBAL_START_DATE = "2000-01-01"
 
 # ===============================================
 
 
-def ensure_dir(path: str):
+def ensure_dir(path: str) -> None:
     if not os.path.exists(path):
         os.makedirs(path)
 
 
 def load_nifty500_list(path: str) -> pd.DataFrame:
+    """Load ISIN and ticker symbol from nifty500_list.csv."""
     df = pd.read_csv(path)
     if "ISIN" not in df.columns or "TckrSymb" not in df.columns:
         raise ValueError("nifty500_list.csv must have columns 'ISIN' and 'TckrSymb'")
@@ -43,7 +48,10 @@ def load_nifty500_list(path: str) -> pd.DataFrame:
 
 
 def get_symbol_eod_path(symbol: str) -> str:
-    """Return full path for symbol's EOD CSV, grouped by first letter."""
+    """
+    Return full path for symbol's EOD CSV, grouped by first letter
+    e.g. data/eod/T/TCS_EOD.csv, data/eod/2/20MICRONS_EOD.csv, etc.
+    """
     first_char = symbol[0].upper() if symbol else "_"
     if not first_char.isalpha():
         first_char = "0-9"
@@ -52,8 +60,11 @@ def get_symbol_eod_path(symbol: str) -> str:
     return os.path.join(subdir, f"{symbol}_EOD.csv")
 
 
-def get_existing_last_date(symbol: str) -> date | None:
-    """If symbol has a CSV, return last Date as a date object."""
+def get_existing_last_date(symbol: str) -> Optional[date]:
+    """
+    If symbol has a CSV already, return last available Date as a date object.
+    Otherwise return None.
+    """
     path = get_symbol_eod_path(symbol)
     if not os.path.exists(path):
         return None
@@ -82,6 +93,7 @@ def generate_date_windows(from_date_str: str, to_date_str: str, max_year_span: i
         try:
             next_start = date(next_start_year, cur_start.month, cur_start.day)
         except ValueError:
+            # handle Feb 29, etc. by falling back to 28th
             next_start = date(next_start_year, cur_start.month, 28)
 
         cur_end = min(end, next_start - timedelta(days=1))
@@ -95,7 +107,9 @@ def fetch_candles_for_key(instrument_key: str, from_date: str, to_date: str) -> 
     """
     Call Upstox historical-candle endpoint for given instrument_key and date range,
     splitting into 10-year windows.
-    /historical-candle/:instrument_key/days/1/:to_date/:from_date
+
+    Endpoint:
+      /historical-candle/:instrument_key/days/1/:to_date/:from_date
     """
     headers = {
         "Accept": "application/json",
@@ -103,7 +117,7 @@ def fetch_candles_for_key(instrument_key: str, from_date: str, to_date: str) -> 
     }
 
     all_parts = []
-    windows = generate_date_windows(from_date, to_date)  # list of (from, to)
+    windows = generate_date_windows(from_date, to_date)
 
     for win_from, win_to in windows:
         url = (
@@ -111,10 +125,10 @@ def fetch_candles_for_key(instrument_key: str, from_date: str, to_date: str) -> 
             f"{instrument_key}/days/1/{win_to}/{win_from}"
         )
 
-        last_exc = None
+        last_exc: Optional[Exception] = None
         success = False
 
-        for attempt in range(1, MAX_RETRIES + 1):
+        for _attempt in range(1, MAX_RETRIES + 1):
             try:
                 resp = requests.get(url, headers=headers, timeout=60)
                 if resp.status_code != 200:
@@ -125,10 +139,11 @@ def fetch_candles_for_key(instrument_key: str, from_date: str, to_date: str) -> 
                     candles = inner.get("candles")
 
                     if not candles:
-                        # request OK but no data for this window
+                        # request OK but no data in this window
                         success = True
                         break
 
+                    # candles: [timestamp, open, high, low, close, volume, oi]
                     df_part = pd.DataFrame(
                         candles,
                         columns=[
@@ -162,6 +177,8 @@ def merge_with_existing(symbol: str, df_new: pd.DataFrame) -> pd.DataFrame:
     Merge newly fetched DF with existing CSV (if any) and return full DF.
     """
     path = get_symbol_eod_path(symbol)
+
+    # Load df_old if exists
     if os.path.exists(path):
         df_old = pd.read_csv(path)
         if "Date" in df_old.columns:
@@ -171,34 +188,34 @@ def merge_with_existing(symbol: str, df_new: pd.DataFrame) -> pd.DataFrame:
     else:
         df_old = pd.DataFrame(columns=["Date", "Open", "High", "Low", "Close", "Volume"])
 
+    # Ensure df_new has proper columns
     for col in ["Date", "Open", "High", "Low", "Close", "Volume"]:
         if col not in df_new.columns:
             df_new[col] = pd.NA
 
-    
+    # Filter out empty frames before concat (avoids FutureWarning)
     frames = []
+    if df_old is not None and not df_old.empty:
+        frames.append(df_old)
+    if df_new is not None and not df_new.empty:
+        frames.append(df_new)
 
-if df_old is not None and not df_old.empty:
-    frames.append(df_old)
+    # If nothing to merge
+    if not frames:
+        return pd.DataFrame(columns=["Date", "Open", "High", "Low", "Close", "Volume"])
 
-if df_new is not None and not df_new.empty:
-    frames.append(df_new)
+    # Merge cleanly
+    df = pd.concat(frames, ignore_index=True)
+    df["Date"] = pd.to_datetime(df["Date"])
+    df = df.drop_duplicates(subset=["Date"]).sort_values("Date")
 
-if not frames:
-    # no old or new data → return empty DF
-    return pd.DataFrame(columns=["Date", "Open", "High", "Low", "Close", "Volume"])
-
-df = pd.concat(frames, ignore_index=True)
-df["Date"] = pd.to_datetime(df["Date"])
-df = df.drop_duplicates(subset=["Date"]).sort_values("Date")
-
-return df
-
+    return df
 
 
-def save_symbol_data(symbol: str, df: pd.DataFrame):
+def save_symbol_data(symbol: str, df: pd.DataFrame) -> None:
     """
-    Save DataFrame to CSV with columns: Symbol, Date, Open, High, Low, Close, Volume
+    Save DataFrame to CSV with columns:
+      Symbol, Date, Open, High, Low, Close, Volume
     in grouped subfolders.
     """
     cols = ["Date", "Open", "High", "Low", "Close", "Volume"]
@@ -210,7 +227,7 @@ def save_symbol_data(symbol: str, df: pd.DataFrame):
     df.to_csv(out_path, index=False)
 
 
-def main():
+def main() -> None:
     if not ACCESS_TOKEN:
         raise RuntimeError("UPSTOX_ACCESS_TOKEN is not set in environment.")
 
@@ -229,6 +246,7 @@ def main():
 
         print(f"\n[{idx+1}/{len(nifty_df)}] {symbol} ({instrument_key})")
 
+        # Determine from_date based on existing file
         last_date = get_existing_last_date(symbol)
         if last_date:
             from_date = (last_date + timedelta(days=1)).isoformat()
@@ -243,6 +261,7 @@ def main():
 
         print(f"  Fetching from {from_date} to {to_date}...")
         df_new = fetch_candles_for_key(instrument_key, from_date, to_date)
+
         if df_new.empty:
             print("  No new data returned.")
             continue
@@ -254,7 +273,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
