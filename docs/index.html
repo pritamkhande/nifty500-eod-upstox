@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nifty Indices Dashboard</title>
+  <title>Nifty Indices & Gann Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -10,51 +10,156 @@
 <body>
 
 <header class="header">
-  <h1>Nifty Indices Dashboard</h1>
-  <p>Daily EOD data auto-updated from Upstox</p>
+  <h1>Nifty Indices & Gann Dashboard</h1>
+  <p>Daily EOD data auto-updated from Upstox + Gann backtest reports</p>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link nav-link-active">Indices</a>
+    <a href="gann-index.html" class="nav-link">Gann Reports (All Stocks)</a>
+    <a href="scan-today.html" class="nav-link">Scan Today – Live Signals</a>
+    <a href="alerts.html" class="nav-link">Alerts & Early Close</a>
+  </nav>
 </header>
 
 <main class="container">
 
-  <section class="cards">
-    <div class="card" data-symbol="Nifty">
-      <h2>Nifty 50</h2>
-      <div class="stats">
-        <span class="label">Last Close:</span>
-        <span class="value" data-field="last-close">–</span>
+  <!-- Section 1: Main Nifty indices -->
+  <section>
+    <h2 class="section-title">Key Nifty Indices</h2>
+    <p class="section-subtitle">
+      Latest close, daily change and last 120 trading days for each index.
+    </p>
+
+    <section class="cards">
+      <div class="card" data-symbol="Nifty">
+        <h3>Nifty 50</h3>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas id="chart-Nifty"></canvas>
       </div>
-      <div class="stats">
-        <span class="label">Change:</span>
-        <span class="value" data-field="change">–</span>
+
+      <div class="card" data-symbol="Nifty Bank">
+        <h3>Nifty Bank</h3>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas id="chart-Nifty Bank"></canvas>
       </div>
-      <canvas id="chart-Nifty"></canvas>
+
+      <div class="card" data-symbol="Nifty IT">
+        <h3>Nifty IT</h3>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas id="chart-Nifty IT"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty Midcap 100">
+        <h3>Nifty Midcap 100</h3>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas id="chart-Nifty Midcap 100"></canvas>
+      </div>
+
+      <div class="card" data-symbol="Nifty Smallcap 100">
+        <h3>Nifty Smallcap 100</h3>
+        <div class="stats">
+          <span class="label">Last Close:</span>
+          <span class="value" data-field="last-close">–</span>
+        </div>
+        <div class="stats">
+          <span class="label">Change:</span>
+          <span class="value" data-field="change">–</span>
+        </div>
+        <canvas id="chart-Nifty Smallcap 100"></canvas>
+      </div>
+    </section>
+  </section>
+
+  <!-- Section 2: Gann reports link -->
+  <section class="panel">
+    <h2 class="section-title">Gann Backtest Reports – All Stocks</h2>
+    <p class="section-subtitle">
+      Mechanical Gann Price–Time / Price–Date Squaring backtest for every symbol in your EOD universe.
+      Click below to see detailed trades, equity curve and early-close margins per stock.
+    </p>
+    <a href="gann-index.html" class="primary-button">
+      Open Gann Reports Index
+    </a>
+  </section>
+
+  <!-- Section 3: Live square signals / Scan Today -->
+  <section class="panel">
+    <h2 class="section-title">Scan Today – Live Square Signals</h2>
+    <p class="section-subtitle">
+      This section aggregates today's fresh Gann square signals across all stocks (long / short),
+      based on the latest EOD bar. It is designed to answer, “Which symbols triggered today?”
+    </p>
+
+    <div id="live-signals-preview" class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Side</th>
+            <th>Signal Date</th>
+            <th>Entry Price</th>
+            <th>Square Type</th>
+          </tr>
+        </thead>
+        <tbody id="live-signals-body">
+          <!-- When we build scan-today backend, this will be filled by JS from JSON.
+               For now, static placeholder so UI looks clear. -->
+          <tr>
+            <td colspan="5" style="text-align:center; color:#aaa;">
+              Live Gann scan for all stocks will appear here once the backend scan is enabled.
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="card" data-symbol="Nifty Bank">
-      <h2>Nifty Bank</h2>
-      <div class="stats">
-        <span class="label">Last Close:</span>
-        <span class="value" data-field="last-close">–</span>
-      </div>
-      <div class="stats">
-        <span class="label">Change:</span>
-        <span class="value" data-field="change">–</span>
-      </div>
-      <canvas id="chart-Nifty Bank"></canvas>
-    </div>
+    <p class="section-subtitle">
+      For full details and filters, use the dedicated Scan Today page:
+    </p>
+    <a href="scan-today.html" class="secondary-button">
+      Go to Scan Today (All Stocks)
+    </a>
+  </section>
 
-    <div class="card" data-symbol="Nifty IT">
-      <h2>Nifty IT</h2>
-      <div class="stats">
-        <span class="label">Last Close:</span>
-        <span class="value" data-field="last-close">–</span>
-      </div>
-      <div class="stats">
-        <span class="label">Change:</span>
-        <span class="value" data-field="change">–</span>
-      </div>
-      <canvas id="chart-Nifty IT"></canvas>
-    </div>
+  <!-- Section 4: Alerts & early-close margins -->
+  <section class="panel">
+    <h2 class="section-title">Alerts & Early Close Margins</h2>
+    <p class="section-subtitle">
+      Early close margins tell you how far the price can move between early-close time and actual close
+      before a square signal flips or becomes unsafe. This logic is already computed inside each Gann
+      report (per trade). The Alerts page will summarise this into simple, ready-to-trade messages.
+    </p>
+    <a href="alerts.html" class="secondary-button">
+      Open Alerts & Early Close Dashboard
+    </a>
   </section>
 
 </main>
