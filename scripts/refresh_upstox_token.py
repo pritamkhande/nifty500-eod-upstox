@@ -18,9 +18,9 @@ API_URL = "https://api.upstox.com/v2/login/authorization/token"
 
 
 def main():
-    client_id = os.environ.get("ea83f8be-6d2c-4c0d-b18a-8f58f40d9019")
-    client_secret = os.environ.get("xnzua69v13")
-    refresh_token = os.environ.get("UeyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiIzODEyNDkiLCJqdGkiOiI2OTJiOGQ2ZWJhYzQ4MDMwYmFiODMyZDYiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaXNQbHVzUGxhbiI6ZmFsc2UsImlhdCI6MTc2NDQ2MTkzNCwiaXNzIjoidWRhcGktZ2F0ZXdheS1zZXJ2aWNlIiwiZXhwIjoxNzY0NTQwMDAwfQ.rajWiT1m0iHRSvj1FZ5Hr7Zs5M8w4Y5u3yUYetCoqzs")
+    client_id = os.environ.get("UPSTOX_CLIENT_ID")
+    client_secret = os.environ.get("UPSTOX_CLIENT_SECRET")
+    refresh_token = os.environ.get("UPSTOX_REFRESH_TOKEN")
 
     if not client_id or not client_secret or not refresh_token:
         print("Missing one of UPSTOX_CLIENT_ID / UPSTOX_CLIENT_SECRET / UPSTOX_REFRESH_TOKEN",
