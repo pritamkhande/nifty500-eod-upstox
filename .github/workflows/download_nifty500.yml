@@ -13,6 +13,9 @@ jobs:
   download-and-commit:
     runs-on: ubuntu-latest
 
+    env:
+      UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -27,19 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas requests
 
-      - name: Refresh Upstox access token
-        id: refresh
-        env:
-          UPSTOX_CLIENT_ID: ${{ secrets.UPSTOX_CLIENT_ID }}
-          UPSTOX_CLIENT_SECRET: ${{ secrets.UPSTOX_CLIENT_SECRET }}
-          UPSTOX_REFRESH_TOKEN: ${{ secrets.UPSTOX_REFRESH_TOKEN }}
-        run: |
-          ACCESS_TOKEN=$(python scripts/refresh_upstox_token.py)
-          echo "UPSTOX_ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
-
       - name: Run Nifty500 EOD downloader
-        env:
-          UPSTOX_ACCESS_TOKEN: ${{ env.UPSTOX_ACCESS_TOKEN }}
         run: |
           python scripts/download_nifty500_eod_upstox.py
 
@@ -48,9 +39,9 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git status --porcelain
-          if [ -n "$(git status --porcelain)" ]; then
+          if [ -n "$(git.status --porcelain)" ]; then
             git add data/eod
-            git commit -m "Update Nifty500 EOD data [skip ci]" || echo "Nothing to commit"
+            git.commit -m "Update Nifty500 EOD data [skip ci]" || echo "Nothing to commit"
             git push
           else
             echo "No changes to commit."
