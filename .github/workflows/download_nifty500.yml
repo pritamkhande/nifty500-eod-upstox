@@ -4,9 +4,12 @@ on:
   # Manual trigger from the Actions tab
   workflow_dispatch:
 
-  # Auto-run Mon–Fri at 10:00 UTC (~3:30 PM IST, after market close)
+  # Auto-run Mon–Fri at 10:00 UTC (~3:30 PM IST)
   schedule:
     - cron: "0 10 * * 1-5"
+
+permissions:
+  contents: write   # <--- IMPORTANT: allow github-actions[bot] to push
 
 jobs:
   download-and-commit:
@@ -16,7 +19,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # so we can push back to main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -38,15 +41,7 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name  "GitHub Actions"
-
-          # Stage all updated/new EOD files
           git add data/eod
-
-          # Show status in logs (for debugging)
           git status
-
-          # Commit (only if there are actual changes)
           git commit -m "Update EOD data $(date)" || echo "No changes to commit"
-
-          # Push to main branch
           git push origin main
