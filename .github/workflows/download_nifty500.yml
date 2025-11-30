@@ -1,48 +1,38 @@
-name: Download Nifty500 EOD – Upstox
+name: download-and-commit
 
 on:
-  workflow_dispatch:    # manual trigger
+  workflow_dispatch:
   schedule:
-    # Mon–Fri at 10:10 UTC (~15:40 IST)
-    - cron: "10 10 * * 1-5"
-
-permissions:
-  contents: write
+    - cron: "0 10 * * 1-5"   # 3:30 PM IST → 10:00 UTC
 
 jobs:
   download-and-commit:
     runs-on: ubuntu-latest
 
-    env:
-      UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pandas requests
+        run: pip install -r requirements.txt
 
       - name: Run Nifty500 EOD downloader
-        run: |
-          python scripts/download_nifty500_eod_upstox.py
+        env:
+          UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
+        run: python scripts/download_nifty500_eod_upstox.py
 
-      - name: Commit and push changes
+      - name: Commit & Push EOD data
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git status --porcelain
-          if [ -n "$(git.status --porcelain)" ]; then
-            git add data/eod
-            git.commit -m "Update Nifty500 EOD data [skip ci]" || echo "Nothing to commit"
-            git push
-          else
-            echo "No changes to commit."
-          fi
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name  "GitHub Actions"
+          git add data/eod
+          git status
+          git commit -m "Update EOD data $(date)" || echo "No changes to commit"
+          git push
