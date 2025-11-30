@@ -54,7 +54,6 @@ async function loadSymbol(symbol) {
     const last = recent[recent.length - 1];
     const prev = recent.length > 1 ? recent[recent.length - 2] : last;
 
-    // Fill stats
     const lastEl = card.querySelector('[data-field="last-close"]');
     const changeEl = card.querySelector('[data-field="change"]');
     if (lastEl) lastEl.textContent = last.close.toFixed(2);
@@ -66,7 +65,6 @@ async function loadSymbol(symbol) {
       changeEl.textContent = `${sign}${diff.toFixed(2)} (${sign}${pct.toFixed(2)}%)`;
     }
 
-    // Chart
     const ctx = document.getElementById(`chart-${symbol}`);
     if (!ctx) return;
 
@@ -106,5 +104,4 @@ async function loadSymbol(symbol) {
 
 document.addEventListener("DOMContentLoaded", () => {
   INDEX_SYMBOLS.forEach(loadSymbol);
-  // live signals table is wired later when we add JSON backend; UI is ready.
 });
