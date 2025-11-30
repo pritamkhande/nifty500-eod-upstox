@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UNITDSPR – Gann Squaring System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mechanical Gann Price-Time and Price-Date Squaring backtest on UNITDSPR daily data.">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+      background: #f7f7f9;
+      color: #111827;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 13px;
+      table-layout: auto;
+    }
+    th, td {
+      padding: 6px 8px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 600;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .metric-box {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid #e5e7eb;
+      font-size: 14px;
+    }
+    .metric-value {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    a.trade-link {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a.trade-link:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+    .footer {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>UNITDSPR – Gann Squaring System</h1>
+  <p>
+    Fully mechanical backtest of a Price-Time / Price-Date Squaring system inspired by W.D. Gann,
+    applied to UNITDSPR daily data from 01-01-2003 to 28-11-2025.
+  </p>
+
+  <div class="card">
+    <h2>Backtest Summary</h2>
+    <div class="metrics-grid">
+      <div class="metric-box">
+        <div class="metric-value">61</div>
+        <div>Number of trades</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">72.1%</div>
+        <div>Win rate</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">0.84 R</div>
+        <div>Average R per trade</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">4.4%</div>
+        <div>CAGR (normalized equity)</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">-3.5%</div>
+        <div>Maximum drawdown</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-value">22.9 yrs</div>
+        <div>Test length</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>System Behaviour Commentary</h2>
+    <p>For UNITDSPR, the system generated 61 trades over the full sample, averaging about 2.7 trades per year. The typical holding period is around 35.1 bars. With a win rate of 72.1% and an average outcome of 0.84R per trade, the equity curve grows at roughly 4.4% CAGR while suffering a maximum drawdown of -3.5%. Overall, this behaves like a very selective, long-term system, with very conservative risk, balanced between robustness and return.</p>
+  </div>
+
+  <div class="card">
+    <h2>Equity Curve and Drawdown</h2>
+    <p>Equity starts at 1.0 and changes based on realized R-multiples with 2% risk per trade.</p>
+    <img src="equity_curve.png" alt="Equity curve">
+    <p>Drawdown relative to running equity peak:</p>
+    <img src="drawdown_curve.png" alt="Drawdown curve">
+  </div>
+
+  <div class="card">
+    <h2>All Trades (point profits + early-close margins)</h2>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Signal date</th>
+        <th>Entry date</th>
+        <th>Entry price</th>
+        <th>Exit date</th>
+        <th>Side</th>
+        <th>R</th>
+        <th>Square type</th>
+        <th>Exit reason</th>
+        <th>T(-1)</th>
+        <th>T</th>
+        <th>T+1</th>
+        <th>T+2</th>
+        <th>T+3</th>
+        <th>T+4</th>
+        <th>Early close</th>
+        <th>Margin neutral (pts)</th>
+        <th>Margin neutral (%)</th>
+        <th>Margin flip (pts)</th>
+        <th>Margin flip (%)</th>
+        <th>Chart</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2004-11-29</td>
+        <td>2004-11-30</td>
+        <td>27.00</td>
+        <td>2004-12-08</td>
+        <td>short</td>
+        <td>-0.69</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>0.71</td>
+        <td>2.06</td>
+        <td>2.10</td>
+        <td>3.19</td>
+        <td>3.09</td>
+        <td>0.93</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_001.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>2005-01-14</td>
+        <td>2005-01-17</td>
+        <td>20.98</td>
+        <td>2005-03-29</td>
+        <td>long</td>
+        <td>6.53</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>2.07</td>
+        <td>1.79</td>
+        <td>4.07</td>
+        <td>4.56</td>
+        <td>2.98</td>
+        <td>4.17</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_002.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>2005-04-26</td>
+        <td>2005-04-27</td>
+        <td>63.38</td>
+        <td>2005-05-23</td>
+        <td>short</td>
+        <td>0.01</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>1.74</td>
+        <td>2.18</td>
+        <td>5.03</td>
+        <td>7.92</td>
+        <td>7.34</td>
+        <td>7.81</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_003.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>2005-07-05</td>
+        <td>2005-07-06</td>
+        <td>57.42</td>
+        <td>2005-08-26</td>
+        <td>long</td>
+        <td>1.33</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>3.04</td>
+        <td>2.52</td>
+        <td>0.66</td>
+        <td>1.03</td>
+        <td>1.33</td>
+        <td>1.03</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_004.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>2005-09-05</td>
+        <td>2005-09-06</td>
+        <td>76.60</td>
+        <td>2005-09-22</td>
+        <td>long</td>
+        <td>0.47</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>3.36</td>
+        <td>2.58</td>
+        <td>2.76</td>
+        <td>2.11</td>
+        <td>4.46</td>
+        <td>6.00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_005.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>2005-10-18</td>
+        <td>2005-10-19</td>
+        <td>92.40</td>
+        <td>2005-12-22</td>
+        <td>short</td>
+        <td>-0.26</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>4.50</td>
+        <td>3.36</td>
+        <td>6.92</td>
+        <td>2.16</td>
+        <td>5.52</td>
+        <td>8.32</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_006.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>7</td>
+        <td>2006-01-05</td>
+        <td>2006-01-06</td>
+        <td>103.40</td>
+        <td>2006-02-13</td>
+        <td>long</td>
+        <td>0.03</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>1.50</td>
+        <td>1.25</td>
+        <td>1.05</td>
+        <td>-1.95</td>
+        <td>-1.03</td>
+        <td>-1.99</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_007.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>8</td>
+        <td>2006-04-10</td>
+        <td>2006-04-12</td>
+        <td>166.01</td>
+        <td>2006-06-22</td>
+        <td>short</td>
+        <td>2.50</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>6.69</td>
+        <td>7.07</td>
+        <td>13.14</td>
+        <td>18.75</td>
+        <td>13.27</td>
+        <td>9.37</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_008.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>9</td>
+        <td>2006-11-07</td>
+        <td>2006-11-08</td>
+        <td>167.80</td>
+        <td>2006-12-06</td>
+        <td>short</td>
+        <td>-0.32</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>3.66</td>
+        <td>3.42</td>
+        <td>-4.09</td>
+        <td>-7.71</td>
+        <td>-5.59</td>
+        <td>1.49</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_009.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>10</td>
+        <td>2007-05-29</td>
+        <td>2007-05-30</td>
+        <td>241.00</td>
+        <td>2007-06-29</td>
+        <td>short</td>
+        <td>-0.36</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>5.23</td>
+        <td>1.69</td>
+        <td>-11.84</td>
+        <td>-1.84</td>
+        <td>1.18</td>
+        <td>8.52</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_010.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>11</td>
+        <td>2007-07-11</td>
+        <td>2007-07-12</td>
+        <td>246.00</td>
+        <td>2007-07-23</td>
+        <td>long</td>
+        <td>0.41</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>4.64</td>
+        <td>3.54</td>
+        <td>-0.79</td>
+        <td>-2.11</td>
+        <td>-1.80</td>
+        <td>-0.87</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_011.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>12</td>
+        <td>2008-01-18</td>
+        <td>2008-01-21</td>
+        <td>369.74</td>
+        <td>2008-04-09</td>
+        <td>short</td>
+        <td>0.41</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>35.36</td>
+        <td>33.78</td>
+        <td>53.02</td>
+        <td>14.80</td>
+        <td>31.69</td>
+        <td>23.17</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_012.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>13</td>
+        <td>2008-04-21</td>
+        <td>2008-04-22</td>
+        <td>351.00</td>
+        <td>2008-07-23</td>
+        <td>short</td>
+        <td>1.80</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>15.75</td>
+        <td>15.90</td>
+        <td>31.95</td>
+        <td>0.19</td>
+        <td>15.48</td>
+        <td>9.50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_013.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>14</td>
+        <td>2009-02-06</td>
+        <td>2009-02-09</td>
+        <td>123.98</td>
+        <td>2009-08-10</td>
+        <td>long</td>
+        <td>1.36</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>17.05</td>
+        <td>16.18</td>
+        <td>18.61</td>
+        <td>22.50</td>
+        <td>9.13</td>
+        <td>13.62</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_014.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>15</td>
+        <td>2009-08-20</td>
+        <td>2009-08-21</td>
+        <td>175.60</td>
+        <td>2009-10-27</td>
+        <td>long</td>
+        <td>0.45</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>4.45</td>
+        <td>2.92</td>
+        <td>11.04</td>
+        <td>10.26</td>
+        <td>6.74</td>
+        <td>17.67</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_015.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>16</td>
+        <td>2009-11-18</td>
+        <td>2009-11-19</td>
+        <td>230.20</td>
+        <td>2009-12-18</td>
+        <td>long</td>
+        <td>0.48</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>6.46</td>
+        <td>9.94</td>
+        <td>9.12</td>
+        <td>10.06</td>
+        <td>16.54</td>
+        <td>13.80</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_016.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>17</td>
+        <td>2010-03-08</td>
+        <td>2010-03-09</td>
+        <td>296.11</td>
+        <td>2010-06-03</td>
+        <td>short</td>
+        <td>1.91</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>1.71</td>
+        <td>2.40</td>
+        <td>3.07</td>
+        <td>9.50</td>
+        <td>12.25</td>
+        <td>10.94</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_017.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>18</td>
+        <td>2010-08-10</td>
+        <td>2010-08-11</td>
+        <td>283.27</td>
+        <td>2010-09-01</td>
+        <td>short</td>
+        <td>-0.50</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>3.74</td>
+        <td>-2.03</td>
+        <td>0.52</td>
+        <td>-0.20</td>
+        <td>2.43</td>
+        <td>3.03</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_018.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>19</td>
+        <td>2011-02-11</td>
+        <td>2011-02-14</td>
+        <td>189.80</td>
+        <td>2011-04-19</td>
+        <td>long</td>
+        <td>0.42</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>29.87</td>
+        <td>40.06</td>
+        <td>37.69</td>
+        <td>45.99</td>
+        <td>48.69</td>
+        <td>47.97</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_019.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>20</td>
+        <td>2011-06-23</td>
+        <td>2011-06-24</td>
+        <td>178.52</td>
+        <td>2011-07-21</td>
+        <td>long</td>
+        <td>1.69</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>2.05</td>
+        <td>10.00</td>
+        <td>10.14</td>
+        <td>12.62</td>
+        <td>13.08</td>
+        <td>17.51</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_020.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>21</td>
+        <td>2012-01-02</td>
+        <td>2012-01-03</td>
+        <td>99.70</td>
+        <td>2012-02-22</td>
+        <td>long</td>
+        <td>1.31</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>3.50</td>
+        <td>2.74</td>
+        <td>12.53</td>
+        <td>5.98</td>
+        <td>5.20</td>
+        <td>3.04</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_021.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>22</td>
+        <td>2012-03-09</td>
+        <td>2012-03-12</td>
+        <td>107.60</td>
+        <td>2012-05-09</td>
+        <td>long</td>
+        <td>0.90</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>4.62</td>
+        <td>3.19</td>
+        <td>9.08</td>
+        <td>12.31</td>
+        <td>7.15</td>
+        <td>8.28</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_022.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>23</td>
+        <td>2012-06-05</td>
+        <td>2012-06-06</td>
+        <td>101.00</td>
+        <td>2012-06-06</td>
+        <td>long</td>
+        <td>-1.00</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>6.53</td>
+        <td>22.83</td>
+        <td>26.78</td>
+        <td>24.58</td>
+        <td>22.99</td>
+        <td>26.39</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_023.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>24</td>
+        <td>2012-06-19</td>
+        <td>2012-06-20</td>
+        <td>130.44</td>
+        <td>2012-07-27</td>
+        <td>long</td>
+        <td>0.81</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>4.64</td>
+        <td>4.36</td>
+        <td>5.22</td>
+        <td>1.78</td>
+        <td>1.32</td>
+        <td>1.71</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_024.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>25</td>
+        <td>2012-08-28</td>
+        <td>2012-08-29</td>
+        <td>186.00</td>
+        <td>2012-10-29</td>
+        <td>long</td>
+        <td>1.11</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>10.23</td>
+        <td>9.70</td>
+        <td>9.84</td>
+        <td>7.83</td>
+        <td>11.38</td>
+        <td>15.91</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_025.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>26</td>
+        <td>2012-11-22</td>
+        <td>2012-11-23</td>
+        <td>368.00</td>
+        <td>2013-01-16</td>
+        <td>long</td>
+        <td>-0.18</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>10.29</td>
+        <td>8.09</td>
+        <td>20.25</td>
+        <td>46.69</td>
+        <td>40.18</td>
+        <td>31.24</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_026.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>27</td>
+        <td>2013-06-26</td>
+        <td>2013-06-27</td>
+        <td>461.20</td>
+        <td>2013-07-01</td>
+        <td>short</td>
+        <td>-0.74</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>10.71</td>
+        <td>16.80</td>
+        <td>27.64</td>
+        <td>-30.25</td>
+        <td>-21.93</td>
+        <td>-41.89</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_027.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>28</td>
+        <td>2013-07-26</td>
+        <td>2013-07-29</td>
+        <td>515.00</td>
+        <td>2013-09-06</td>
+        <td>short</td>
+        <td>0.34</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>10.97</td>
+        <td>8.58</td>
+        <td>8.90</td>
+        <td>38.04</td>
+        <td>36.69</td>
+        <td>54.81</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_028.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>29</td>
+        <td>2013-11-13</td>
+        <td>2013-11-14</td>
+        <td>475.14</td>
+        <td>2014-01-30</td>
+        <td>long</td>
+        <td>0.92</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>11.77</td>
+        <td>7.53</td>
+        <td>6.65</td>
+        <td>21.53</td>
+        <td>19.18</td>
+        <td>8.57</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_029.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>30</td>
+        <td>2014-03-06</td>
+        <td>2014-03-07</td>
+        <td>489.80</td>
+        <td>2014-05-14</td>
+        <td>long</td>
+        <td>1.63</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>6.03</td>
+        <td>4.56</td>
+        <td>3.52</td>
+        <td>3.74</td>
+        <td>4.04</td>
+        <td>9.26</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_030.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>31</td>
+        <td>2014-10-13</td>
+        <td>2014-10-14</td>
+        <td>487.00</td>
+        <td>2015-04-22</td>
+        <td>long</td>
+        <td>4.19</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>5.86</td>
+        <td>1.27</td>
+        <td>-11.40</td>
+        <td>-12.31</td>
+        <td>24.26</td>
+        <td>27.88</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_031.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>32</td>
+        <td>2015-06-15</td>
+        <td>2015-06-16</td>
+        <td>719.80</td>
+        <td>2015-07-16</td>
+        <td>short</td>
+        <td>0.19</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>18.26</td>
+        <td>18.96</td>
+        <td>27.34</td>
+        <td>34.73</td>
+        <td>49.45</td>
+        <td>49.38</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_032.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>33</td>
+        <td>2015-08-18</td>
+        <td>2015-08-19</td>
+        <td>700.00</td>
+        <td>2015-11-03</td>
+        <td>short</td>
+        <td>0.59</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>5.52</td>
+        <td>4.58</td>
+        <td>15.65</td>
+        <td>24.28</td>
+        <td>75.70</td>
+        <td>57.83</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_033.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>34</td>
+        <td>2015-12-08</td>
+        <td>2015-12-09</td>
+        <td>622.96</td>
+        <td>2016-01-25</td>
+        <td>short</td>
+        <td>0.81</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>26.65</td>
+        <td>26.30</td>
+        <td>1.18</td>
+        <td>6.48</td>
+        <td>11.02</td>
+        <td>17.32</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_034.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>35</td>
+        <td>2016-05-17</td>
+        <td>2016-05-18</td>
+        <td>524.54</td>
+        <td>2016-06-30</td>
+        <td>short</td>
+        <td>0.58</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>18.52</td>
+        <td>17.67</td>
+        <td>35.51</td>
+        <td>35.43</td>
+        <td>31.23</td>
+        <td>31.65</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_035.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>36</td>
+        <td>2016-12-02</td>
+        <td>2016-12-05</td>
+        <td>380.79</td>
+        <td>2017-03-09</td>
+        <td>long</td>
+        <td>1.92</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>6.98</td>
+        <td>5.90</td>
+        <td>3.31</td>
+        <td>5.97</td>
+        <td>9.99</td>
+        <td>2.02</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_036.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>37</td>
+        <td>2017-05-29</td>
+        <td>2017-05-30</td>
+        <td>404.00</td>
+        <td>2017-07-10</td>
+        <td>long</td>
+        <td>1.51</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>14.92</td>
+        <td>14.49</td>
+        <td>49.07</td>
+        <td>58.79</td>
+        <td>64.79</td>
+        <td>92.99</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_037.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>38</td>
+        <td>2017-10-10</td>
+        <td>2017-10-11</td>
+        <td>477.88</td>
+        <td>2017-10-27</td>
+        <td>long</td>
+        <td>2.04</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>6.58</td>
+        <td>2.54</td>
+        <td>10.43</td>
+        <td>9.63</td>
+        <td>5.97</td>
+        <td>20.26</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_038.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>39</td>
+        <td>2018-01-24</td>
+        <td>2018-01-25</td>
+        <td>690.00</td>
+        <td>2018-04-02</td>
+        <td>short</td>
+        <td>0.40</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>24.06</td>
+        <td>16.49</td>
+        <td>33.05</td>
+        <td>33.77</td>
+        <td>32.88</td>
+        <td>29.44</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_039.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>40</td>
+        <td>2018-05-31</td>
+        <td>2018-06-01</td>
+        <td>669.58</td>
+        <td>2018-06-26</td>
+        <td>short</td>
+        <td>-0.55</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>16.57</td>
+        <td>17.43</td>
+        <td>10.33</td>
+        <td>19.59</td>
+        <td>8.19</td>
+        <td>0.45</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_040.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>41</td>
+        <td>2018-07-10</td>
+        <td>2018-07-11</td>
+        <td>638.00</td>
+        <td>2018-08-16</td>
+        <td>short</td>
+        <td>0.10</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>18.45</td>
+        <td>18.15</td>
+        <td>35.15</td>
+        <td>30.05</td>
+        <td>63.65</td>
+        <td>58.00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_041.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>42</td>
+        <td>2019-02-19</td>
+        <td>2019-02-20</td>
+        <td>516.90</td>
+        <td>2019-03-27</td>
+        <td>long</td>
+        <td>0.41</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>15.60</td>
+        <td>11.20</td>
+        <td>19.60</td>
+        <td>16.35</td>
+        <td>7.30</td>
+        <td>5.35</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_042.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>43</td>
+        <td>2019-07-02</td>
+        <td>2019-07-03</td>
+        <td>594.90</td>
+        <td>2019-07-18</td>
+        <td>short</td>
+        <td>-0.33</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>15.20</td>
+        <td>15.20</td>
+        <td>19.90</td>
+        <td>14.40</td>
+        <td>13.95</td>
+        <td>26.00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_043.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>44</td>
+        <td>2019-11-07</td>
+        <td>2019-11-11</td>
+        <td>632.00</td>
+        <td>2020-01-28</td>
+        <td>short</td>
+        <td>0.56</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>21.70</td>
+        <td>5.00</td>
+        <td>11.85</td>
+        <td>13.55</td>
+        <td>7.50</td>
+        <td>19.30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_044.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>45</td>
+        <td>2020-03-06</td>
+        <td>2020-03-09</td>
+        <td>638.00</td>
+        <td>2020-04-13</td>
+        <td>short</td>
+        <td>0.98</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>25.25</td>
+        <td>18.15</td>
+        <td>29.80</td>
+        <td>94.65</td>
+        <td>73.10</td>
+        <td>113.25</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_045.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>46</td>
+        <td>2020-05-13</td>
+        <td>2020-05-14</td>
+        <td>505.00</td>
+        <td>2020-07-28</td>
+        <td>long</td>
+        <td>1.73</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>29.60</td>
+        <td>34.80</td>
+        <td>35.85</td>
+        <td>37.60</td>
+        <td>50.10</td>
+        <td>70.15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_046.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>47</td>
+        <td>2020-11-02</td>
+        <td>2020-11-03</td>
+        <td>503.00</td>
+        <td>2020-12-21</td>
+        <td>long</td>
+        <td>1.90</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>5.75</td>
+        <td>6.70</td>
+        <td>7.45</td>
+        <td>30.95</td>
+        <td>41.20</td>
+        <td>52.80</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_047.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>48</td>
+        <td>2021-02-26</td>
+        <td>2021-03-01</td>
+        <td>537.90</td>
+        <td>2021-03-15</td>
+        <td>long</td>
+        <td>-0.21</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>11.25</td>
+        <td>8.45</td>
+        <td>14.15</td>
+        <td>29.75</td>
+        <td>24.60</td>
+        <td>14.15</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_048.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>49</td>
+        <td>2021-04-19</td>
+        <td>2021-04-20</td>
+        <td>518.50</td>
+        <td>2021-07-28</td>
+        <td>long</td>
+        <td>2.99</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>4.95</td>
+        <td>4.40</td>
+        <td>0.40</td>
+        <td>3.65</td>
+        <td>-0.45</td>
+        <td>2.35</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_049.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>50</td>
+        <td>2021-08-11</td>
+        <td>2021-08-12</td>
+        <td>651.40</td>
+        <td>2021-08-18</td>
+        <td>long</td>
+        <td>0.36</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>9.90</td>
+        <td>4.55</td>
+        <td>9.10</td>
+        <td>5.25</td>
+        <td>8.80</td>
+        <td>73.05</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_050.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>51</td>
+        <td>2021-12-16</td>
+        <td>2021-12-17</td>
+        <td>922.10</td>
+        <td>2022-01-13</td>
+        <td>short</td>
+        <td>-0.23</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>39.60</td>
+        <td>39.30</td>
+        <td>59.35</td>
+        <td>33.25</td>
+        <td>18.35</td>
+        <td>17.95</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_051.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>52</td>
+        <td>2022-04-13</td>
+        <td>2022-04-18</td>
+        <td>886.00</td>
+        <td>2022-07-05</td>
+        <td>short</td>
+        <td>1.18</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>7.05</td>
+        <td>-0.90</td>
+        <td>27.00</td>
+        <td>22.90</td>
+        <td>14.85</td>
+        <td>13.80</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_052.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>53</td>
+        <td>2022-12-20</td>
+        <td>2022-12-21</td>
+        <td>917.55</td>
+        <td>2023-03-15</td>
+        <td>short</td>
+        <td>4.02</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>14.95</td>
+        <td>14.55</td>
+        <td>19.50</td>
+        <td>43.30</td>
+        <td>36.45</td>
+        <td>36.90</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_053.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>54</td>
+        <td>2023-05-16</td>
+        <td>2023-05-17</td>
+        <td>801.00</td>
+        <td>2023-05-24</td>
+        <td>short</td>
+        <td>-0.96</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>6.30</td>
+        <td>4.85</td>
+        <td>4.00</td>
+        <td>-16.05</td>
+        <td>-22.65</td>
+        <td>-20.95</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_054.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>55</td>
+        <td>2023-06-08</td>
+        <td>2023-06-09</td>
+        <td>871.05</td>
+        <td>2023-09-22</td>
+        <td>long</td>
+        <td>3.98</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>17.15</td>
+        <td>17.15</td>
+        <td>9.70</td>
+        <td>22.45</td>
+        <td>27.00</td>
+        <td>25.00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_055.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>56</td>
+        <td>2024-02-15</td>
+        <td>2024-02-16</td>
+        <td>1140.00</td>
+        <td>2024-04-10</td>
+        <td>short</td>
+        <td>-0.57</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>17.65</td>
+        <td>13.60</td>
+        <td>-16.90</td>
+        <td>-3.60</td>
+        <td>-1.20</td>
+        <td>-19.75</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_056.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>57</td>
+        <td>2024-06-04</td>
+        <td>2024-06-05</td>
+        <td>1227.95</td>
+        <td>2024-10-04</td>
+        <td>long</td>
+        <td>1.98</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>94.50</td>
+        <td>70.55</td>
+        <td>77.50</td>
+        <td>79.60</td>
+        <td>87.15</td>
+        <td>89.75</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_057.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>58</td>
+        <td>2024-12-19</td>
+        <td>2024-12-20</td>
+        <td>1578.60</td>
+        <td>2024-12-30</td>
+        <td>short</td>
+        <td>-0.95</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>27.55</td>
+        <td>33.80</td>
+        <td>33.55</td>
+        <td>13.85</td>
+        <td>11.65</td>
+        <td>-0.80</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_058.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>59</td>
+        <td>2025-05-27</td>
+        <td>2025-05-28</td>
+        <td>1533.10</td>
+        <td>2025-06-05</td>
+        <td>short</td>
+        <td>-0.81</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>10.40</td>
+        <td>10.40</td>
+        <td>10.50</td>
+        <td>13.00</td>
+        <td>-16.10</td>
+        <td>-46.50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_059.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>60</td>
+        <td>2025-06-20</td>
+        <td>2025-06-23</td>
+        <td>1453.90</td>
+        <td>2025-09-03</td>
+        <td>short</td>
+        <td>1.06</td>
+        <td>price_time</td>
+        <td>SL</td>
+        <td>39.00</td>
+        <td>34.00</td>
+        <td>10.60</td>
+        <td>-1.00</td>
+        <td>9.40</td>
+        <td>11.70</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_060.html" target="_blank">View</a></td>
+      </tr>
+
+      <tr>
+        <td>61</td>
+        <td>2025-10-10</td>
+        <td>2025-10-13</td>
+        <td>1337.00</td>
+        <td>2025-10-29</td>
+        <td>short</td>
+        <td>-0.69</td>
+        <td>price_date</td>
+        <td>SL</td>
+        <td>20.90</td>
+        <td>20.90</td>
+        <td>34.60</td>
+        <td>3.90</td>
+        <td>-22.10</td>
+        <td>-24.40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="trade-link" href="trades/trade_061.html" target="_blank">View</a></td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class="footer">
+    This is a research backtest. It ignores costs, slippage and execution constraints.
+    It is not trading advice.
+  </div>
+
+</body>
+</html>

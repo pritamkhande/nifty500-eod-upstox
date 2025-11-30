@@ -1,0 +1,5109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nifty500 – Gann Squaring System (All Symbols)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gann Price-Time / Price-Date Squaring backtest for all Nifty500 symbols.">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+      background: #f7f7f9;
+      color: #111827;
+    }
+    h1 {
+      color: #111827;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 6px 8px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 600;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nifty500 – Gann Squaring System (All Symbols)</h1>
+  <div class="card">
+    <p>
+      Each symbol below has a dedicated Gann Price-Time / Price-Date Squaring backtest report.
+      Click on a symbol to see detailed trades, equity curve, and early-close margin statistics (if available).
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Symbol List</h2>
+    <table>
+      <tr>
+        <th>Symbol</th>
+        <th># Trades</th>
+        <th>Win rate</th>
+        <th>Avg R</th>
+        <th>CAGR</th>
+        <th>Max DD</th>
+        <th>Years</th>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/360ONE/index.html">360ONE</a></td>
+        <td>17</td>
+        <td>70.6%</td>
+        <td>0.53</td>
+        <td>1.6%</td>
+        <td>-2.7%</td>
+        <td>10.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/3MINDIA/index.html">3MINDIA</a></td>
+        <td>49</td>
+        <td>49.0%</td>
+        <td>0.94</td>
+        <td>3.8%</td>
+        <td>-7.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AADHARHFC/index.html">AADHARHFC</a></td>
+        <td>4</td>
+        <td>25.0%</td>
+        <td>-0.14</td>
+        <td>-0.8%</td>
+        <td>-2.6%</td>
+        <td>1.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AARTIIND/index.html">AARTIIND</a></td>
+        <td>39</td>
+        <td>66.7%</td>
+        <td>0.71</td>
+        <td>2.4%</td>
+        <td>-3.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AAVAS/index.html">AAVAS</a></td>
+        <td>16</td>
+        <td>50.0%</td>
+        <td>0.89</td>
+        <td>3.8%</td>
+        <td>-2.8%</td>
+        <td>7.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABBOTINDIA/index.html">ABBOTINDIA</a></td>
+        <td>33</td>
+        <td>45.5%</td>
+        <td>0.63</td>
+        <td>1.7%</td>
+        <td>-6.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABB/index.html">ABB</a></td>
+        <td>58</td>
+        <td>70.7%</td>
+        <td>1.57</td>
+        <td>7.9%</td>
+        <td>-7.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABCAPITAL/index.html">ABCAPITAL</a></td>
+        <td>39</td>
+        <td>69.2%</td>
+        <td>0.52</td>
+        <td>4.9%</td>
+        <td>-5.0%</td>
+        <td>8.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABFRL/index.html">ABFRL</a></td>
+        <td>47</td>
+        <td>59.6%</td>
+        <td>0.43</td>
+        <td>3.2%</td>
+        <td>-2.7%</td>
+        <td>12.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABLBL/index.html">ABLBL</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>0.45</td>
+        <td>6.3%</td>
+        <td>0.0%</td>
+        <td>0.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABREL/index.html">ABREL</a></td>
+        <td>61</td>
+        <td>63.9%</td>
+        <td>1.21</td>
+        <td>6.4%</td>
+        <td>-8.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ABSLAMC/index.html">ABSLAMC</a></td>
+        <td>11</td>
+        <td>54.5%</td>
+        <td>0.66</td>
+        <td>3.5%</td>
+        <td>-3.8%</td>
+        <td>4.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ACC/index.html">ACC</a></td>
+        <td>60</td>
+        <td>60.0%</td>
+        <td>0.55</td>
+        <td>2.8%</td>
+        <td>-4.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ACE/index.html">ACE</a></td>
+        <td>63</td>
+        <td>57.1%</td>
+        <td>0.79</td>
+        <td>4.9%</td>
+        <td>-5.3%</td>
+        <td>19.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ACMESOLAR/index.html">ACMESOLAR</a></td>
+        <td>2</td>
+        <td>50.0%</td>
+        <td>0.44</td>
+        <td>1.7%</td>
+        <td>-0.5%</td>
+        <td>1.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ADANIENSOL/index.html">ADANIENSOL</a></td>
+        <td>32</td>
+        <td>46.9%</td>
+        <td>0.44</td>
+        <td>2.6%</td>
+        <td>-5.1%</td>
+        <td>10.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ADANIENT/index.html">ADANIENT</a></td>
+        <td>64</td>
+        <td>64.1%</td>
+        <td>1.66</td>
+        <td>8.8%</td>
+        <td>-5.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ADANIGREEN/index.html">ADANIGREEN</a></td>
+        <td>24</td>
+        <td>70.8%</td>
+        <td>1.83</td>
+        <td>11.4%</td>
+        <td>-3.1%</td>
+        <td>7.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ADANIPORTS/index.html">ADANIPORTS</a></td>
+        <td>64</td>
+        <td>68.8%</td>
+        <td>0.79</td>
+        <td>5.6%</td>
+        <td>-3.4%</td>
+        <td>18.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ADANIPOWER/index.html">ADANIPOWER</a></td>
+        <td>20</td>
+        <td>45.0%</td>
+        <td>0.41</td>
+        <td>1.0%</td>
+        <td>-6.4%</td>
+        <td>16.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AEGISLOG/index.html">AEGISLOG</a></td>
+        <td>38</td>
+        <td>71.1%</td>
+        <td>0.69</td>
+        <td>2.2%</td>
+        <td>-3.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AEGISVOPAK/index.html">AEGISVOPAK</a></td>
+        <td>1</td>
+        <td>100.0%</td>
+        <td>0.36</td>
+        <td>1.5%</td>
+        <td>0.0%</td>
+        <td>0.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AFCONS/index.html">AFCONS</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>0.22</td>
+        <td>1.6%</td>
+        <td>-1.2%</td>
+        <td>1.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AFFLE/index.html">AFFLE</a></td>
+        <td>15</td>
+        <td>73.3%</td>
+        <td>1.66</td>
+        <td>7.9%</td>
+        <td>-1.0%</td>
+        <td>6.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AGARWALEYE/index.html">AGARWALEYE</a></td>
+        <td>2</td>
+        <td>100.0%</td>
+        <td>1.23</td>
+        <td>6.1%</td>
+        <td>0.0%</td>
+        <td>0.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AIAENG/index.html">AIAENG</a></td>
+        <td>42</td>
+        <td>59.5%</td>
+        <td>0.74</td>
+        <td>3.0%</td>
+        <td>-6.1%</td>
+        <td>20.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AIIL/index.html">AIIL</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>0.42</td>
+        <td>2.1%</td>
+        <td>-1.2%</td>
+        <td>1.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AJANTPHARM/index.html">AJANTPHARM</a></td>
+        <td>34</td>
+        <td>55.9%</td>
+        <td>0.22</td>
+        <td>0.6%</td>
+        <td>-8.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AKUMS/index.html">AKUMS</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>2.28</td>
+        <td>10.7%</td>
+        <td>0.0%</td>
+        <td>1.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AKZOINDIA/index.html">AKZOINDIA</a></td>
+        <td>58</td>
+        <td>56.9%</td>
+        <td>1.15</td>
+        <td>5.2%</td>
+        <td>-5.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ALKEM/index.html">ALKEM</a></td>
+        <td>20</td>
+        <td>75.0%</td>
+        <td>1.55</td>
+        <td>6.1%</td>
+        <td>-3.2%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ALKYLAMINE/index.html">ALKYLAMINE</a></td>
+        <td>45</td>
+        <td>57.8%</td>
+        <td>0.59</td>
+        <td>2.8%</td>
+        <td>-5.7%</td>
+        <td>18.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ALOKINDS/index.html">ALOKINDS</a></td>
+        <td>12</td>
+        <td>58.3%</td>
+        <td>2.07</td>
+        <td>7.5%</td>
+        <td>-2.0%</td>
+        <td>5.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AMBER/index.html">AMBER</a></td>
+        <td>21</td>
+        <td>47.6%</td>
+        <td>0.54</td>
+        <td>2.7%</td>
+        <td>-6.1%</td>
+        <td>7.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AMBUJACEM/index.html">AMBUJACEM</a></td>
+        <td>85</td>
+        <td>57.6%</td>
+        <td>0.56</td>
+        <td>4.1%</td>
+        <td>-6.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ANANDRATHI/index.html">ANANDRATHI</a></td>
+        <td>10</td>
+        <td>40.0%</td>
+        <td>2.06</td>
+        <td>9.4%</td>
+        <td>-1.7%</td>
+        <td>4.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ANANTRAJ/index.html">ANANTRAJ</a></td>
+        <td>66</td>
+        <td>59.1%</td>
+        <td>0.65</td>
+        <td>4.3%</td>
+        <td>-4.4%</td>
+        <td>19.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ANGELONE/index.html">ANGELONE</a></td>
+        <td>14</td>
+        <td>42.9%</td>
+        <td>2.47</td>
+        <td>6.1%</td>
+        <td>-8.6%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APARINDS/index.html">APARINDS</a></td>
+        <td>70</td>
+        <td>61.4%</td>
+        <td>0.65</td>
+        <td>4.2%</td>
+        <td>-4.6%</td>
+        <td>21.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APLAPOLLO/index.html">APLAPOLLO</a></td>
+        <td>29</td>
+        <td>65.5%</td>
+        <td>1.01</td>
+        <td>4.1%</td>
+        <td>-2.1%</td>
+        <td>14.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APLLTD/index.html">APLLTD</a></td>
+        <td>37</td>
+        <td>59.5%</td>
+        <td>0.71</td>
+        <td>3.7%</td>
+        <td>-6.2%</td>
+        <td>14.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APOLLOHOSP/index.html">APOLLOHOSP</a></td>
+        <td>63</td>
+        <td>61.9%</td>
+        <td>0.61</td>
+        <td>3.3%</td>
+        <td>-5.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APOLLOTYRE/index.html">APOLLOTYRE</a></td>
+        <td>67</td>
+        <td>65.7%</td>
+        <td>0.80</td>
+        <td>4.6%</td>
+        <td>-3.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/APTUS/index.html">APTUS</a></td>
+        <td>15</td>
+        <td>73.3%</td>
+        <td>0.62</td>
+        <td>4.4%</td>
+        <td>-1.8%</td>
+        <td>4.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ARE&M/index.html">ARE&M</a></td>
+        <td>60</td>
+        <td>58.3%</td>
+        <td>0.63</td>
+        <td>3.3%</td>
+        <td>-5.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASAHIINDIA/index.html">ASAHIINDIA</a></td>
+        <td>77</td>
+        <td>48.1%</td>
+        <td>0.35</td>
+        <td>2.3%</td>
+        <td>-7.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASHOKLEY/index.html">ASHOKLEY</a></td>
+        <td>41</td>
+        <td>63.4%</td>
+        <td>0.57</td>
+        <td>2.0%</td>
+        <td>-2.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASIANPAINT/index.html">ASIANPAINT</a></td>
+        <td>56</td>
+        <td>60.7%</td>
+        <td>0.58</td>
+        <td>2.8%</td>
+        <td>-3.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASTERDM/index.html">ASTERDM</a></td>
+        <td>22</td>
+        <td>72.7%</td>
+        <td>0.88</td>
+        <td>4.9%</td>
+        <td>-2.6%</td>
+        <td>7.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASTRAL/index.html">ASTRAL</a></td>
+        <td>30</td>
+        <td>73.3%</td>
+        <td>1.55</td>
+        <td>4.8%</td>
+        <td>-2.9%</td>
+        <td>18.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ASTRAZEN/index.html">ASTRAZEN</a></td>
+        <td>54</td>
+        <td>57.4%</td>
+        <td>0.87</td>
+        <td>3.9%</td>
+        <td>-5.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ATGL/index.html">ATGL</a></td>
+        <td>23</td>
+        <td>91.3%</td>
+        <td>1.50</td>
+        <td>9.8%</td>
+        <td>-0.8%</td>
+        <td>7.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ATHERENERG/index.html">ATHERENERG</a></td>
+        <td>2</td>
+        <td>50.0%</td>
+        <td>1.96</td>
+        <td>14.0%</td>
+        <td>-1.6%</td>
+        <td>0.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ATUL/index.html">ATUL</a></td>
+        <td>60</td>
+        <td>63.3%</td>
+        <td>0.98</td>
+        <td>4.9%</td>
+        <td>-4.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AUBANK/index.html">AUBANK</a></td>
+        <td>22</td>
+        <td>63.6%</td>
+        <td>0.73</td>
+        <td>3.8%</td>
+        <td>-3.8%</td>
+        <td>8.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AUROPHARMA/index.html">AUROPHARMA</a></td>
+        <td>65</td>
+        <td>67.7%</td>
+        <td>0.96</td>
+        <td>5.5%</td>
+        <td>-3.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AWL/index.html">AWL</a></td>
+        <td>12</td>
+        <td>58.3%</td>
+        <td>0.65</td>
+        <td>3.9%</td>
+        <td>-4.1%</td>
+        <td>3.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/AXISBANK/index.html">AXISBANK</a></td>
+        <td>66</td>
+        <td>63.6%</td>
+        <td>0.88</td>
+        <td>5.0%</td>
+        <td>-3.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAJAJ-AUTO/index.html">BAJAJ-AUTO</a></td>
+        <td>41</td>
+        <td>73.2%</td>
+        <td>1.08</td>
+        <td>4.9%</td>
+        <td>-2.0%</td>
+        <td>17.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAJAJFINSV/index.html">BAJAJFINSV</a></td>
+        <td>44</td>
+        <td>72.7%</td>
+        <td>1.59</td>
+        <td>7.9%</td>
+        <td>-2.2%</td>
+        <td>17.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAJAJHFL/index.html">BAJAJHFL</a></td>
+        <td>6</td>
+        <td>66.7%</td>
+        <td>0.51</td>
+        <td>5.2%</td>
+        <td>-1.3%</td>
+        <td>1.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAJAJHLDNG/index.html">BAJAJHLDNG</a></td>
+        <td>51</td>
+        <td>56.9%</td>
+        <td>0.93</td>
+        <td>4.0%</td>
+        <td>-6.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAJFINANCE/index.html">BAJFINANCE</a></td>
+        <td>26</td>
+        <td>69.2%</td>
+        <td>1.33</td>
+        <td>2.9%</td>
+        <td>-1.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BALKRISIND/index.html">BALKRISIND</a></td>
+        <td>59</td>
+        <td>44.1%</td>
+        <td>0.35</td>
+        <td>2.0%</td>
+        <td>-7.7%</td>
+        <td>19.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BALRAMCHIN/index.html">BALRAMCHIN</a></td>
+        <td>82</td>
+        <td>57.3%</td>
+        <td>0.57</td>
+        <td>4.0%</td>
+        <td>-5.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BANDHANBNK/index.html">BANDHANBNK</a></td>
+        <td>25</td>
+        <td>68.0%</td>
+        <td>0.95</td>
+        <td>6.2%</td>
+        <td>-3.2%</td>
+        <td>7.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BANKBARODA/index.html">BANKBARODA</a></td>
+        <td>99</td>
+        <td>64.6%</td>
+        <td>0.62</td>
+        <td>5.3%</td>
+        <td>-3.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BANKINDIA/index.html">BANKINDIA</a></td>
+        <td>81</td>
+        <td>71.6%</td>
+        <td>0.90</td>
+        <td>6.4%</td>
+        <td>-3.2%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BASF/index.html">BASF</a></td>
+        <td>61</td>
+        <td>54.1%</td>
+        <td>0.55</td>
+        <td>2.9%</td>
+        <td>-4.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BATAINDIA/index.html">BATAINDIA</a></td>
+        <td>72</td>
+        <td>59.7%</td>
+        <td>0.63</td>
+        <td>3.9%</td>
+        <td>-7.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BAYERCROP/index.html">BAYERCROP</a></td>
+        <td>33</td>
+        <td>48.5%</td>
+        <td>0.60</td>
+        <td>2.4%</td>
+        <td>-4.5%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BBTC/index.html">BBTC</a></td>
+        <td>68</td>
+        <td>67.6%</td>
+        <td>1.03</td>
+        <td>6.0%</td>
+        <td>-2.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BDL/index.html">BDL</a></td>
+        <td>28</td>
+        <td>60.7%</td>
+        <td>0.62</td>
+        <td>4.3%</td>
+        <td>-2.5%</td>
+        <td>7.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BEL/index.html">BEL</a></td>
+        <td>35</td>
+        <td>51.4%</td>
+        <td>0.20</td>
+        <td>0.6%</td>
+        <td>-4.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BEML/index.html">BEML</a></td>
+        <td>61</td>
+        <td>65.6%</td>
+        <td>1.18</td>
+        <td>6.1%</td>
+        <td>-5.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BERGEPAINT/index.html">BERGEPAINT</a></td>
+        <td>43</td>
+        <td>69.8%</td>
+        <td>0.99</td>
+        <td>3.6%</td>
+        <td>-2.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BHARATFORG/index.html">BHARATFORG</a></td>
+        <td>72</td>
+        <td>58.3%</td>
+        <td>0.77</td>
+        <td>4.7%</td>
+        <td>-4.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BHARTIARTL/index.html">BHARTIARTL</a></td>
+        <td>75</td>
+        <td>61.3%</td>
+        <td>0.49</td>
+        <td>3.2%</td>
+        <td>-4.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BHARTIHEXA/index.html">BHARTIHEXA</a></td>
+        <td>6</td>
+        <td>66.7%</td>
+        <td>0.11</td>
+        <td>0.8%</td>
+        <td>-2.0%</td>
+        <td>1.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BHEL/index.html">BHEL</a></td>
+        <td>86</td>
+        <td>55.8%</td>
+        <td>0.49</td>
+        <td>3.6%</td>
+        <td>-6.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BIKAJI/index.html">BIKAJI</a></td>
+        <td>7</td>
+        <td>85.7%</td>
+        <td>2.03</td>
+        <td>9.2%</td>
+        <td>-0.3%</td>
+        <td>3.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BIOCON/index.html">BIOCON</a></td>
+        <td>71</td>
+        <td>60.6%</td>
+        <td>0.42</td>
+        <td>2.7%</td>
+        <td>-3.5%</td>
+        <td>21.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BLS/index.html">BLS</a></td>
+        <td>32</td>
+        <td>68.8%</td>
+        <td>0.81</td>
+        <td>5.4%</td>
+        <td>-3.9%</td>
+        <td>9.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BLUEDART/index.html">BLUEDART</a></td>
+        <td>49</td>
+        <td>51.0%</td>
+        <td>0.39</td>
+        <td>1.6%</td>
+        <td>-6.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BLUEJET/index.html">BLUEJET</a></td>
+        <td>5</td>
+        <td>40.0%</td>
+        <td>0.75</td>
+        <td>3.5%</td>
+        <td>-1.0%</td>
+        <td>2.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BLUESTARCO/index.html">BLUESTARCO</a></td>
+        <td>59</td>
+        <td>61.0%</td>
+        <td>0.64</td>
+        <td>3.1%</td>
+        <td>-4.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BOSCHLTD/index.html">BOSCHLTD</a></td>
+        <td>51</td>
+        <td>64.7%</td>
+        <td>0.78</td>
+        <td>3.4%</td>
+        <td>-3.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BPCL/index.html">BPCL</a></td>
+        <td>77</td>
+        <td>64.9%</td>
+        <td>0.53</td>
+        <td>3.5%</td>
+        <td>-6.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BRIGADE/index.html">BRIGADE</a></td>
+        <td>57</td>
+        <td>49.1%</td>
+        <td>0.31</td>
+        <td>1.9%</td>
+        <td>-10.3%</td>
+        <td>17.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BRITANNIA/index.html">BRITANNIA</a></td>
+        <td>54</td>
+        <td>50.0%</td>
+        <td>0.32</td>
+        <td>1.5%</td>
+        <td>-5.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BSE/index.html">BSE</a></td>
+        <td>19</td>
+        <td>68.4%</td>
+        <td>3.09</td>
+        <td>11.1%</td>
+        <td>-3.2%</td>
+        <td>8.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/BSOFT/index.html">BSOFT</a></td>
+        <td>65</td>
+        <td>56.9%</td>
+        <td>0.74</td>
+        <td>4.0%</td>
+        <td>-6.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CAMPUS/index.html">CAMPUS</a></td>
+        <td>13</td>
+        <td>76.9%</td>
+        <td>1.24</td>
+        <td>9.0%</td>
+        <td>-1.8%</td>
+        <td>3.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CAMS/index.html">CAMS</a></td>
+        <td>16</td>
+        <td>56.2%</td>
+        <td>0.82</td>
+        <td>4.8%</td>
+        <td>-3.9%</td>
+        <td>5.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CANBK/index.html">CANBK</a></td>
+        <td>101</td>
+        <td>52.5%</td>
+        <td>0.47</td>
+        <td>4.1%</td>
+        <td>-7.6%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CANFINHOME/index.html">CANFINHOME</a></td>
+        <td>34</td>
+        <td>61.8%</td>
+        <td>0.70</td>
+        <td>2.0%</td>
+        <td>-2.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CAPLIPOINT/index.html">CAPLIPOINT</a></td>
+        <td>33</td>
+        <td>57.6%</td>
+        <td>0.52</td>
+        <td>3.0%</td>
+        <td>-4.8%</td>
+        <td>11.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CARBORUNIV/index.html">CARBORUNIV</a></td>
+        <td>63</td>
+        <td>54.0%</td>
+        <td>0.43</td>
+        <td>2.3%</td>
+        <td>-10.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CASTROLIND/index.html">CASTROLIND</a></td>
+        <td>77</td>
+        <td>50.6%</td>
+        <td>0.34</td>
+        <td>2.8%</td>
+        <td>-11.7%</td>
+        <td>18.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CCL/index.html">CCL</a></td>
+        <td>52</td>
+        <td>55.8%</td>
+        <td>0.48</td>
+        <td>2.3%</td>
+        <td>-8.5%</td>
+        <td>21.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CDSL/index.html">CDSL</a></td>
+        <td>26</td>
+        <td>57.7%</td>
+        <td>1.18</td>
+        <td>7.1%</td>
+        <td>-3.8%</td>
+        <td>8.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CEATLTD/index.html">CEATLTD</a></td>
+        <td>72</td>
+        <td>61.1%</td>
+        <td>0.69</td>
+        <td>4.3%</td>
+        <td>-3.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CENTRALBK/index.html">CENTRALBK</a></td>
+        <td>57</td>
+        <td>70.2%</td>
+        <td>0.60</td>
+        <td>3.7%</td>
+        <td>-3.5%</td>
+        <td>18.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CENTURYPLY/index.html">CENTURYPLY</a></td>
+        <td>59</td>
+        <td>50.8%</td>
+        <td>0.59</td>
+        <td>3.4%</td>
+        <td>-17.9%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CERA/index.html">CERA</a></td>
+        <td>39</td>
+        <td>48.7%</td>
+        <td>0.61</td>
+        <td>2.6%</td>
+        <td>-6.9%</td>
+        <td>18.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CESC/index.html">CESC</a></td>
+        <td>62</td>
+        <td>48.4%</td>
+        <td>0.33</td>
+        <td>1.7%</td>
+        <td>-8.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CGCL/index.html">CGCL</a></td>
+        <td>31</td>
+        <td>48.4%</td>
+        <td>0.57</td>
+        <td>2.3%</td>
+        <td>-4.1%</td>
+        <td>15.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CGPOWER/index.html">CGPOWER</a></td>
+        <td>75</td>
+        <td>42.7%</td>
+        <td>0.23</td>
+        <td>1.4%</td>
+        <td>-6.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHALET/index.html">CHALET</a></td>
+        <td>16</td>
+        <td>62.5%</td>
+        <td>0.90</td>
+        <td>4.2%</td>
+        <td>-4.2%</td>
+        <td>6.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHAMBLFERT/index.html">CHAMBLFERT</a></td>
+        <td>77</td>
+        <td>53.2%</td>
+        <td>0.43</td>
+        <td>2.8%</td>
+        <td>-4.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHENNPETRO/index.html">CHENNPETRO</a></td>
+        <td>75</td>
+        <td>69.3%</td>
+        <td>1.15</td>
+        <td>7.4%</td>
+        <td>-1.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHOICEIN/index.html">CHOICEIN</a></td>
+        <td>10</td>
+        <td>40.0%</td>
+        <td>0.56</td>
+        <td>3.0%</td>
+        <td>-3.4%</td>
+        <td>3.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHOLAFIN/index.html">CHOLAFIN</a></td>
+        <td>49</td>
+        <td>57.1%</td>
+        <td>0.76</td>
+        <td>3.1%</td>
+        <td>-5.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CHOLAHLDNG/index.html">CHOLAHLDNG</a></td>
+        <td>17</td>
+        <td>52.9%</td>
+        <td>0.89</td>
+        <td>3.6%</td>
+        <td>-4.1%</td>
+        <td>8.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CIPLA/index.html">CIPLA</a></td>
+        <td>66</td>
+        <td>69.7%</td>
+        <td>0.69</td>
+        <td>4.0%</td>
+        <td>-4.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CLEAN/index.html">CLEAN</a></td>
+        <td>9</td>
+        <td>66.7%</td>
+        <td>0.19</td>
+        <td>0.8%</td>
+        <td>-3.3%</td>
+        <td>4.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COALINDIA/index.html">COALINDIA</a></td>
+        <td>63</td>
+        <td>65.1%</td>
+        <td>0.62</td>
+        <td>5.1%</td>
+        <td>-2.0%</td>
+        <td>15.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COCHINSHIP/index.html">COCHINSHIP</a></td>
+        <td>29</td>
+        <td>51.7%</td>
+        <td>0.93</td>
+        <td>6.2%</td>
+        <td>-3.5%</td>
+        <td>8.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COFORGE/index.html">COFORGE</a></td>
+        <td>49</td>
+        <td>53.1%</td>
+        <td>0.57</td>
+        <td>2.5%</td>
+        <td>-3.4%</td>
+        <td>21.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COHANCE/index.html">COHANCE</a></td>
+        <td>12</td>
+        <td>58.3%</td>
+        <td>0.88</td>
+        <td>1.9%</td>
+        <td>-4.0%</td>
+        <td>10.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COLPAL/index.html">COLPAL</a></td>
+        <td>65</td>
+        <td>55.4%</td>
+        <td>0.55</td>
+        <td>3.0%</td>
+        <td>-5.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CONCORDBIO/index.html">CONCORDBIO</a></td>
+        <td>6</td>
+        <td>66.7%</td>
+        <td>1.50</td>
+        <td>7.8%</td>
+        <td>-1.4%</td>
+        <td>2.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CONCOR/index.html">CONCOR</a></td>
+        <td>75</td>
+        <td>53.3%</td>
+        <td>0.41</td>
+        <td>2.6%</td>
+        <td>-8.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/COROMANDEL/index.html">COROMANDEL</a></td>
+        <td>60</td>
+        <td>60.0%</td>
+        <td>0.63</td>
+        <td>3.3%</td>
+        <td>-6.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CRAFTSMAN/index.html">CRAFTSMAN</a></td>
+        <td>9</td>
+        <td>44.4%</td>
+        <td>0.18</td>
+        <td>0.7%</td>
+        <td>-2.6%</td>
+        <td>4.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CREDITACC/index.html">CREDITACC</a></td>
+        <td>15</td>
+        <td>66.7%</td>
+        <td>1.37</td>
+        <td>5.5%</td>
+        <td>-3.6%</td>
+        <td>7.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CRISIL/index.html">CRISIL</a></td>
+        <td>54</td>
+        <td>55.6%</td>
+        <td>0.68</td>
+        <td>3.1%</td>
+        <td>-7.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CROMPTON/index.html">CROMPTON</a></td>
+        <td>32</td>
+        <td>68.8%</td>
+        <td>0.77</td>
+        <td>5.1%</td>
+        <td>-2.0%</td>
+        <td>9.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CUB/index.html">CUB</a></td>
+        <td>54</td>
+        <td>44.4%</td>
+        <td>0.34</td>
+        <td>1.6%</td>
+        <td>-6.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CUMMINSIND/index.html">CUMMINSIND</a></td>
+        <td>67</td>
+        <td>59.7%</td>
+        <td>1.07</td>
+        <td>6.2%</td>
+        <td>-4.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/CYIENT/index.html">CYIENT</a></td>
+        <td>60</td>
+        <td>56.7%</td>
+        <td>1.04</td>
+        <td>5.0%</td>
+        <td>-6.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DABUR/index.html">DABUR</a></td>
+        <td>65</td>
+        <td>66.2%</td>
+        <td>0.75</td>
+        <td>4.2%</td>
+        <td>-4.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DALBHARAT/index.html">DALBHARAT</a></td>
+        <td>16</td>
+        <td>81.2%</td>
+        <td>0.89</td>
+        <td>4.1%</td>
+        <td>-1.2%</td>
+        <td>6.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DATAPATTNS/index.html">DATAPATTNS</a></td>
+        <td>11</td>
+        <td>45.5%</td>
+        <td>0.48</td>
+        <td>2.6%</td>
+        <td>-4.2%</td>
+        <td>3.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DBREALTY/index.html">DBREALTY</a></td>
+        <td>51</td>
+        <td>56.9%</td>
+        <td>0.56</td>
+        <td>3.5%</td>
+        <td>-2.9%</td>
+        <td>15.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DCMSHRIRAM/index.html">DCMSHRIRAM</a></td>
+        <td>61</td>
+        <td>70.5%</td>
+        <td>1.25</td>
+        <td>6.4%</td>
+        <td>-3.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DEEPAKFERT/index.html">DEEPAKFERT</a></td>
+        <td>74</td>
+        <td>59.5%</td>
+        <td>0.53</td>
+        <td>3.3%</td>
+        <td>-6.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DEEPAKNTR/index.html">DEEPAKNTR</a></td>
+        <td>34</td>
+        <td>47.1%</td>
+        <td>0.69</td>
+        <td>3.0%</td>
+        <td>-5.8%</td>
+        <td>15.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DELHIVERY/index.html">DELHIVERY</a></td>
+        <td>9</td>
+        <td>66.7%</td>
+        <td>0.68</td>
+        <td>1.2%</td>
+        <td>-2.0%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DEVYANI/index.html">DEVYANI</a></td>
+        <td>19</td>
+        <td>73.7%</td>
+        <td>0.63</td>
+        <td>5.6%</td>
+        <td>-1.9%</td>
+        <td>4.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DIVISLAB/index.html">DIVISLAB</a></td>
+        <td>64</td>
+        <td>64.1%</td>
+        <td>0.60</td>
+        <td>3.3%</td>
+        <td>-5.0%</td>
+        <td>22.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DIXON/index.html">DIXON</a></td>
+        <td>15</td>
+        <td>53.3%</td>
+        <td>0.69</td>
+        <td>2.4%</td>
+        <td>-3.1%</td>
+        <td>8.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DLF/index.html">DLF</a></td>
+        <td>56</td>
+        <td>73.2%</td>
+        <td>1.05</td>
+        <td>6.4%</td>
+        <td>-1.8%</td>
+        <td>18.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DMART/index.html">DMART</a></td>
+        <td>22</td>
+        <td>72.7%</td>
+        <td>0.98</td>
+        <td>5.0%</td>
+        <td>-3.0%</td>
+        <td>8.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DOMS/index.html">DOMS</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>-0.01</td>
+        <td>-0.1%</td>
+        <td>-1.9%</td>
+        <td>1.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/DRREDDY/index.html">DRREDDY</a></td>
+        <td>51</td>
+        <td>58.8%</td>
+        <td>0.59</td>
+        <td>3.7%</td>
+        <td>-3.5%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ECLERX/index.html">ECLERX</a></td>
+        <td>44</td>
+        <td>54.5%</td>
+        <td>0.95</td>
+        <td>4.3%</td>
+        <td>-4.8%</td>
+        <td>17.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EICHERMOT/index.html">EICHERMOT</a></td>
+        <td>64</td>
+        <td>54.7%</td>
+        <td>0.73</td>
+        <td>4.0%</td>
+        <td>-10.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EIDPARRY/index.html">EIDPARRY</a></td>
+        <td>66</td>
+        <td>60.6%</td>
+        <td>0.80</td>
+        <td>4.5%</td>
+        <td>-4.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EIHOTEL/index.html">EIHOTEL</a></td>
+        <td>82</td>
+        <td>58.5%</td>
+        <td>0.44</td>
+        <td>3.1%</td>
+        <td>-3.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ELECON/index.html">ELECON</a></td>
+        <td>51</td>
+        <td>49.0%</td>
+        <td>0.48</td>
+        <td>2.4%</td>
+        <td>-8.3%</td>
+        <td>19.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ELGIEQUIP/index.html">ELGIEQUIP</a></td>
+        <td>52</td>
+        <td>59.6%</td>
+        <td>0.32</td>
+        <td>1.4%</td>
+        <td>-6.2%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EMAMILTD/index.html">EMAMILTD</a></td>
+        <td>51</td>
+        <td>60.8%</td>
+        <td>0.83</td>
+        <td>4.2%</td>
+        <td>-11.4%</td>
+        <td>19.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EMCURE/index.html">EMCURE</a></td>
+        <td>4</td>
+        <td>25.0%</td>
+        <td>-0.20</td>
+        <td>-1.1%</td>
+        <td>-1.6%</td>
+        <td>1.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ENDURANCE/index.html">ENDURANCE</a></td>
+        <td>20</td>
+        <td>60.0%</td>
+        <td>1.18</td>
+        <td>5.0%</td>
+        <td>-3.1%</td>
+        <td>9.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ENGINERSIN/index.html">ENGINERSIN</a></td>
+        <td>85</td>
+        <td>54.1%</td>
+        <td>0.47</td>
+        <td>3.4%</td>
+        <td>-5.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ENRIN/index.html">ENRIN</a></td>
+        <td>2</td>
+        <td>0.0%</td>
+        <td>-0.95</td>
+        <td>-8.3%</td>
+        <td>-3.8%</td>
+        <td>0.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ERIS/index.html">ERIS</a></td>
+        <td>22</td>
+        <td>45.5%</td>
+        <td>0.69</td>
+        <td>3.5%</td>
+        <td>-5.7%</td>
+        <td>8.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ESCORTS/index.html">ESCORTS</a></td>
+        <td>73</td>
+        <td>65.8%</td>
+        <td>1.06</td>
+        <td>6.7%</td>
+        <td>-2.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ETERNAL/index.html">ETERNAL</a></td>
+        <td>16</td>
+        <td>81.2%</td>
+        <td>1.29</td>
+        <td>9.6%</td>
+        <td>-1.7%</td>
+        <td>4.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/EXIDEIND/index.html">EXIDEIND</a></td>
+        <td>76</td>
+        <td>68.4%</td>
+        <td>0.68</td>
+        <td>4.5%</td>
+        <td>-3.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FACT/index.html">FACT</a></td>
+        <td>76</td>
+        <td>52.6%</td>
+        <td>0.18</td>
+        <td>1.2%</td>
+        <td>-7.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FEDERALBNK/index.html">FEDERALBNK</a></td>
+        <td>64</td>
+        <td>45.3%</td>
+        <td>0.17</td>
+        <td>0.8%</td>
+        <td>-10.5%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FINCABLES/index.html">FINCABLES</a></td>
+        <td>61</td>
+        <td>49.2%</td>
+        <td>0.66</td>
+        <td>3.4%</td>
+        <td>-11.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FINPIPE/index.html">FINPIPE</a></td>
+        <td>47</td>
+        <td>55.3%</td>
+        <td>0.53</td>
+        <td>2.1%</td>
+        <td>-8.2%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FIRSTCRY/index.html">FIRSTCRY</a></td>
+        <td>3</td>
+        <td>66.7%</td>
+        <td>0.06</td>
+        <td>0.3%</td>
+        <td>-1.0%</td>
+        <td>1.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FIVESTAR/index.html">FIVESTAR</a></td>
+        <td>8</td>
+        <td>75.0%</td>
+        <td>0.62</td>
+        <td>3.3%</td>
+        <td>-2.0%</td>
+        <td>3.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FLUOROCHEM/index.html">FLUOROCHEM</a></td>
+        <td>11</td>
+        <td>54.5%</td>
+        <td>1.15</td>
+        <td>3.9%</td>
+        <td>-5.0%</td>
+        <td>6.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FORCEMOT/index.html">FORCEMOT</a></td>
+        <td>12</td>
+        <td>75.0%</td>
+        <td>3.71</td>
+        <td>13.2%</td>
+        <td>-1.3%</td>
+        <td>6.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FORTIS/index.html">FORTIS</a></td>
+        <td>64</td>
+        <td>67.2%</td>
+        <td>0.61</td>
+        <td>4.2%</td>
+        <td>-4.8%</td>
+        <td>18.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/FSL/index.html">FSL</a></td>
+        <td>59</td>
+        <td>59.3%</td>
+        <td>0.38</td>
+        <td>2.3%</td>
+        <td>-4.5%</td>
+        <td>18.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GAIL/index.html">GAIL</a></td>
+        <td>85</td>
+        <td>49.4%</td>
+        <td>0.30</td>
+        <td>2.1%</td>
+        <td>-7.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GESHIP/index.html">GESHIP</a></td>
+        <td>65</td>
+        <td>73.8%</td>
+        <td>0.94</td>
+        <td>5.3%</td>
+        <td>-4.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GICRE/index.html">GICRE</a></td>
+        <td>29</td>
+        <td>58.6%</td>
+        <td>0.59</td>
+        <td>4.2%</td>
+        <td>-2.8%</td>
+        <td>8.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GILLETTE/index.html">GILLETTE</a></td>
+        <td>52</td>
+        <td>55.8%</td>
+        <td>0.59</td>
+        <td>2.6%</td>
+        <td>-6.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GLAND/index.html">GLAND</a></td>
+        <td>10</td>
+        <td>50.0%</td>
+        <td>0.97</td>
+        <td>3.7%</td>
+        <td>-1.8%</td>
+        <td>5.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GLAXO/index.html">GLAXO</a></td>
+        <td>49</td>
+        <td>67.3%</td>
+        <td>0.83</td>
+        <td>3.5%</td>
+        <td>-3.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GLENMARK/index.html">GLENMARK</a></td>
+        <td>64</td>
+        <td>64.1%</td>
+        <td>0.87</td>
+        <td>4.7%</td>
+        <td>-3.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GMDCLTD/index.html">GMDCLTD</a></td>
+        <td>67</td>
+        <td>65.7%</td>
+        <td>0.72</td>
+        <td>4.2%</td>
+        <td>-4.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GMRAIRPORT/index.html">GMRAIRPORT</a></td>
+        <td>41</td>
+        <td>58.5%</td>
+        <td>0.49</td>
+        <td>2.0%</td>
+        <td>-3.1%</td>
+        <td>19.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODFRYPHLP/index.html">GODFRYPHLP</a></td>
+        <td>58</td>
+        <td>72.4%</td>
+        <td>0.80</td>
+        <td>4.0%</td>
+        <td>-3.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODIGIT/index.html">GODIGIT</a></td>
+        <td>3</td>
+        <td>33.3%</td>
+        <td>0.16</td>
+        <td>0.6%</td>
+        <td>-1.5%</td>
+        <td>1.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODREJAGRO/index.html">GODREJAGRO</a></td>
+        <td>18</td>
+        <td>66.7%</td>
+        <td>0.46</td>
+        <td>2.0%</td>
+        <td>-3.9%</td>
+        <td>8.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODREJCP/index.html">GODREJCP</a></td>
+        <td>58</td>
+        <td>43.1%</td>
+        <td>0.19</td>
+        <td>0.9%</td>
+        <td>-6.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODREJIND/index.html">GODREJIND</a></td>
+        <td>71</td>
+        <td>69.0%</td>
+        <td>0.78</td>
+        <td>4.8%</td>
+        <td>-4.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GODREJPROP/index.html">GODREJPROP</a></td>
+        <td>46</td>
+        <td>52.2%</td>
+        <td>0.67</td>
+        <td>3.8%</td>
+        <td>-5.3%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GPIL/index.html">GPIL</a></td>
+        <td>27</td>
+        <td>55.6%</td>
+        <td>0.49</td>
+        <td>1.3%</td>
+        <td>-2.7%</td>
+        <td>19.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GRANULES/index.html">GRANULES</a></td>
+        <td>39</td>
+        <td>61.5%</td>
+        <td>0.38</td>
+        <td>1.4%</td>
+        <td>-3.1%</td>
+        <td>20.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GRAPHITE/index.html">GRAPHITE</a></td>
+        <td>76</td>
+        <td>50.0%</td>
+        <td>0.38</td>
+        <td>2.4%</td>
+        <td>-8.7%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GRASIM/index.html">GRASIM</a></td>
+        <td>60</td>
+        <td>61.7%</td>
+        <td>1.24</td>
+        <td>6.4%</td>
+        <td>-3.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GRAVITA/index.html">GRAVITA</a></td>
+        <td>47</td>
+        <td>57.4%</td>
+        <td>0.56</td>
+        <td>3.4%</td>
+        <td>-3.8%</td>
+        <td>15.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GRSE/index.html">GRSE</a></td>
+        <td>19</td>
+        <td>73.7%</td>
+        <td>0.78</td>
+        <td>4.1%</td>
+        <td>-1.4%</td>
+        <td>7.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GSPL/index.html">GSPL</a></td>
+        <td>79</td>
+        <td>53.2%</td>
+        <td>0.26</td>
+        <td>2.0%</td>
+        <td>-9.6%</td>
+        <td>19.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GUJGASLTD/index.html">GUJGASLTD</a></td>
+        <td>48</td>
+        <td>56.2%</td>
+        <td>0.51</td>
+        <td>2.1%</td>
+        <td>-7.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/GVT&D/index.html">GVT&D</a></td>
+        <td>55</td>
+        <td>72.7%</td>
+        <td>0.87</td>
+        <td>5.4%</td>
+        <td>-2.4%</td>
+        <td>17.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HAL/index.html">HAL</a></td>
+        <td>21</td>
+        <td>57.1%</td>
+        <td>1.20</td>
+        <td>6.4%</td>
+        <td>-3.8%</td>
+        <td>7.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HAPPSTMNDS/index.html">HAPPSTMNDS</a></td>
+        <td>14</td>
+        <td>57.1%</td>
+        <td>0.74</td>
+        <td>3.9%</td>
+        <td>-2.4%</td>
+        <td>5.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HAVELLS/index.html">HAVELLS</a></td>
+        <td>59</td>
+        <td>61.0%</td>
+        <td>0.68</td>
+        <td>3.4%</td>
+        <td>-5.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HBLENGINE/index.html">HBLENGINE</a></td>
+        <td>54</td>
+        <td>64.8%</td>
+        <td>0.69</td>
+        <td>3.8%</td>
+        <td>-2.7%</td>
+        <td>18.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HCLTECH/index.html">HCLTECH</a></td>
+        <td>72</td>
+        <td>61.1%</td>
+        <td>0.57</td>
+        <td>3.5%</td>
+        <td>-8.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HDFCAMC/index.html">HDFCAMC</a></td>
+        <td>16</td>
+        <td>56.2%</td>
+        <td>0.89</td>
+        <td>3.8%</td>
+        <td>-1.5%</td>
+        <td>7.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HDFCBANK/index.html">HDFCBANK</a></td>
+        <td>76</td>
+        <td>61.8%</td>
+        <td>0.71</td>
+        <td>4.7%</td>
+        <td>-4.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HDFCLIFE/index.html">HDFCLIFE</a></td>
+        <td>21</td>
+        <td>57.1%</td>
+        <td>0.52</td>
+        <td>2.7%</td>
+        <td>-4.9%</td>
+        <td>8.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HEG/index.html">HEG</a></td>
+        <td>55</td>
+        <td>56.4%</td>
+        <td>0.54</td>
+        <td>2.5%</td>
+        <td>-3.6%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HEROMOTOCO/index.html">HEROMOTOCO</a></td>
+        <td>57</td>
+        <td>64.9%</td>
+        <td>0.73</td>
+        <td>3.6%</td>
+        <td>-3.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HEXT/index.html">HEXT</a></td>
+        <td>2</td>
+        <td>100.0%</td>
+        <td>0.81</td>
+        <td>4.2%</td>
+        <td>0.0%</td>
+        <td>0.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HFCL/index.html">HFCL</a></td>
+        <td>51</td>
+        <td>56.9%</td>
+        <td>0.34</td>
+        <td>1.5%</td>
+        <td>-3.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HINDALCO/index.html">HINDALCO</a></td>
+        <td>87</td>
+        <td>73.6%</td>
+        <td>0.64</td>
+        <td>4.9%</td>
+        <td>-2.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HINDCOPPER/index.html">HINDCOPPER</a></td>
+        <td>62</td>
+        <td>58.1%</td>
+        <td>0.52</td>
+        <td>4.0%</td>
+        <td>-3.5%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HINDPETRO/index.html">HINDPETRO</a></td>
+        <td>84</td>
+        <td>60.7%</td>
+        <td>0.69</td>
+        <td>5.0%</td>
+        <td>-7.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HINDUNILVR/index.html">HINDUNILVR</a></td>
+        <td>70</td>
+        <td>74.3%</td>
+        <td>0.55</td>
+        <td>3.4%</td>
+        <td>-3.8%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HINDZINC/index.html">HINDZINC</a></td>
+        <td>69</td>
+        <td>58.0%</td>
+        <td>0.50</td>
+        <td>3.0%</td>
+        <td>-4.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HOMEFIRST/index.html">HOMEFIRST</a></td>
+        <td>11</td>
+        <td>36.4%</td>
+        <td>0.32</td>
+        <td>0.9%</td>
+        <td>-5.4%</td>
+        <td>7.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HONASA/index.html">HONASA</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>1.08</td>
+        <td>4.1%</td>
+        <td>-1.1%</td>
+        <td>2.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HONAUT/index.html">HONAUT</a></td>
+        <td>46</td>
+        <td>58.7%</td>
+        <td>0.91</td>
+        <td>3.6%</td>
+        <td>-4.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HSCL/index.html">HSCL</a></td>
+        <td>59</td>
+        <td>54.2%</td>
+        <td>0.46</td>
+        <td>2.8%</td>
+        <td>-4.1%</td>
+        <td>18.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HUDCO/index.html">HUDCO</a></td>
+        <td>30</td>
+        <td>56.7%</td>
+        <td>0.85</td>
+        <td>5.7%</td>
+        <td>-7.0%</td>
+        <td>8.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/HYUNDAI/index.html">HYUNDAI</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>0.78</td>
+        <td>4.3%</td>
+        <td>0.0%</td>
+        <td>1.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ICICIBANK/index.html">ICICIBANK</a></td>
+        <td>87</td>
+        <td>67.8%</td>
+        <td>0.63</td>
+        <td>4.8%</td>
+        <td>-3.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ICICIGI/index.html">ICICIGI</a></td>
+        <td>17</td>
+        <td>52.9%</td>
+        <td>0.59</td>
+        <td>2.4%</td>
+        <td>-3.8%</td>
+        <td>8.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ICICIPRULI/index.html">ICICIPRULI</a></td>
+        <td>24</td>
+        <td>62.5%</td>
+        <td>0.60</td>
+        <td>3.0%</td>
+        <td>-5.4%</td>
+        <td>9.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IDBI/index.html">IDBI</a></td>
+        <td>94</td>
+        <td>60.6%</td>
+        <td>0.57</td>
+        <td>4.6%</td>
+        <td>-12.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IDEA/index.html">IDEA</a></td>
+        <td>56</td>
+        <td>53.6%</td>
+        <td>0.29</td>
+        <td>1.6%</td>
+        <td>-6.5%</td>
+        <td>18.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IDFCFIRSTB/index.html">IDFCFIRSTB</a></td>
+        <td>39</td>
+        <td>61.5%</td>
+        <td>0.68</td>
+        <td>5.3%</td>
+        <td>-4.4%</td>
+        <td>10.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IEX/index.html">IEX</a></td>
+        <td>22</td>
+        <td>77.3%</td>
+        <td>0.74</td>
+        <td>3.9%</td>
+        <td>-1.3%</td>
+        <td>8.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IFCI/index.html">IFCI</a></td>
+        <td>46</td>
+        <td>47.8%</td>
+        <td>0.35</td>
+        <td>1.4%</td>
+        <td>-3.3%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IGIL/index.html">IGIL</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>0.94</td>
+        <td>6.1%</td>
+        <td>0.0%</td>
+        <td>0.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IGL/index.html">IGL</a></td>
+        <td>45</td>
+        <td>51.1%</td>
+        <td>0.50</td>
+        <td>2.0%</td>
+        <td>-4.3%</td>
+        <td>21.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IIFL/index.html">IIFL</a></td>
+        <td>66</td>
+        <td>54.5%</td>
+        <td>0.51</td>
+        <td>3.2%</td>
+        <td>-3.8%</td>
+        <td>20.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IKS/index.html">IKS</a></td>
+        <td>2</td>
+        <td>100.0%</td>
+        <td>0.86</td>
+        <td>3.7%</td>
+        <td>0.0%</td>
+        <td>0.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDGN/index.html">INDGN</a></td>
+        <td>4</td>
+        <td>75.0%</td>
+        <td>0.45</td>
+        <td>2.3%</td>
+        <td>-0.7%</td>
+        <td>1.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDHOTEL/index.html">INDHOTEL</a></td>
+        <td>73</td>
+        <td>52.1%</td>
+        <td>0.50</td>
+        <td>3.1%</td>
+        <td>-8.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDIACEM/index.html">INDIACEM</a></td>
+        <td>87</td>
+        <td>62.1%</td>
+        <td>0.74</td>
+        <td>5.6%</td>
+        <td>-4.9%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDIAMART/index.html">INDIAMART</a></td>
+        <td>16</td>
+        <td>37.5%</td>
+        <td>-0.08</td>
+        <td>-0.4%</td>
+        <td>-10.2%</td>
+        <td>6.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDIANB/index.html">INDIANB</a></td>
+        <td>63</td>
+        <td>74.6%</td>
+        <td>0.94</td>
+        <td>6.3%</td>
+        <td>-3.6%</td>
+        <td>18.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDIGO/index.html">INDIGO</a></td>
+        <td>22</td>
+        <td>77.3%</td>
+        <td>1.28</td>
+        <td>5.6%</td>
+        <td>-1.5%</td>
+        <td>10.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDUSINDBK/index.html">INDUSINDBK</a></td>
+        <td>64</td>
+        <td>62.5%</td>
+        <td>1.11</td>
+        <td>6.0%</td>
+        <td>-4.5%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INDUSTOWER/index.html">INDUSTOWER</a></td>
+        <td>33</td>
+        <td>75.8%</td>
+        <td>1.01</td>
+        <td>5.1%</td>
+        <td>-1.7%</td>
+        <td>12.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INFY/index.html">INFY</a></td>
+        <td>81</td>
+        <td>60.5%</td>
+        <td>0.66</td>
+        <td>4.6%</td>
+        <td>-9.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INOXINDIA/index.html">INOXINDIA</a></td>
+        <td>5</td>
+        <td>60.0%</td>
+        <td>0.93</td>
+        <td>4.7%</td>
+        <td>-2.7%</td>
+        <td>1.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INOXWIND/index.html">INOXWIND</a></td>
+        <td>27</td>
+        <td>44.4%</td>
+        <td>0.44</td>
+        <td>2.2%</td>
+        <td>-2.9%</td>
+        <td>10.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/INTELLECT/index.html">INTELLECT</a></td>
+        <td>35</td>
+        <td>68.6%</td>
+        <td>0.95</td>
+        <td>6.1%</td>
+        <td>-2.4%</td>
+        <td>10.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IOB/index.html">IOB</a></td>
+        <td>62</td>
+        <td>58.1%</td>
+        <td>0.72</td>
+        <td>3.8%</td>
+        <td>-3.0%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IOC/index.html">IOC</a></td>
+        <td>75</td>
+        <td>45.3%</td>
+        <td>0.15</td>
+        <td>0.9%</td>
+        <td>-8.4%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IPCALAB/index.html">IPCALAB</a></td>
+        <td>57</td>
+        <td>59.6%</td>
+        <td>0.35</td>
+        <td>1.7%</td>
+        <td>-7.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IRB/index.html">IRB</a></td>
+        <td>21</td>
+        <td>52.4%</td>
+        <td>0.65</td>
+        <td>1.5%</td>
+        <td>-3.3%</td>
+        <td>17.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IRCON/index.html">IRCON</a></td>
+        <td>20</td>
+        <td>70.0%</td>
+        <td>1.38</td>
+        <td>7.1%</td>
+        <td>-2.7%</td>
+        <td>7.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IRCTC/index.html">IRCTC</a></td>
+        <td>18</td>
+        <td>66.7%</td>
+        <td>1.23</td>
+        <td>7.1%</td>
+        <td>-3.1%</td>
+        <td>6.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IREDA/index.html">IREDA</a></td>
+        <td>6</td>
+        <td>66.7%</td>
+        <td>0.44</td>
+        <td>2.7%</td>
+        <td>-0.7%</td>
+        <td>2.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/IRFC/index.html">IRFC</a></td>
+        <td>9</td>
+        <td>66.7%</td>
+        <td>0.92</td>
+        <td>3.4%</td>
+        <td>-1.8%</td>
+        <td>4.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ITCHOTELS/index.html">ITCHOTELS</a></td>
+        <td>3</td>
+        <td>66.7%</td>
+        <td>-0.23</td>
+        <td>-1.6%</td>
+        <td>-2.0%</td>
+        <td>0.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ITC/index.html">ITC</a></td>
+        <td>85</td>
+        <td>52.9%</td>
+        <td>0.35</td>
+        <td>2.5%</td>
+        <td>-7.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ITI/index.html">ITI</a></td>
+        <td>77</td>
+        <td>58.4%</td>
+        <td>0.63</td>
+        <td>4.1%</td>
+        <td>-3.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/J&KBANK/index.html">J&KBANK</a></td>
+        <td>78</td>
+        <td>53.8%</td>
+        <td>0.45</td>
+        <td>2.9%</td>
+        <td>-15.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JBCHEPHARM/index.html">JBCHEPHARM</a></td>
+        <td>63</td>
+        <td>46.0%</td>
+        <td>0.22</td>
+        <td>1.1%</td>
+        <td>-13.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JBMA/index.html">JBMA</a></td>
+        <td>35</td>
+        <td>57.1%</td>
+        <td>0.52</td>
+        <td>1.7%</td>
+        <td>-5.6%</td>
+        <td>20.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JINDALSAW/index.html">JINDALSAW</a></td>
+        <td>75</td>
+        <td>48.0%</td>
+        <td>0.45</td>
+        <td>2.8%</td>
+        <td>-10.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JINDALSTEL/index.html">JINDALSTEL</a></td>
+        <td>58</td>
+        <td>58.6%</td>
+        <td>0.83</td>
+        <td>4.1%</td>
+        <td>-5.6%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JIOFIN/index.html">JIOFIN</a></td>
+        <td>6</td>
+        <td>100.0%</td>
+        <td>1.90</td>
+        <td>10.1%</td>
+        <td>0.0%</td>
+        <td>2.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JKCEMENT/index.html">JKCEMENT</a></td>
+        <td>53</td>
+        <td>64.2%</td>
+        <td>0.91</td>
+        <td>4.8%</td>
+        <td>-5.4%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JKTYRE/index.html">JKTYRE</a></td>
+        <td>54</td>
+        <td>55.6%</td>
+        <td>0.52</td>
+        <td>2.4%</td>
+        <td>-8.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JMFINANCIL/index.html">JMFINANCIL</a></td>
+        <td>63</td>
+        <td>60.3%</td>
+        <td>0.69</td>
+        <td>3.5%</td>
+        <td>-7.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JPPOWER/index.html">JPPOWER</a></td>
+        <td>31</td>
+        <td>48.4%</td>
+        <td>0.38</td>
+        <td>1.1%</td>
+        <td>-5.8%</td>
+        <td>20.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JSL/index.html">JSL</a></td>
+        <td>69</td>
+        <td>56.5%</td>
+        <td>0.54</td>
+        <td>3.3%</td>
+        <td>-5.3%</td>
+        <td>22.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JSWENERGY/index.html">JSWENERGY</a></td>
+        <td>66</td>
+        <td>56.1%</td>
+        <td>0.68</td>
+        <td>5.4%</td>
+        <td>-5.8%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JSWINFRA/index.html">JSWINFRA</a></td>
+        <td>5</td>
+        <td>80.0%</td>
+        <td>0.89</td>
+        <td>4.1%</td>
+        <td>-0.5%</td>
+        <td>2.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JSWSTEEL/index.html">JSWSTEEL</a></td>
+        <td>67</td>
+        <td>62.7%</td>
+        <td>1.19</td>
+        <td>7.7%</td>
+        <td>-3.4%</td>
+        <td>20.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JUBLFOOD/index.html">JUBLFOOD</a></td>
+        <td>52</td>
+        <td>75.0%</td>
+        <td>0.92</td>
+        <td>6.0%</td>
+        <td>-3.7%</td>
+        <td>15.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JUBLINGREA/index.html">JUBLINGREA</a></td>
+        <td>11</td>
+        <td>72.7%</td>
+        <td>0.92</td>
+        <td>4.2%</td>
+        <td>-1.9%</td>
+        <td>4.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JUBLPHARMA/index.html">JUBLPHARMA</a></td>
+        <td>71</td>
+        <td>73.2%</td>
+        <td>1.36</td>
+        <td>8.2%</td>
+        <td>-5.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JWL/index.html">JWL</a></td>
+        <td>32</td>
+        <td>68.8%</td>
+        <td>1.29</td>
+        <td>5.3%</td>
+        <td>-3.6%</td>
+        <td>15.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JYOTHYLAB/index.html">JYOTHYLAB</a></td>
+        <td>54</td>
+        <td>53.7%</td>
+        <td>0.37</td>
+        <td>2.1%</td>
+        <td>-6.4%</td>
+        <td>17.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/JYOTICNC/index.html">JYOTICNC</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>4.41</td>
+        <td>14.4%</td>
+        <td>0.0%</td>
+        <td>1.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KAJARIACER/index.html">KAJARIACER</a></td>
+        <td>43</td>
+        <td>55.8%</td>
+        <td>0.85</td>
+        <td>3.0%</td>
+        <td>-3.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KALYANKJIL/index.html">KALYANKJIL</a></td>
+        <td>14</td>
+        <td>78.6%</td>
+        <td>0.80</td>
+        <td>4.8%</td>
+        <td>-1.9%</td>
+        <td>4.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KARURVYSYA/index.html">KARURVYSYA</a></td>
+        <td>53</td>
+        <td>54.7%</td>
+        <td>0.49</td>
+        <td>2.2%</td>
+        <td>-8.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KAYNES/index.html">KAYNES</a></td>
+        <td>6</td>
+        <td>33.3%</td>
+        <td>3.91</td>
+        <td>13.4%</td>
+        <td>-2.7%</td>
+        <td>3.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KEC/index.html">KEC</a></td>
+        <td>56</td>
+        <td>50.0%</td>
+        <td>0.89</td>
+        <td>4.8%</td>
+        <td>-6.0%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KEI/index.html">KEI</a></td>
+        <td>55</td>
+        <td>56.4%</td>
+        <td>0.59</td>
+        <td>3.2%</td>
+        <td>-3.4%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KFINTECH/index.html">KFINTECH</a></td>
+        <td>9</td>
+        <td>77.8%</td>
+        <td>1.39</td>
+        <td>3.3%</td>
+        <td>-1.8%</td>
+        <td>7.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KIMS/index.html">KIMS</a></td>
+        <td>13</td>
+        <td>53.8%</td>
+        <td>0.42</td>
+        <td>2.4%</td>
+        <td>-2.5%</td>
+        <td>4.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KIRLOSBROS/index.html">KIRLOSBROS</a></td>
+        <td>55</td>
+        <td>70.9%</td>
+        <td>0.65</td>
+        <td>3.6%</td>
+        <td>-2.8%</td>
+        <td>19.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KIRLOSENG/index.html">KIRLOSENG</a></td>
+        <td>48</td>
+        <td>77.1%</td>
+        <td>0.87</td>
+        <td>5.6%</td>
+        <td>-1.7%</td>
+        <td>14.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KOTAKBANK/index.html">KOTAKBANK</a></td>
+        <td>61</td>
+        <td>63.9%</td>
+        <td>0.66</td>
+        <td>3.5%</td>
+        <td>-4.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KPIL/index.html">KPIL</a></td>
+        <td>60</td>
+        <td>61.7%</td>
+        <td>0.55</td>
+        <td>2.9%</td>
+        <td>-4.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KPITTECH/index.html">KPITTECH</a></td>
+        <td>15</td>
+        <td>73.3%</td>
+        <td>1.69</td>
+        <td>7.2%</td>
+        <td>-4.3%</td>
+        <td>6.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KPRMILL/index.html">KPRMILL</a></td>
+        <td>38</td>
+        <td>68.4%</td>
+        <td>0.94</td>
+        <td>3.8%</td>
+        <td>-2.6%</td>
+        <td>18.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/KSB/index.html">KSB</a></td>
+        <td>62</td>
+        <td>43.5%</td>
+        <td>0.34</td>
+        <td>1.7%</td>
+        <td>-6.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LALPATHLAB/index.html">LALPATHLAB</a></td>
+        <td>21</td>
+        <td>90.5%</td>
+        <td>1.57</td>
+        <td>6.6%</td>
+        <td>-1.2%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LATENTVIEW/index.html">LATENTVIEW</a></td>
+        <td>10</td>
+        <td>60.0%</td>
+        <td>0.90</td>
+        <td>2.6%</td>
+        <td>-0.4%</td>
+        <td>6.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LAURUSLABS/index.html">LAURUSLABS</a></td>
+        <td>27</td>
+        <td>74.1%</td>
+        <td>1.25</td>
+        <td>7.5%</td>
+        <td>-2.0%</td>
+        <td>8.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LEMONTREE/index.html">LEMONTREE</a></td>
+        <td>31</td>
+        <td>64.5%</td>
+        <td>0.56</td>
+        <td>4.5%</td>
+        <td>-3.2%</td>
+        <td>7.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LICHSGFIN/index.html">LICHSGFIN</a></td>
+        <td>71</td>
+        <td>64.8%</td>
+        <td>0.72</td>
+        <td>4.4%</td>
+        <td>-5.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LICI/index.html">LICI</a></td>
+        <td>8</td>
+        <td>75.0%</td>
+        <td>1.37</td>
+        <td>6.1%</td>
+        <td>-0.7%</td>
+        <td>3.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LINDEINDIA/index.html">LINDEINDIA</a></td>
+        <td>63</td>
+        <td>50.8%</td>
+        <td>0.60</td>
+        <td>3.2%</td>
+        <td>-11.1%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LLOYDSME/index.html">LLOYDSME</a></td>
+        <td>5</td>
+        <td>60.0%</td>
+        <td>1.22</td>
+        <td>5.1%</td>
+        <td>-1.3%</td>
+        <td>2.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LODHA/index.html">LODHA</a></td>
+        <td>15</td>
+        <td>66.7%</td>
+        <td>0.60</td>
+        <td>3.9%</td>
+        <td>-2.2%</td>
+        <td>4.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LTFOODS/index.html">LTFOODS</a></td>
+        <td>37</td>
+        <td>51.4%</td>
+        <td>0.43</td>
+        <td>1.6%</td>
+        <td>-3.4%</td>
+        <td>18.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LTF/index.html">LTF</a></td>
+        <td>57</td>
+        <td>61.4%</td>
+        <td>0.66</td>
+        <td>5.3%</td>
+        <td>-4.1%</td>
+        <td>14.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LTIM/index.html">LTIM</a></td>
+        <td>20</td>
+        <td>75.0%</td>
+        <td>1.36</td>
+        <td>5.6%</td>
+        <td>-1.7%</td>
+        <td>9.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LTTS/index.html">LTTS</a></td>
+        <td>25</td>
+        <td>76.0%</td>
+        <td>1.19</td>
+        <td>6.4%</td>
+        <td>-2.2%</td>
+        <td>9.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LT/index.html">LT</a></td>
+        <td>61</td>
+        <td>73.8%</td>
+        <td>1.32</td>
+        <td>7.0%</td>
+        <td>-5.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/LUPIN/index.html">LUPIN</a></td>
+        <td>69</td>
+        <td>59.4%</td>
+        <td>0.73</td>
+        <td>4.2%</td>
+        <td>-9.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/M&MFIN/index.html">M&MFIN</a></td>
+        <td>75</td>
+        <td>54.7%</td>
+        <td>0.29</td>
+        <td>2.2%</td>
+        <td>-4.9%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/M&M/index.html">M&M</a></td>
+        <td>67</td>
+        <td>65.7%</td>
+        <td>0.83</td>
+        <td>4.8%</td>
+        <td>-4.6%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAHABANK/index.html">MAHABANK</a></td>
+        <td>48</td>
+        <td>43.8%</td>
+        <td>0.15</td>
+        <td>0.6%</td>
+        <td>-6.1%</td>
+        <td>21.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAHSCOOTER/index.html">MAHSCOOTER</a></td>
+        <td>53</td>
+        <td>56.6%</td>
+        <td>1.31</td>
+        <td>5.8%</td>
+        <td>-4.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAHSEAMLES/index.html">MAHSEAMLES</a></td>
+        <td>74</td>
+        <td>68.9%</td>
+        <td>0.79</td>
+        <td>5.0%</td>
+        <td>-4.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MANAPPURAM/index.html">MANAPPURAM</a></td>
+        <td>56</td>
+        <td>60.7%</td>
+        <td>0.77</td>
+        <td>5.6%</td>
+        <td>-7.4%</td>
+        <td>15.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MANKIND/index.html">MANKIND</a></td>
+        <td>5</td>
+        <td>0.0%</td>
+        <td>-0.48</td>
+        <td>-1.9%</td>
+        <td>-4.7%</td>
+        <td>2.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MANYAVAR/index.html">MANYAVAR</a></td>
+        <td>8</td>
+        <td>62.5%</td>
+        <td>0.45</td>
+        <td>1.8%</td>
+        <td>-2.6%</td>
+        <td>3.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAPMYINDIA/index.html">MAPMYINDIA</a></td>
+        <td>8</td>
+        <td>37.5%</td>
+        <td>0.19</td>
+        <td>0.7%</td>
+        <td>-3.9%</td>
+        <td>3.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MARICO/index.html">MARICO</a></td>
+        <td>60</td>
+        <td>58.3%</td>
+        <td>0.59</td>
+        <td>3.0%</td>
+        <td>-4.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MARUTI/index.html">MARUTI</a></td>
+        <td>55</td>
+        <td>54.5%</td>
+        <td>0.75</td>
+        <td>3.5%</td>
+        <td>-12.6%</td>
+        <td>22.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAXHEALTH/index.html">MAXHEALTH</a></td>
+        <td>13</td>
+        <td>53.8%</td>
+        <td>0.30</td>
+        <td>1.4%</td>
+        <td>-3.8%</td>
+        <td>5.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MAZDOCK/index.html">MAZDOCK</a></td>
+        <td>14</td>
+        <td>71.4%</td>
+        <td>1.92</td>
+        <td>6.0%</td>
+        <td>-3.0%</td>
+        <td>8.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MCX/index.html">MCX</a></td>
+        <td>32</td>
+        <td>53.1%</td>
+        <td>0.56</td>
+        <td>2.5%</td>
+        <td>-6.8%</td>
+        <td>13.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MEDANTA/index.html">MEDANTA</a></td>
+        <td>7</td>
+        <td>71.4%</td>
+        <td>9.84</td>
+        <td>9.8%</td>
+        <td>-3.4%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/METROPOLIS/index.html">METROPOLIS</a></td>
+        <td>14</td>
+        <td>50.0%</td>
+        <td>0.33</td>
+        <td>1.3%</td>
+        <td>-4.8%</td>
+        <td>6.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MFSL/index.html">MFSL</a></td>
+        <td>71</td>
+        <td>56.3%</td>
+        <td>0.76</td>
+        <td>4.5%</td>
+        <td>-5.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MGL/index.html">MGL</a></td>
+        <td>21</td>
+        <td>85.7%</td>
+        <td>1.63</td>
+        <td>7.2%</td>
+        <td>-1.1%</td>
+        <td>9.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MINDACORP/index.html">MINDACORP</a></td>
+        <td>43</td>
+        <td>55.8%</td>
+        <td>0.42</td>
+        <td>2.6%</td>
+        <td>-3.9%</td>
+        <td>13.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MMTC/index.html">MMTC</a></td>
+        <td>49</td>
+        <td>63.3%</td>
+        <td>0.60</td>
+        <td>3.6%</td>
+        <td>-3.2%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MOTHERSON/index.html">MOTHERSON</a></td>
+        <td>46</td>
+        <td>56.5%</td>
+        <td>0.69</td>
+        <td>2.7%</td>
+        <td>-5.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MOTILALOFS/index.html">MOTILALOFS</a></td>
+        <td>46</td>
+        <td>54.3%</td>
+        <td>0.69</td>
+        <td>3.4%</td>
+        <td>-9.9%</td>
+        <td>18.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MPHASIS/index.html">MPHASIS</a></td>
+        <td>62</td>
+        <td>54.8%</td>
+        <td>0.77</td>
+        <td>4.1%</td>
+        <td>-5.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MRF/index.html">MRF</a></td>
+        <td>48</td>
+        <td>62.5%</td>
+        <td>0.80</td>
+        <td>3.2%</td>
+        <td>-4.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MRPL/index.html">MRPL</a></td>
+        <td>87</td>
+        <td>60.9%</td>
+        <td>0.36</td>
+        <td>2.7%</td>
+        <td>-6.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MSUMI/index.html">MSUMI</a></td>
+        <td>8</td>
+        <td>62.5%</td>
+        <td>0.48</td>
+        <td>2.1%</td>
+        <td>-2.5%</td>
+        <td>3.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/MUTHOOTFIN/index.html">MUTHOOTFIN</a></td>
+        <td>41</td>
+        <td>78.0%</td>
+        <td>0.96</td>
+        <td>5.4%</td>
+        <td>-2.6%</td>
+        <td>14.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NAM-INDIA/index.html">NAM-INDIA</a></td>
+        <td>24</td>
+        <td>75.0%</td>
+        <td>0.95</td>
+        <td>5.7%</td>
+        <td>-1.8%</td>
+        <td>8.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NATCOPHARM/index.html">NATCOPHARM</a></td>
+        <td>55</td>
+        <td>69.1%</td>
+        <td>0.93</td>
+        <td>4.4%</td>
+        <td>-5.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NATIONALUM/index.html">NATIONALUM</a></td>
+        <td>93</td>
+        <td>59.1%</td>
+        <td>0.42</td>
+        <td>3.3%</td>
+        <td>-7.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NAUKRI/index.html">NAUKRI</a></td>
+        <td>53</td>
+        <td>56.6%</td>
+        <td>0.36</td>
+        <td>1.9%</td>
+        <td>-6.5%</td>
+        <td>19.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NAVA/index.html">NAVA</a></td>
+        <td>58</td>
+        <td>55.2%</td>
+        <td>0.50</td>
+        <td>2.4%</td>
+        <td>-4.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NAVINFLUOR/index.html">NAVINFLUOR</a></td>
+        <td>58</td>
+        <td>46.6%</td>
+        <td>0.54</td>
+        <td>3.3%</td>
+        <td>-13.6%</td>
+        <td>18.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NBCC/index.html">NBCC</a></td>
+        <td>38</td>
+        <td>44.7%</td>
+        <td>0.19</td>
+        <td>1.0%</td>
+        <td>-8.7%</td>
+        <td>13.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NCC/index.html">NCC</a></td>
+        <td>84</td>
+        <td>60.7%</td>
+        <td>0.49</td>
+        <td>3.5%</td>
+        <td>-3.6%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NESTLEIND/index.html">NESTLEIND</a></td>
+        <td>50</td>
+        <td>66.0%</td>
+        <td>0.70</td>
+        <td>4.3%</td>
+        <td>-3.1%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NETWEB/index.html">NETWEB</a></td>
+        <td>5</td>
+        <td>80.0%</td>
+        <td>1.86</td>
+        <td>8.0%</td>
+        <td>-1.3%</td>
+        <td>2.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NEULANDLAB/index.html">NEULANDLAB</a></td>
+        <td>47</td>
+        <td>59.6%</td>
+        <td>0.84</td>
+        <td>3.3%</td>
+        <td>-4.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NEWGEN/index.html">NEWGEN</a></td>
+        <td>20</td>
+        <td>75.0%</td>
+        <td>2.05</td>
+        <td>10.1%</td>
+        <td>-3.4%</td>
+        <td>7.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NHPC/index.html">NHPC</a></td>
+        <td>19</td>
+        <td>68.4%</td>
+        <td>0.28</td>
+        <td>0.6%</td>
+        <td>-2.2%</td>
+        <td>16.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NH/index.html">NH</a></td>
+        <td>26</td>
+        <td>61.5%</td>
+        <td>0.63</td>
+        <td>3.3%</td>
+        <td>-2.1%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NIACL/index.html">NIACL</a></td>
+        <td>34</td>
+        <td>58.8%</td>
+        <td>0.64</td>
+        <td>5.3%</td>
+        <td>-4.5%</td>
+        <td>8.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NIVABUPA/index.html">NIVABUPA</a></td>
+        <td>6</td>
+        <td>66.7%</td>
+        <td>0.03</td>
+        <td>0.2%</td>
+        <td>-3.9%</td>
+        <td>1.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NLCINDIA/index.html">NLCINDIA</a></td>
+        <td>91</td>
+        <td>50.5%</td>
+        <td>0.29</td>
+        <td>2.3%</td>
+        <td>-6.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NMDC/index.html">NMDC</a></td>
+        <td>29</td>
+        <td>65.5%</td>
+        <td>0.47</td>
+        <td>1.5%</td>
+        <td>-4.4%</td>
+        <td>17.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NSLNISP/index.html">NSLNISP</a></td>
+        <td>11</td>
+        <td>36.4%</td>
+        <td>-0.19</td>
+        <td>-1.5%</td>
+        <td>-5.6%</td>
+        <td>2.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NTPCGREEN/index.html">NTPCGREEN</a></td>
+        <td>4</td>
+        <td>75.0%</td>
+        <td>0.64</td>
+        <td>5.2%</td>
+        <td>-0.2%</td>
+        <td>1.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NTPC/index.html">NTPC</a></td>
+        <td>84</td>
+        <td>64.3%</td>
+        <td>0.50</td>
+        <td>4.0%</td>
+        <td>-5.3%</td>
+        <td>21.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NUVAMA/index.html">NUVAMA</a></td>
+        <td>3</td>
+        <td>100.0%</td>
+        <td>2.07</td>
+        <td>5.7%</td>
+        <td>0.0%</td>
+        <td>2.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NUVOCO/index.html">NUVOCO</a></td>
+        <td>16</td>
+        <td>68.8%</td>
+        <td>0.35</td>
+        <td>2.6%</td>
+        <td>-3.5%</td>
+        <td>4.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/NYKAA/index.html">NYKAA</a></td>
+        <td>14</td>
+        <td>42.9%</td>
+        <td>0.36</td>
+        <td>2.4%</td>
+        <td>-2.5%</td>
+        <td>4.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/Nifty Bank/index.html">Nifty Bank</a></td>
+        <td>57</td>
+        <td>52.6%</td>
+        <td>0.97</td>
+        <td>4.1%</td>
+        <td>-9.3%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/Nifty IT/index.html">Nifty IT</a></td>
+        <td>56</td>
+        <td>57.1%</td>
+        <td>0.91</td>
+        <td>3.8%</td>
+        <td>-4.6%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/Nifty/index.html">Nifty</a></td>
+        <td>60</td>
+        <td>65.0%</td>
+        <td>1.00</td>
+        <td>4.5%</td>
+        <td>-3.0%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/OBEROIRLTY/index.html">OBEROIRLTY</a></td>
+        <td>41</td>
+        <td>73.2%</td>
+        <td>0.76</td>
+        <td>4.1%</td>
+        <td>-2.7%</td>
+        <td>15.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/OFSS/index.html">OFSS</a></td>
+        <td>51</td>
+        <td>45.1%</td>
+        <td>0.48</td>
+        <td>2.0%</td>
+        <td>-8.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/OIL/index.html">OIL</a></td>
+        <td>65</td>
+        <td>47.7%</td>
+        <td>0.42</td>
+        <td>3.3%</td>
+        <td>-10.1%</td>
+        <td>16.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/OLAELEC/index.html">OLAELEC</a></td>
+        <td>5</td>
+        <td>60.0%</td>
+        <td>0.39</td>
+        <td>3.0%</td>
+        <td>-0.5%</td>
+        <td>1.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/OLECTRA/index.html">OLECTRA</a></td>
+        <td>41</td>
+        <td>53.7%</td>
+        <td>0.68</td>
+        <td>2.8%</td>
+        <td>-3.7%</td>
+        <td>18.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ONESOURCE/index.html">ONESOURCE</a></td>
+        <td>2</td>
+        <td>0.0%</td>
+        <td>-0.75</td>
+        <td>-3.5%</td>
+        <td>-3.0%</td>
+        <td>0.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ONGC/index.html">ONGC</a></td>
+        <td>90</td>
+        <td>60.0%</td>
+        <td>0.86</td>
+        <td>6.6%</td>
+        <td>-4.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PAGEIND/index.html">PAGEIND</a></td>
+        <td>39</td>
+        <td>59.0%</td>
+        <td>0.80</td>
+        <td>3.1%</td>
+        <td>-3.1%</td>
+        <td>18.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PATANJALI/index.html">PATANJALI</a></td>
+        <td>18</td>
+        <td>50.0%</td>
+        <td>0.93</td>
+        <td>5.7%</td>
+        <td>-3.9%</td>
+        <td>5.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PAYTM/index.html">PAYTM</a></td>
+        <td>10</td>
+        <td>60.0%</td>
+        <td>1.98</td>
+        <td>9.1%</td>
+        <td>-5.1%</td>
+        <td>4.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PCBL/index.html">PCBL</a></td>
+        <td>37</td>
+        <td>64.9%</td>
+        <td>0.72</td>
+        <td>2.3%</td>
+        <td>-2.1%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PERSISTENT/index.html">PERSISTENT</a></td>
+        <td>46</td>
+        <td>69.6%</td>
+        <td>1.40</td>
+        <td>8.0%</td>
+        <td>-3.2%</td>
+        <td>15.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PETRONET/index.html">PETRONET</a></td>
+        <td>74</td>
+        <td>51.4%</td>
+        <td>0.41</td>
+        <td>2.8%</td>
+        <td>-5.7%</td>
+        <td>21.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PFC/index.html">PFC</a></td>
+        <td>88</td>
+        <td>61.4%</td>
+        <td>0.60</td>
+        <td>5.6%</td>
+        <td>-4.8%</td>
+        <td>18.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PFIZER/index.html">PFIZER</a></td>
+        <td>53</td>
+        <td>58.5%</td>
+        <td>0.74</td>
+        <td>3.3%</td>
+        <td>-6.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PGEL/index.html">PGEL</a></td>
+        <td>32</td>
+        <td>37.5%</td>
+        <td>0.12</td>
+        <td>0.5%</td>
+        <td>-8.1%</td>
+        <td>14.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PGHH/index.html">PGHH</a></td>
+        <td>44</td>
+        <td>56.8%</td>
+        <td>0.71</td>
+        <td>2.7%</td>
+        <td>-7.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PHOENIXLTD/index.html">PHOENIXLTD</a></td>
+        <td>54</td>
+        <td>63.0%</td>
+        <td>0.32</td>
+        <td>1.8%</td>
+        <td>-3.4%</td>
+        <td>18.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PIDILITIND/index.html">PIDILITIND</a></td>
+        <td>54</td>
+        <td>68.5%</td>
+        <td>0.55</td>
+        <td>2.6%</td>
+        <td>-6.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PIIND/index.html">PIIND</a></td>
+        <td>36</td>
+        <td>77.8%</td>
+        <td>0.98</td>
+        <td>4.8%</td>
+        <td>-4.2%</td>
+        <td>14.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PNBHOUSING/index.html">PNBHOUSING</a></td>
+        <td>22</td>
+        <td>68.2%</td>
+        <td>1.12</td>
+        <td>5.4%</td>
+        <td>-3.5%</td>
+        <td>9.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PNB/index.html">PNB</a></td>
+        <td>89</td>
+        <td>70.8%</td>
+        <td>1.12</td>
+        <td>8.6%</td>
+        <td>-3.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POLICYBZR/index.html">POLICYBZR</a></td>
+        <td>10</td>
+        <td>80.0%</td>
+        <td>1.10</td>
+        <td>5.4%</td>
+        <td>-3.9%</td>
+        <td>4.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POLYCAB/index.html">POLYCAB</a></td>
+        <td>14</td>
+        <td>85.7%</td>
+        <td>1.78</td>
+        <td>7.4%</td>
+        <td>-2.0%</td>
+        <td>6.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POLYMED/index.html">POLYMED</a></td>
+        <td>41</td>
+        <td>53.7%</td>
+        <td>0.64</td>
+        <td>3.6%</td>
+        <td>-4.4%</td>
+        <td>14.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POONAWALLA/index.html">POONAWALLA</a></td>
+        <td>72</td>
+        <td>61.1%</td>
+        <td>0.61</td>
+        <td>4.0%</td>
+        <td>-7.5%</td>
+        <td>21.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POWERGRID/index.html">POWERGRID</a></td>
+        <td>65</td>
+        <td>56.9%</td>
+        <td>0.21</td>
+        <td>1.5%</td>
+        <td>-5.6%</td>
+        <td>18.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/POWERINDIA/index.html">POWERINDIA</a></td>
+        <td>12</td>
+        <td>58.3%</td>
+        <td>1.18</td>
+        <td>4.9%</td>
+        <td>-3.4%</td>
+        <td>5.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PPLPHARMA/index.html">PPLPHARMA</a></td>
+        <td>11</td>
+        <td>72.7%</td>
+        <td>1.47</td>
+        <td>10.6%</td>
+        <td>-0.7%</td>
+        <td>3.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PRAJIND/index.html">PRAJIND</a></td>
+        <td>77</td>
+        <td>49.4%</td>
+        <td>0.42</td>
+        <td>2.8%</td>
+        <td>-4.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PREMIERENE/index.html">PREMIERENE</a></td>
+        <td>2</td>
+        <td>100.0%</td>
+        <td>0.40</td>
+        <td>1.3%</td>
+        <td>0.0%</td>
+        <td>1.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PRESTIGE/index.html">PRESTIGE</a></td>
+        <td>46</td>
+        <td>58.7%</td>
+        <td>0.63</td>
+        <td>3.8%</td>
+        <td>-3.5%</td>
+        <td>15.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PTCIL/index.html">PTCIL</a></td>
+        <td>4</td>
+        <td>25.0%</td>
+        <td>1.23</td>
+        <td>3.8%</td>
+        <td>-2.4%</td>
+        <td>2.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/PVRINOX/index.html">PVRINOX</a></td>
+        <td>45</td>
+        <td>57.8%</td>
+        <td>0.86</td>
+        <td>3.8%</td>
+        <td>-5.0%</td>
+        <td>19.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RADICO/index.html">RADICO</a></td>
+        <td>69</td>
+        <td>60.9%</td>
+        <td>0.85</td>
+        <td>4.9%</td>
+        <td>-4.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RAILTEL/index.html">RAILTEL</a></td>
+        <td>16</td>
+        <td>62.5%</td>
+        <td>1.04</td>
+        <td>7.0%</td>
+        <td>-1.1%</td>
+        <td>4.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RAINBOW/index.html">RAINBOW</a></td>
+        <td>8</td>
+        <td>62.5%</td>
+        <td>0.47</td>
+        <td>1.1%</td>
+        <td>-1.6%</td>
+        <td>6.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RAMCOCEM/index.html">RAMCOCEM</a></td>
+        <td>71</td>
+        <td>57.7%</td>
+        <td>0.54</td>
+        <td>3.3%</td>
+        <td>-3.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RBLBANK/index.html">RBLBANK</a></td>
+        <td>28</td>
+        <td>75.0%</td>
+        <td>0.69</td>
+        <td>4.1%</td>
+        <td>-4.5%</td>
+        <td>9.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RCF/index.html">RCF</a></td>
+        <td>93</td>
+        <td>62.4%</td>
+        <td>0.64</td>
+        <td>5.0%</td>
+        <td>-7.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RECLTD/index.html">RECLTD</a></td>
+        <td>77</td>
+        <td>58.4%</td>
+        <td>0.56</td>
+        <td>4.8%</td>
+        <td>-4.8%</td>
+        <td>17.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/REDINGTON/index.html">REDINGTON</a></td>
+        <td>57</td>
+        <td>52.6%</td>
+        <td>0.18</td>
+        <td>1.1%</td>
+        <td>-4.7%</td>
+        <td>18.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RELIANCE/index.html">RELIANCE</a></td>
+        <td>74</td>
+        <td>66.2%</td>
+        <td>0.60</td>
+        <td>3.4%</td>
+        <td>-2.7%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RELINFRA/index.html">RELINFRA</a></td>
+        <td>69</td>
+        <td>63.8%</td>
+        <td>1.01</td>
+        <td>6.0%</td>
+        <td>-2.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RHIM/index.html">RHIM</a></td>
+        <td>34</td>
+        <td>64.7%</td>
+        <td>0.88</td>
+        <td>4.3%</td>
+        <td>-3.3%</td>
+        <td>13.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RITES/index.html">RITES</a></td>
+        <td>32</td>
+        <td>62.5%</td>
+        <td>0.11</td>
+        <td>0.9%</td>
+        <td>-6.4%</td>
+        <td>7.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RKFORGE/index.html">RKFORGE</a></td>
+        <td>66</td>
+        <td>50.0%</td>
+        <td>0.71</td>
+        <td>4.1%</td>
+        <td>-7.7%</td>
+        <td>21.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RPOWER/index.html">RPOWER</a></td>
+        <td>52</td>
+        <td>69.2%</td>
+        <td>0.96</td>
+        <td>5.5%</td>
+        <td>-2.4%</td>
+        <td>17.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RRKABEL/index.html">RRKABEL</a></td>
+        <td>4</td>
+        <td>75.0%</td>
+        <td>0.97</td>
+        <td>3.5%</td>
+        <td>-0.7%</td>
+        <td>2.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/RVNL/index.html">RVNL</a></td>
+        <td>19</td>
+        <td>73.7%</td>
+        <td>0.32</td>
+        <td>1.8%</td>
+        <td>-2.7%</td>
+        <td>6.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAGILITY/index.html">SAGILITY</a></td>
+        <td>3</td>
+        <td>66.7%</td>
+        <td>0.23</td>
+        <td>1.3%</td>
+        <td>-1.3%</td>
+        <td>1.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAILIFE/index.html">SAILIFE</a></td>
+        <td>1</td>
+        <td>100.0%</td>
+        <td>1.63</td>
+        <td>3.4%</td>
+        <td>0.0%</td>
+        <td>0.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAIL/index.html">SAIL</a></td>
+        <td>94</td>
+        <td>58.5%</td>
+        <td>0.53</td>
+        <td>4.3%</td>
+        <td>-4.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAMMAANCAP/index.html">SAMMAANCAP</a></td>
+        <td>38</td>
+        <td>84.2%</td>
+        <td>1.20</td>
+        <td>7.3%</td>
+        <td>-1.8%</td>
+        <td>12.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAPPHIRE/index.html">SAPPHIRE</a></td>
+        <td>11</td>
+        <td>72.7%</td>
+        <td>0.47</td>
+        <td>2.5%</td>
+        <td>-2.4%</td>
+        <td>4.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SARDAEN/index.html">SARDAEN</a></td>
+        <td>35</td>
+        <td>48.6%</td>
+        <td>0.34</td>
+        <td>1.5%</td>
+        <td>-3.4%</td>
+        <td>16.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SAREGAMA/index.html">SAREGAMA</a></td>
+        <td>35</td>
+        <td>54.3%</td>
+        <td>0.68</td>
+        <td>2.0%</td>
+        <td>-3.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SBFC/index.html">SBFC</a></td>
+        <td>9</td>
+        <td>55.6%</td>
+        <td>0.24</td>
+        <td>1.8%</td>
+        <td>-2.2%</td>
+        <td>2.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SBICARD/index.html">SBICARD</a></td>
+        <td>13</td>
+        <td>61.5%</td>
+        <td>0.81</td>
+        <td>1.9%</td>
+        <td>-4.6%</td>
+        <td>10.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SBILIFE/index.html">SBILIFE</a></td>
+        <td>18</td>
+        <td>55.6%</td>
+        <td>0.45</td>
+        <td>1.9%</td>
+        <td>-3.4%</td>
+        <td>8.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SBIN/index.html">SBIN</a></td>
+        <td>74</td>
+        <td>62.2%</td>
+        <td>0.81</td>
+        <td>5.1%</td>
+        <td>-4.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SCHAEFFLER/index.html">SCHAEFFLER</a></td>
+        <td>54</td>
+        <td>61.1%</td>
+        <td>1.32</td>
+        <td>5.9%</td>
+        <td>-8.2%</td>
+        <td>22.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SCHNEIDER/index.html">SCHNEIDER</a></td>
+        <td>57</td>
+        <td>56.1%</td>
+        <td>0.28</td>
+        <td>2.2%</td>
+        <td>-5.6%</td>
+        <td>13.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SCI/index.html">SCI</a></td>
+        <td>75</td>
+        <td>50.7%</td>
+        <td>0.37</td>
+        <td>2.4%</td>
+        <td>-6.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SHREECEM/index.html">SHREECEM</a></td>
+        <td>44</td>
+        <td>59.1%</td>
+        <td>1.18</td>
+        <td>4.3%</td>
+        <td>-5.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SHRIRAMFIN/index.html">SHRIRAMFIN</a></td>
+        <td>64</td>
+        <td>59.4%</td>
+        <td>0.69</td>
+        <td>3.8%</td>
+        <td>-4.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SHYAMMETL/index.html">SHYAMMETL</a></td>
+        <td>13</td>
+        <td>69.2%</td>
+        <td>0.31</td>
+        <td>1.8%</td>
+        <td>-2.7%</td>
+        <td>4.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SIEMENS/index.html">SIEMENS</a></td>
+        <td>50</td>
+        <td>64.0%</td>
+        <td>1.20</td>
+        <td>5.2%</td>
+        <td>-5.6%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SIGNATURE/index.html">SIGNATURE</a></td>
+        <td>3</td>
+        <td>33.3%</td>
+        <td>0.01</td>
+        <td>-0.0%</td>
+        <td>-2.0%</td>
+        <td>2.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SJVN/index.html">SJVN</a></td>
+        <td>16</td>
+        <td>50.0%</td>
+        <td>0.21</td>
+        <td>0.4%</td>
+        <td>-3.8%</td>
+        <td>15.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SKFINDIA/index.html">SKFINDIA</a></td>
+        <td>45</td>
+        <td>68.9%</td>
+        <td>1.16</td>
+        <td>4.5%</td>
+        <td>-2.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SOBHA/index.html">SOBHA</a></td>
+        <td>55</td>
+        <td>69.1%</td>
+        <td>0.83</td>
+        <td>4.8%</td>
+        <td>-3.7%</td>
+        <td>18.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SOLARINDS/index.html">SOLARINDS</a></td>
+        <td>43</td>
+        <td>51.2%</td>
+        <td>0.84</td>
+        <td>3.5%</td>
+        <td>-4.4%</td>
+        <td>19.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SONACOMS/index.html">SONACOMS</a></td>
+        <td>10</td>
+        <td>70.0%</td>
+        <td>1.29</td>
+        <td>5.8%</td>
+        <td>-1.3%</td>
+        <td>4.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SONATSOFTW/index.html">SONATSOFTW</a></td>
+        <td>45</td>
+        <td>57.8%</td>
+        <td>0.42</td>
+        <td>1.6%</td>
+        <td>-4.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SRF/index.html">SRF</a></td>
+        <td>59</td>
+        <td>72.9%</td>
+        <td>1.04</td>
+        <td>5.2%</td>
+        <td>-2.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/STARHEALTH/index.html">STARHEALTH</a></td>
+        <td>13</td>
+        <td>84.6%</td>
+        <td>1.23</td>
+        <td>3.2%</td>
+        <td>-0.9%</td>
+        <td>9.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUMICHEM/index.html">SUMICHEM</a></td>
+        <td>18</td>
+        <td>61.1%</td>
+        <td>0.58</td>
+        <td>3.5%</td>
+        <td>-2.4%</td>
+        <td>5.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUNDARMFIN/index.html">SUNDARMFIN</a></td>
+        <td>54</td>
+        <td>42.6%</td>
+        <td>0.60</td>
+        <td>2.6%</td>
+        <td>-7.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUNDRMFAST/index.html">SUNDRMFAST</a></td>
+        <td>64</td>
+        <td>57.8%</td>
+        <td>0.46</td>
+        <td>2.5%</td>
+        <td>-7.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUNPHARMA/index.html">SUNPHARMA</a></td>
+        <td>65</td>
+        <td>63.1%</td>
+        <td>0.85</td>
+        <td>4.8%</td>
+        <td>-3.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUNTV/index.html">SUNTV</a></td>
+        <td>48</td>
+        <td>60.4%</td>
+        <td>0.65</td>
+        <td>3.1%</td>
+        <td>-3.8%</td>
+        <td>19.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUPREMEIND/index.html">SUPREMEIND</a></td>
+        <td>58</td>
+        <td>48.3%</td>
+        <td>0.17</td>
+        <td>0.8%</td>
+        <td>-9.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SUZLON/index.html">SUZLON</a></td>
+        <td>40</td>
+        <td>55.0%</td>
+        <td>0.77</td>
+        <td>3.0%</td>
+        <td>-4.2%</td>
+        <td>20.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SWANCORP/index.html">SWANCORP</a></td>
+        <td>35</td>
+        <td>60.0%</td>
+        <td>0.39</td>
+        <td>2.0%</td>
+        <td>-2.3%</td>
+        <td>13.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SWIGGY/index.html">SWIGGY</a></td>
+        <td>2</td>
+        <td>50.0%</td>
+        <td>1.51</td>
+        <td>5.7%</td>
+        <td>-1.2%</td>
+        <td>1.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SYNGENE/index.html">SYNGENE</a></td>
+        <td>31</td>
+        <td>61.3%</td>
+        <td>0.61</td>
+        <td>3.6%</td>
+        <td>-3.1%</td>
+        <td>10.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/SYRMA/index.html">SYRMA</a></td>
+        <td>9</td>
+        <td>44.4%</td>
+        <td>0.24</td>
+        <td>1.2%</td>
+        <td>-3.3%</td>
+        <td>3.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TARIL/index.html">TARIL</a></td>
+        <td>14</td>
+        <td>35.7%</td>
+        <td>0.12</td>
+        <td>0.2%</td>
+        <td>-4.0%</td>
+        <td>17.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATACHEM/index.html">TATACHEM</a></td>
+        <td>68</td>
+        <td>66.2%</td>
+        <td>1.09</td>
+        <td>6.4%</td>
+        <td>-3.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATACOMM/index.html">TATACOMM</a></td>
+        <td>62</td>
+        <td>66.1%</td>
+        <td>0.79</td>
+        <td>4.2%</td>
+        <td>-3.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATACONSUM/index.html">TATACONSUM</a></td>
+        <td>76</td>
+        <td>60.5%</td>
+        <td>0.57</td>
+        <td>3.7%</td>
+        <td>-4.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATAELXSI/index.html">TATAELXSI</a></td>
+        <td>83</td>
+        <td>63.9%</td>
+        <td>0.84</td>
+        <td>5.9%</td>
+        <td>-8.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATAINVEST/index.html">TATAINVEST</a></td>
+        <td>40</td>
+        <td>57.5%</td>
+        <td>0.42</td>
+        <td>1.4%</td>
+        <td>-6.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATAPOWER/index.html">TATAPOWER</a></td>
+        <td>81</td>
+        <td>56.8%</td>
+        <td>0.41</td>
+        <td>2.9%</td>
+        <td>-5.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATASTEEL/index.html">TATASTEEL</a></td>
+        <td>91</td>
+        <td>49.5%</td>
+        <td>0.28</td>
+        <td>2.1%</td>
+        <td>-20.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TATATECH/index.html">TATATECH</a></td>
+        <td>5</td>
+        <td>100.0%</td>
+        <td>1.27</td>
+        <td>6.3%</td>
+        <td>0.0%</td>
+        <td>2.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TBOTEK/index.html">TBOTEK</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>0.42</td>
+        <td>2.1%</td>
+        <td>-2.4%</td>
+        <td>1.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TCS/index.html">TCS</a></td>
+        <td>60</td>
+        <td>66.7%</td>
+        <td>0.60</td>
+        <td>3.3%</td>
+        <td>-5.7%</td>
+        <td>21.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TECHM/index.html">TECHM</a></td>
+        <td>52</td>
+        <td>65.4%</td>
+        <td>1.21</td>
+        <td>6.4%</td>
+        <td>-3.5%</td>
+        <td>19.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TECHNOE/index.html">TECHNOE</a></td>
+        <td>17</td>
+        <td>64.7%</td>
+        <td>0.42</td>
+        <td>2.0%</td>
+        <td>-3.6%</td>
+        <td>6.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TEJASNET/index.html">TEJASNET</a></td>
+        <td>23</td>
+        <td>78.3%</td>
+        <td>1.23</td>
+        <td>6.6%</td>
+        <td>-4.3%</td>
+        <td>8.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/THELEELA/index.html">THELEELA</a></td>
+        <td>2</td>
+        <td>50.0%</td>
+        <td>0.54</td>
+        <td>4.5%</td>
+        <td>-0.0%</td>
+        <td>0.5</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/THERMAX/index.html">THERMAX</a></td>
+        <td>56</td>
+        <td>67.9%</td>
+        <td>1.32</td>
+        <td>5.8%</td>
+        <td>-6.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TIINDIA/index.html">TIINDIA</a></td>
+        <td>24</td>
+        <td>58.3%</td>
+        <td>0.53</td>
+        <td>3.1%</td>
+        <td>-5.3%</td>
+        <td>8.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TIMKEN/index.html">TIMKEN</a></td>
+        <td>53</td>
+        <td>66.0%</td>
+        <td>0.82</td>
+        <td>3.7%</td>
+        <td>-2.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TITAGARH/index.html">TITAGARH</a></td>
+        <td>65</td>
+        <td>60.0%</td>
+        <td>0.79</td>
+        <td>5.6%</td>
+        <td>-4.2%</td>
+        <td>17.6</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TITAN/index.html">TITAN</a></td>
+        <td>63</td>
+        <td>57.1%</td>
+        <td>0.93</td>
+        <td>4.9%</td>
+        <td>-4.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TMPV/index.html">TMPV</a></td>
+        <td>75</td>
+        <td>68.0%</td>
+        <td>1.15</td>
+        <td>6.6%</td>
+        <td>-2.9%</td>
+        <td>25.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TORNTPHARM/index.html">TORNTPHARM</a></td>
+        <td>61</td>
+        <td>49.2%</td>
+        <td>0.50</td>
+        <td>2.5%</td>
+        <td>-7.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TORNTPOWER/index.html">TORNTPOWER</a></td>
+        <td>63</td>
+        <td>61.9%</td>
+        <td>0.72</td>
+        <td>4.7%</td>
+        <td>-2.2%</td>
+        <td>19.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TRENT/index.html">TRENT</a></td>
+        <td>62</td>
+        <td>64.5%</td>
+        <td>0.62</td>
+        <td>3.3%</td>
+        <td>-3.7%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TRIDENT/index.html">TRIDENT</a></td>
+        <td>13</td>
+        <td>76.9%</td>
+        <td>0.44</td>
+        <td>0.5%</td>
+        <td>-1.8%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TRITURBINE/index.html">TRITURBINE</a></td>
+        <td>41</td>
+        <td>63.4%</td>
+        <td>0.47</td>
+        <td>2.6%</td>
+        <td>-3.1%</td>
+        <td>14.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TRIVENI/index.html">TRIVENI</a></td>
+        <td>60</td>
+        <td>60.0%</td>
+        <td>0.28</td>
+        <td>1.4%</td>
+        <td>-6.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TTML/index.html">TTML</a></td>
+        <td>34</td>
+        <td>64.7%</td>
+        <td>0.99</td>
+        <td>2.8%</td>
+        <td>-2.0%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/TVSMOTOR/index.html">TVSMOTOR</a></td>
+        <td>62</td>
+        <td>59.7%</td>
+        <td>1.11</td>
+        <td>5.8%</td>
+        <td>-5.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UBL/index.html">UBL</a></td>
+        <td>45</td>
+        <td>64.4%</td>
+        <td>0.50</td>
+        <td>2.5%</td>
+        <td>-5.9%</td>
+        <td>17.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UCOBANK/index.html">UCOBANK</a></td>
+        <td>52</td>
+        <td>63.5%</td>
+        <td>0.85</td>
+        <td>3.9%</td>
+        <td>-2.8%</td>
+        <td>22.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ULTRACEMCO/index.html">ULTRACEMCO</a></td>
+        <td>46</td>
+        <td>52.2%</td>
+        <td>0.82</td>
+        <td>3.4%</td>
+        <td>-7.0%</td>
+        <td>21.3</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UNIONBANK/index.html">UNIONBANK</a></td>
+        <td>88</td>
+        <td>70.5%</td>
+        <td>0.69</td>
+        <td>5.3%</td>
+        <td>-4.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UNITDSPR/index.html">UNITDSPR</a></td>
+        <td>61</td>
+        <td>72.1%</td>
+        <td>0.84</td>
+        <td>4.4%</td>
+        <td>-3.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UNOMINDA/index.html">UNOMINDA</a></td>
+        <td>31</td>
+        <td>67.7%</td>
+        <td>1.06</td>
+        <td>3.4%</td>
+        <td>-3.2%</td>
+        <td>18.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UPL/index.html">UPL</a></td>
+        <td>82</td>
+        <td>57.3%</td>
+        <td>0.65</td>
+        <td>4.8%</td>
+        <td>-9.2%</td>
+        <td>21.8</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/USHAMART/index.html">USHAMART</a></td>
+        <td>53</td>
+        <td>62.3%</td>
+        <td>0.55</td>
+        <td>2.5%</td>
+        <td>-4.5%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/UTIAMC/index.html">UTIAMC</a></td>
+        <td>11</td>
+        <td>81.8%</td>
+        <td>0.47</td>
+        <td>2.0%</td>
+        <td>-3.4%</td>
+        <td>5.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VBL/index.html">VBL</a></td>
+        <td>25</td>
+        <td>52.0%</td>
+        <td>0.40</td>
+        <td>2.1%</td>
+        <td>-2.8%</td>
+        <td>9.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VEDL/index.html">VEDL</a></td>
+        <td>68</td>
+        <td>57.4%</td>
+        <td>0.98</td>
+        <td>5.7%</td>
+        <td>-4.3%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VENTIVE/index.html">VENTIVE</a></td>
+        <td>2</td>
+        <td>0.0%</td>
+        <td>-0.35</td>
+        <td>-1.5%</td>
+        <td>-1.4%</td>
+        <td>0.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VGUARD/index.html">VGUARD</a></td>
+        <td>38</td>
+        <td>60.5%</td>
+        <td>1.04</td>
+        <td>4.3%</td>
+        <td>-2.5%</td>
+        <td>17.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VIJAYA/index.html">VIJAYA</a></td>
+        <td>12</td>
+        <td>75.0%</td>
+        <td>0.55</td>
+        <td>3.1%</td>
+        <td>-3.1%</td>
+        <td>4.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VMM/index.html">VMM</a></td>
+        <td>6</td>
+        <td>33.3%</td>
+        <td>-0.04</td>
+        <td>-0.5%</td>
+        <td>-1.6%</td>
+        <td>0.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VOLTAS/index.html">VOLTAS</a></td>
+        <td>64</td>
+        <td>57.8%</td>
+        <td>0.55</td>
+        <td>3.0%</td>
+        <td>-7.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/VTL/index.html">VTL</a></td>
+        <td>67</td>
+        <td>59.7%</td>
+        <td>0.54</td>
+        <td>3.1%</td>
+        <td>-7.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WAAREEENER/index.html">WAAREEENER</a></td>
+        <td>4</td>
+        <td>50.0%</td>
+        <td>0.43</td>
+        <td>3.1%</td>
+        <td>-1.7%</td>
+        <td>1.1</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WELCORP/index.html">WELCORP</a></td>
+        <td>76</td>
+        <td>60.5%</td>
+        <td>0.68</td>
+        <td>4.6%</td>
+        <td>-3.4%</td>
+        <td>22.0</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WELSPUNLIV/index.html">WELSPUNLIV</a></td>
+        <td>43</td>
+        <td>62.8%</td>
+        <td>0.49</td>
+        <td>1.8%</td>
+        <td>-7.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WHIRLPOOL/index.html">WHIRLPOOL</a></td>
+        <td>37</td>
+        <td>59.5%</td>
+        <td>0.99</td>
+        <td>4.5%</td>
+        <td>-3.6%</td>
+        <td>15.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WIPRO/index.html">WIPRO</a></td>
+        <td>86</td>
+        <td>48.8%</td>
+        <td>0.21</td>
+        <td>1.5%</td>
+        <td>-8.9%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/WOCKPHARMA/index.html">WOCKPHARMA</a></td>
+        <td>62</td>
+        <td>56.5%</td>
+        <td>0.71</td>
+        <td>3.8%</td>
+        <td>-4.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/YESBANK/index.html">YESBANK</a></td>
+        <td>61</td>
+        <td>62.3%</td>
+        <td>0.71</td>
+        <td>4.2%</td>
+        <td>-6.9%</td>
+        <td>20.4</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ZEEL/index.html">ZEEL</a></td>
+        <td>89</td>
+        <td>67.4%</td>
+        <td>0.51</td>
+        <td>3.9%</td>
+        <td>-5.2%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ZENSARTECH/index.html">ZENSARTECH</a></td>
+        <td>50</td>
+        <td>48.0%</td>
+        <td>0.33</td>
+        <td>1.4%</td>
+        <td>-12.4%</td>
+        <td>22.9</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ZENTEC/index.html">ZENTEC</a></td>
+        <td>39</td>
+        <td>51.3%</td>
+        <td>0.31</td>
+        <td>2.2%</td>
+        <td>-7.2%</td>
+        <td>10.7</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ZFCVINDIA/index.html">ZFCVINDIA</a></td>
+        <td>36</td>
+        <td>55.6%</td>
+        <td>0.95</td>
+        <td>3.8%</td>
+        <td>-4.4%</td>
+        <td>17.2</td>
+      </tr>
+
+      <tr>
+        <td><a href="stocks/ZYDUSLIFE/index.html">ZYDUSLIFE</a></td>
+        <td>65</td>
+        <td>55.4%</td>
+        <td>0.56</td>
+        <td>3.1%</td>
+        <td>-6.0%</td>
+        <td>22.8</td>
+      </tr>
+
+    </table>
+  </div>
+
+</body>
+</html>
