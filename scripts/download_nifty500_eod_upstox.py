@@ -175,11 +175,25 @@ def merge_with_existing(symbol: str, df_new: pd.DataFrame) -> pd.DataFrame:
         if col not in df_new.columns:
             df_new[col] = pd.NA
 
-    df = pd.concat([df_old, df_new], ignore_index=True)
-    df["Date"] = pd.to_datetime(df["Date"])
-    df = df.drop_duplicates(subset=["Date"]).sort_values("Date")
+    
+    frames = []
 
-    return df
+if df_old is not None and not df_old.empty:
+    frames.append(df_old)
+
+if df_new is not None and not df_new.empty:
+    frames.append(df_new)
+
+if not frames:
+    # no old or new data → return empty DF
+    return pd.DataFrame(columns=["Date", "Open", "High", "Low", "Close", "Volume"])
+
+df = pd.concat(frames, ignore_index=True)
+df["Date"] = pd.to_datetime(df["Date"])
+df = df.drop_duplicates(subset=["Date"]).sort_values("Date")
+
+return df
+
 
 
 def save_symbol_data(symbol: str, df: pd.DataFrame):
@@ -240,6 +254,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
