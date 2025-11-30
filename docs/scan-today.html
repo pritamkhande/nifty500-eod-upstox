@@ -10,7 +10,11 @@
 
 <header class="header">
   <h1>Scan Today – Gann Live Signals</h1>
-  <p>Daily list of fresh Gann square signals across all stocks (based on latest EOD).</p>
+  <p>
+    Gann Price–Time / Price–Date squaring signals from your system,
+    split into <strong>Today’s signals</strong> and
+    <strong>all signals in the current month</strong>.
+  </p>
 
   <nav class="nav">
     <a href="index.html" class="nav-link">Indices</a>
@@ -21,11 +25,36 @@
 </header>
 
 <main class="container">
+
+  <!-- Explanation of logic: EOD vs early close -->
   <section class="panel">
-    <h2 class="section-title">Today’s Signals</h2>
+    <h2 class="section-title">How this scan works</h2>
     <p class="section-subtitle">
-      This table is where we will display all symbols that generated a new Gann square signal today
-      (long / short), using the same swing and squaring logic as the backtest.
+      The core Gann logic always runs on the <strong>full daily bar</strong> (H, L, O, C)
+      of the last completed session. That is how swings and squares are detected and
+      how the backtest is generated.
+    </p>
+    <p class="section-subtitle">
+      In addition, you are now collecting an <strong>early close</strong> for every
+      stock – approximately 10 minutes before the market close. If the early close
+      is still within a safe margin from the square levels, then you can
+      <strong>pre-enter</strong> the trade on the <strong>signal date itself</strong>,
+      instead of waiting for next-day confirmation.
+    </p>
+    <p class="section-subtitle">
+      This page is designed exactly for that:
+      it shows which stocks generated signals, and whether the early-close price
+      keeps the signal safe or already too close to the “flip” point.
+    </p>
+  </section>
+
+  <!-- Section 1: Today's signals -->
+  <section class="panel">
+    <h2 class="section-title">Today’s Signals (latest trading day)</h2>
+    <p class="section-subtitle">
+      All stocks where a new Gann square signal has appeared on the
+      <strong>most recent trading day</strong>. This is the list you watch
+      during the last 10–15 minutes of the session using early-close prices.
     </p>
 
     <div class="table-wrapper">
@@ -35,22 +64,76 @@
             <th>Symbol</th>
             <th>Side</th>
             <th>Signal Date</th>
+            <th>Entry Date (Backtest)</th>
             <th>Entry Price</th>
             <th>Square Type</th>
-            <th>R-Multiple (Backtest)</th>
-            <th>Link</th>
+            <th>Early Close</th>
+            <th>Neutral Margin (pts)</th>
+            <th>Flip Margin (pts)</th>
+            <th>Backtest Edge (R)</th>
+            <th>Report</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="today-signals-body">
+          <!-- Backend will populate this from scan_today_all JSON.
+               For now, a placeholder row so the UI is visible. -->
           <tr>
-            <td colspan="7" style="text-align:center; color:#aaa;">
-              Backend scan will populate this table from a daily JSON/CSV file (e.g. data/scan_today_all.csv).
+            <td colspan="11" style="text-align:center; color:#aaa;">
+              Today’s live signals will appear here after we connect the daily scan script.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-subtitle">
+      Interpretation:
+      <br>
+      – <strong>Neutral Margin</strong> ≈ how many points the price can still move
+      before the signal becomes unsafe but not opposite.<br>
+      – <strong>Flip Margin</strong> ≈ how many points remain before the square level
+      is broken in the opposite direction and the setup flips (buy → sell or sell → buy).
+    </p>
+  </section>
+
+  <!-- Section 2: Signals in current month -->
+  <section class="panel">
+    <h2 class="section-title">Signals in Current Month</h2>
+    <p class="section-subtitle">
+      Overview of all signals generated in the <strong>current calendar month</strong>.
+      This helps you understand which stocks are currently “in play” under the Gann
+      square logic and how many setups this system is producing recently.
+    </p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Side</th>
+            <th>Signal Date</th>
+            <th>Entry Date</th>
+            <th>Square Type</th>
+            <th>R-Multiple</th>
+            <th>Early Close (if any)</th>
+            <th>Neutral Margin (pts)</th>
+            <th>Flip Margin (pts)</th>
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody id="month-signals-body">
+          <!-- Backend will populate this from scan_today_all JSON.
+               For now, a placeholder row so the UI is visible. -->
+          <tr>
+            <td colspan="10" style="text-align:center; color:#aaa;">
+              Current-month signals will appear here once the monthly scan is connected.
             </td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
+
 </main>
 
 </body>
