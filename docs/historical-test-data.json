@@ -1106,7 +1106,7 @@
     "profit_factor": 7.32,
     "max_dd": -191.31,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "CDSL",
     "link": "stocks/CDSL/index.html"
   },
@@ -1914,13 +1914,13 @@
     "link": "stocks/GICRE/index.html"
   },
   {
-    "total_trades": 52,
-    "winrate": 55.77,
-    "avg_r": 0.5904,
-    "profit_factor": 3.4,
+    "total_trades": 53,
+    "winrate": 56.6,
+    "avg_r": 0.5822,
+    "profit_factor": 3.41,
     "max_dd": -346.42,
-    "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 40.0,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 50.0,
     "symbol": "GILLETTE",
     "link": "stocks/GILLETTE/index.html"
   },
@@ -2849,13 +2849,13 @@
     "link": "stocks/JIOFIN/index.html"
   },
   {
-    "total_trades": 53,
-    "winrate": 64.15,
-    "avg_r": 0.9075,
-    "profit_factor": 5.91,
+    "total_trades": 54,
+    "winrate": 64.81,
+    "avg_r": 0.9081,
+    "profit_factor": 6.01,
     "max_dd": -274.86,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 42.86,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "JKCEMENT",
     "link": "stocks/JKCEMENT/index.html"
   },
@@ -3647,7 +3647,7 @@
     "profit_factor": 8.29,
     "max_dd": -258.16,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 77.78,
+    "last_3_year_winrate": 87.5,
     "symbol": "NATCOPHARM",
     "link": "stocks/NATCOPHARM/index.html"
   },
@@ -4186,7 +4186,7 @@
     "profit_factor": 16.22,
     "max_dd": -100.0,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 83.33,
+    "last_3_year_winrate": 80.0,
     "symbol": "POLYCAB",
     "link": "stocks/POLYCAB/index.html"
   },
@@ -4675,13 +4675,13 @@
     "link": "stocks/SIEMENS/index.html"
   },
   {
-    "total_trades": 3,
-    "winrate": 33.33,
-    "avg_r": 0.0074,
-    "profit_factor": 1.02,
+    "total_trades": 4,
+    "winrate": 50.0,
+    "avg_r": 0.5985,
+    "profit_factor": 3.21,
     "max_dd": -100.0,
-    "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "SIGNATURE",
     "link": "stocks/SIGNATURE/index.html"
   },
@@ -5363,7 +5363,7 @@
     "profit_factor": 5.02,
     "max_dd": -100.0,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 90.0,
+    "last_3_year_winrate": 88.89,
     "symbol": "VIJAYA",
     "link": "stocks/VIJAYA/index.html"
   },
