@@ -121,13 +121,13 @@
     "link": "stocks/ABREL/index.html"
   },
   {
-    "total_trades": 11,
-    "winrate": 54.55,
-    "avg_r": 0.6638,
-    "profit_factor": 3.06,
+    "total_trades": 12,
+    "winrate": 58.33,
+    "avg_r": 0.637,
+    "profit_factor": 3.16,
     "max_dd": -189.31,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 28.57,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 37.5,
     "symbol": "ABSLAMC",
     "link": "stocks/ABSLAMC/index.html"
   },
@@ -159,7 +159,7 @@
     "avg_r": 0.9098,
     "profit_factor": 11.43,
     "max_dd": -26.16,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 66.67,
     "symbol": "ACMESOLAR",
     "link": "stocks/ACMESOLAR/index.html"
@@ -286,13 +286,13 @@
     "link": "stocks/AIAENG/index.html"
   },
   {
-    "total_trades": 3,
-    "winrate": 66.67,
-    "avg_r": 0.622,
-    "profit_factor": 4.2,
+    "total_trades": 4,
+    "winrate": 75.0,
+    "avg_r": 0.5605,
+    "profit_factor": 4.85,
     "max_dd": 0.0,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 75.0,
     "symbol": "AIIL",
     "link": "stocks/AIIL/index.html"
   },
@@ -627,13 +627,13 @@
     "link": "stocks/AWL/index.html"
   },
   {
-    "total_trades": 66,
-    "winrate": 63.64,
-    "avg_r": 0.8846,
-    "profit_factor": 6.32,
+    "total_trades": 67,
+    "winrate": 64.18,
+    "avg_r": 0.8766,
+    "profit_factor": 6.36,
     "max_dd": -162.14,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 71.43,
     "symbol": "AXISBANK",
     "link": "stocks/AXISBANK/index.html"
   },
@@ -2035,13 +2035,13 @@
     "link": "stocks/GODREJPROP/index.html"
   },
   {
-    "total_trades": 27,
-    "winrate": 55.56,
-    "avg_r": 0.4941,
-    "profit_factor": 3.94,
+    "total_trades": 28,
+    "winrate": 57.14,
+    "avg_r": 0.5093,
+    "profit_factor": 4.14,
     "max_dd": -104.76,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 75.0,
+    "last_3_year_winrate": 53.85,
     "symbol": "GPIL",
     "link": "stocks/GPIL/index.html"
   },
@@ -2073,7 +2073,7 @@
     "avg_r": 1.2423,
     "profit_factor": 7.99,
     "max_dd": -176.19,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 50.0,
     "symbol": "GRASIM",
     "link": "stocks/GRASIM/index.html"
@@ -2623,7 +2623,7 @@
     "avg_r": 1.2617,
     "profit_factor": 6.28,
     "max_dd": -95.51,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 75.0,
     "symbol": "INOXINDIA",
     "link": "stocks/INOXINDIA/index.html"
@@ -2795,12 +2795,12 @@
   },
   {
     "total_trades": 35,
-    "winrate": 57.14,
-    "avg_r": 0.5166,
-    "profit_factor": 3.53,
+    "winrate": 54.29,
+    "avg_r": 0.4713,
+    "profit_factor": 3.28,
     "max_dd": -285.75,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 57.14,
+    "last_1_year_winrate": 0.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "JBMA",
     "link": "stocks/JBMA/index.html"
   },
@@ -3124,13 +3124,13 @@
     "link": "stocks/KPIL/index.html"
   },
   {
-    "total_trades": 15,
-    "winrate": 73.33,
-    "avg_r": 1.6933,
-    "profit_factor": 11.54,
+    "total_trades": 16,
+    "winrate": 75.0,
+    "avg_r": 1.6078,
+    "profit_factor": 11.68,
     "max_dd": -217.65,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 57.14,
     "symbol": "KPITTECH",
     "link": "stocks/KPITTECH/index.html"
   },
@@ -4158,13 +4158,13 @@
     "link": "stocks/PNB/index.html"
   },
   {
-    "total_trades": 10,
-    "winrate": 80.0,
-    "avg_r": 1.1026,
-    "profit_factor": 6.66,
+    "total_trades": 11,
+    "winrate": 81.82,
+    "avg_r": 1.0444,
+    "profit_factor": 6.9,
     "max_dd": -194.87,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 71.43,
+    "last_3_year_winrate": 75.0,
     "symbol": "POLICYBZR",
     "link": "stocks/POLICYBZR/index.html"
   },
@@ -4306,7 +4306,7 @@
     "avg_r": 1.0407,
     "profit_factor": 16.46,
     "max_dd": -54.91,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 62.5,
     "symbol": "RAILTEL",
     "link": "stocks/RAILTEL/index.html"
@@ -5131,7 +5131,7 @@
     "avg_r": 0.7172,
     "profit_factor": 6.07,
     "max_dd": -111.37,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 77.78,
     "symbol": "TORNTPOWER",
     "link": "stocks/TORNTPOWER/index.html"
