@@ -93,7 +93,7 @@
     "avg_r": 0.4349,
     "profit_factor": 4.18,
     "max_dd": -137.92,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 50.0,
     "symbol": "ABFRL",
     "link": "stocks/ABFRL/index.html"
@@ -1028,7 +1028,7 @@
     "avg_r": 0.818,
     "profit_factor": 3.4,
     "max_dd": -195.36,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 44.44,
     "symbol": "CAMS",
     "link": "stocks/CAMS/index.html"
@@ -2260,7 +2260,7 @@
     "avg_r": 0.3539,
     "profit_factor": 2.56,
     "max_dd": -191.37,
-    "last_1_year_winrate": 80.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 69.23,
     "symbol": "HFCL",
     "link": "stocks/HFCL/index.html"
@@ -2513,7 +2513,7 @@
     "avg_r": 0.337,
     "profit_factor": 2.44,
     "max_dd": -70.46,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 66.67,
     "symbol": "IKS",
     "link": "stocks/IKS/index.html"
@@ -4581,7 +4581,7 @@
     "avg_r": 0.8314,
     "profit_factor": 5.92,
     "max_dd": -247.99,
-    "last_1_year_winrate": 60.0,
+    "last_1_year_winrate": 75.0,
     "last_3_year_winrate": 60.0,
     "symbol": "SBIN",
     "link": "stocks/SBIN/index.html"
