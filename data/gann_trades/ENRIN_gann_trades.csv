@@ -1,1 +1,2 @@
-
+trade_no,signal_index,signal_date,entry_index,exit_index,entry_date,exit_date,position,entry_price,exit_price,initial_stop_price,final_stop_price,R,pnl,exit_reason,square_type,pts_Tm1,pts_T,pts_T1,pts_T2,pts_T3,pts_T4
+1,126,2025-12-19,127,152,2025-12-22,2026-01-29,short,2722.0,2378.4500000000003,3082.957142857143,2378.4500000000003,0.9517750425456116,343.5499999999997,SL,price_time,130.5,105.5,128.5999999999999,126.5,96.90000000000009,143.5
