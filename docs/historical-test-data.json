@@ -330,13 +330,13 @@
     "link": "stocks/AKZOINDIA/index.html"
   },
   {
-    "total_trades": 21,
-    "winrate": 71.43,
-    "avg_r": 1.4563,
-    "profit_factor": 7.7,
+    "total_trades": 20,
+    "winrate": 75.0,
+    "avg_r": 1.552,
+    "profit_factor": 8.56,
     "max_dd": -160.41,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 80.0,
     "symbol": "ALKEM",
     "link": "stocks/ALKEM/index.html"
   },
@@ -1435,7 +1435,7 @@
     "avg_r": 1.0298,
     "profit_factor": 5.4,
     "max_dd": -305.61,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 57.14,
     "symbol": "CYIENT",
     "link": "stocks/CYIENT/index.html"
@@ -2453,13 +2453,13 @@
     "link": "stocks/IDEA/index.html"
   },
   {
-    "total_trades": 40,
-    "winrate": 60.0,
-    "avg_r": 0.6594,
-    "profit_factor": 4.29,
+    "total_trades": 41,
+    "winrate": 58.54,
+    "avg_r": 0.6189,
+    "profit_factor": 3.82,
     "max_dd": -221.73,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 38.46,
+    "last_1_year_winrate": 25.0,
+    "last_3_year_winrate": 35.71,
     "symbol": "IDFCFIRSTB",
     "link": "stocks/IDFCFIRSTB/index.html"
   },
@@ -3465,13 +3465,13 @@
     "link": "stocks/MAXHEALTH/index.html"
   },
   {
-    "total_trades": 15,
-    "winrate": 73.33,
-    "avg_r": 1.918,
-    "profit_factor": 15.42,
+    "total_trades": 16,
+    "winrate": 68.75,
+    "avg_r": 1.7587,
+    "profit_factor": 11.71,
     "max_dd": -149.02,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 71.43,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 62.5,
     "symbol": "MAZDOCK",
     "link": "stocks/MAZDOCK/index.html"
   },
@@ -4807,13 +4807,13 @@
     "link": "stocks/SUNDRMFAST/index.html"
   },
   {
-    "total_trades": 67,
-    "winrate": 64.18,
-    "avg_r": 0.8588,
-    "profit_factor": 6.92,
+    "total_trades": 66,
+    "winrate": 63.64,
+    "avg_r": 0.8672,
+    "profit_factor": 6.88,
     "max_dd": -163.28,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 71.43,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "SUNPHARMA",
     "link": "stocks/SUNPHARMA/index.html"
   },
@@ -4851,13 +4851,13 @@
     "link": "stocks/SUZLON/index.html"
   },
   {
-    "total_trades": 35,
-    "winrate": 60.0,
-    "avg_r": 0.3898,
-    "profit_factor": 3.66,
+    "total_trades": 36,
+    "winrate": 58.33,
+    "avg_r": 0.3512,
+    "profit_factor": 3.06,
     "max_dd": -113.21,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 71.43,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 62.5,
     "symbol": "SWANCORP",
     "link": "stocks/SWANCORP/index.html"
   },
@@ -5021,7 +5021,7 @@
     "avg_r": 1.213,
     "profit_factor": 9.64,
     "max_dd": -177.77,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 66.67,
     "symbol": "TECHM",
     "link": "stocks/TECHM/index.html"
@@ -5060,13 +5060,13 @@
     "link": "stocks/THELEELA/index.html"
   },
   {
-    "total_trades": 57,
-    "winrate": 68.42,
-    "avg_r": 1.2984,
-    "profit_factor": 7.66,
+    "total_trades": 56,
+    "winrate": 67.86,
+    "avg_r": 1.319,
+    "profit_factor": 7.65,
     "max_dd": -342.63,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 83.33,
+    "last_3_year_winrate": 80.0,
     "symbol": "THERMAX",
     "link": "stocks/THERMAX/index.html"
   },
@@ -5280,13 +5280,13 @@
     "link": "stocks/UNOMINDA/index.html"
   },
   {
-    "total_trades": 82,
-    "winrate": 58.54,
-    "avg_r": 0.678,
-    "profit_factor": 4.78,
+    "total_trades": 83,
+    "winrate": 57.83,
+    "avg_r": 0.6593,
+    "profit_factor": 4.52,
     "max_dd": -480.91,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 62.5,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 55.56,
     "symbol": "UPL",
     "link": "stocks/UPL/index.html"
   },
