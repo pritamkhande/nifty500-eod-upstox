@@ -1982,8 +1982,8 @@
   {
     "total_trades": 60,
     "winrate": 70.0,
-    "avg_r": 0.7526,
-    "profit_factor": 5.85,
+    "avg_r": 0.7617,
+    "profit_factor": 6.21,
     "max_dd": -149.37,
     "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 55.56,
@@ -2519,13 +2519,13 @@
     "link": "stocks/IIFL/index.html"
   },
   {
-    "total_trades": 2,
-    "winrate": 100.0,
-    "avg_r": 0.8578,
-    "profit_factor": 999.0,
-    "max_dd": 0.0,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 100.0,
+    "total_trades": 3,
+    "winrate": 66.67,
+    "avg_r": 0.3764,
+    "profit_factor": 2.92,
+    "max_dd": -58.66,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "IKS",
     "link": "stocks/IKS/index.html"
   },
@@ -2849,13 +2849,13 @@
     "link": "stocks/JIOFIN/index.html"
   },
   {
-    "total_trades": 55,
-    "winrate": 63.64,
-    "avg_r": 0.8742,
-    "profit_factor": 5.47,
+    "total_trades": 54,
+    "winrate": 64.81,
+    "avg_r": 0.9081,
+    "profit_factor": 6.01,
     "max_dd": -274.86,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 44.44,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 50.0,
     "symbol": "JKCEMENT",
     "link": "stocks/JKCEMENT/index.html"
   },
@@ -3454,13 +3454,13 @@
     "link": "stocks/MARUTI/index.html"
   },
   {
-    "total_trades": 13,
-    "winrate": 53.85,
-    "avg_r": 0.3246,
-    "profit_factor": 2.17,
+    "total_trades": 14,
+    "winrate": 57.14,
+    "avg_r": 0.392,
+    "profit_factor": 2.52,
     "max_dd": -192.26,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 33.33,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 42.86,
     "symbol": "MAXHEALTH",
     "link": "stocks/MAXHEALTH/index.html"
   },
@@ -3828,13 +3828,13 @@
     "link": "stocks/NMDC/index.html"
   },
   {
-    "total_trades": 12,
-    "winrate": 33.33,
-    "avg_r": -0.2439,
-    "profit_factor": 0.27,
-    "max_dd": -205.59,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 33.33,
+    "total_trades": 13,
+    "winrate": 30.77,
+    "avg_r": -0.298,
+    "profit_factor": 0.22,
+    "max_dd": -300.24,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 30.77,
     "symbol": "NSLNISP",
     "link": "stocks/NSLNISP/index.html"
   },
@@ -3850,13 +3850,13 @@
     "link": "stocks/NTPCGREEN/index.html"
   },
   {
-    "total_trades": 86,
-    "winrate": 63.95,
-    "avg_r": 0.4975,
-    "profit_factor": 3.7,
+    "total_trades": 84,
+    "winrate": 64.29,
+    "avg_r": 0.4989,
+    "profit_factor": 3.76,
     "max_dd": -268.44,
-    "last_1_year_winrate": 40.0,
-    "last_3_year_winrate": 53.85,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 54.55,
     "symbol": "NTPC",
     "link": "stocks/NTPC/index.html"
   },
@@ -4268,13 +4268,13 @@
     "link": "stocks/PREMIERENE/index.html"
   },
   {
-    "total_trades": 45,
-    "winrate": 60.0,
-    "avg_r": 0.6599,
-    "profit_factor": 4.29,
+    "total_trades": 46,
+    "winrate": 58.7,
+    "avg_r": 0.6324,
+    "profit_factor": 4.02,
     "max_dd": -176.91,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 42.86,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 37.5,
     "symbol": "PRESTIGE",
     "link": "stocks/PRESTIGE/index.html"
   },
@@ -4301,13 +4301,13 @@
     "link": "stocks/PVRINOX/index.html"
   },
   {
-    "total_trades": 69,
-    "winrate": 60.87,
-    "avg_r": 0.8487,
-    "profit_factor": 6.56,
+    "total_trades": 70,
+    "winrate": 61.43,
+    "avg_r": 0.8536,
+    "profit_factor": 6.68,
     "max_dd": -224.32,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 71.43,
     "symbol": "RADICO",
     "link": "stocks/RADICO/index.html"
   },
@@ -4444,13 +4444,13 @@
     "link": "stocks/RKFORGE/index.html"
   },
   {
-    "total_trades": 52,
-    "winrate": 69.23,
-    "avg_r": 0.9605,
-    "profit_factor": 8.0,
-    "max_dd": -118.32,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 55.56,
+    "total_trades": 53,
+    "winrate": 67.92,
+    "avg_r": 0.9295,
+    "profit_factor": 7.3,
+    "max_dd": -139.06,
+    "last_1_year_winrate": 25.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "RPOWER",
     "link": "stocks/RPOWER/index.html"
   },
