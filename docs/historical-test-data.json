@@ -511,7 +511,7 @@
     "avg_r": 0.5773,
     "profit_factor": 4.63,
     "max_dd": -158.89,
-    "last_1_year_winrate": 40.0,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 61.54,
     "symbol": "ASHOKLEY",
     "link": "stocks/ASHOKLEY/index.html"
@@ -709,7 +709,7 @@
     "avg_r": 0.5751,
     "profit_factor": 3.83,
     "max_dd": -254.92,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 70.0,
     "symbol": "BALRAMCHIN",
     "link": "stocks/BALRAMCHIN/index.html"
@@ -1039,7 +1039,7 @@
     "avg_r": 0.4904,
     "profit_factor": 3.0,
     "max_dd": -390.26,
-    "last_1_year_winrate": 83.33,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 52.63,
     "symbol": "CANBK",
     "link": "stocks/CANBK/index.html"
@@ -1171,7 +1171,7 @@
     "avg_r": 0.5953,
     "profit_factor": 3.82,
     "max_dd": -206.49,
-    "last_1_year_winrate": 75.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 45.45,
     "symbol": "CGCL",
     "link": "stocks/CGCL/index.html"
@@ -1699,7 +1699,7 @@
     "avg_r": 1.1535,
     "profit_factor": 6.56,
     "max_dd": -155.11,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 62.5,
     "symbol": "ENDURANCE",
     "link": "stocks/ENDURANCE/index.html"
@@ -4163,7 +4163,7 @@
     "avg_r": 1.1024,
     "profit_factor": 9.78,
     "max_dd": -149.33,
-    "last_1_year_winrate": 60.0,
+    "last_1_year_winrate": 75.0,
     "last_3_year_winrate": 76.92,
     "symbol": "PNB",
     "link": "stocks/PNB/index.html"
