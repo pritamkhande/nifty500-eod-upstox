@@ -1007,7 +1007,7 @@
     "profit_factor": 3.95,
     "max_dd": -321.56,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 55.56,
+    "last_3_year_winrate": 50.0,
     "symbol": "BSOFT",
     "link": "stocks/BSOFT/index.html"
   },
@@ -2008,7 +2008,7 @@
     "profit_factor": 3.22,
     "max_dd": -222.0,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 42.86,
+    "last_3_year_winrate": 33.33,
     "symbol": "GODREJAGRO",
     "link": "stocks/GODREJAGRO/index.html"
   },
@@ -2965,7 +2965,7 @@
     "profit_factor": 9.49,
     "max_dd": -258.35,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 75.0,
+    "last_3_year_winrate": 71.43,
     "symbol": "JUBLPHARMA",
     "link": "stocks/JUBLPHARMA/index.html"
   },
@@ -3746,7 +3746,7 @@
     "profit_factor": 4.65,
     "max_dd": -200.91,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 37.5,
+    "last_3_year_winrate": 28.57,
     "symbol": "NEULANDLAB",
     "link": "stocks/NEULANDLAB/index.html"
   },
@@ -4351,7 +4351,7 @@
     "profit_factor": 7.76,
     "max_dd": -228.33,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 62.5,
     "symbol": "RBLBANK",
     "link": "stocks/RBLBANK/index.html"
   },
@@ -4934,7 +4934,7 @@
     "profit_factor": 3.96,
     "max_dd": -202.27,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 55.56,
+    "last_3_year_winrate": 62.5,
     "symbol": "TATACONSUM",
     "link": "stocks/TATACONSUM/index.html"
   },
@@ -5121,7 +5121,7 @@
     "profit_factor": 9.96,
     "max_dd": -148.32,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 55.56,
     "symbol": "TMPV",
     "link": "stocks/TMPV/index.html"
   },
@@ -5308,7 +5308,7 @@
     "profit_factor": 5.24,
     "max_dd": -173.69,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 71.43,
+    "last_3_year_winrate": 66.67,
     "symbol": "UTIAMC",
     "link": "stocks/UTIAMC/index.html"
   },
