@@ -528,13 +528,13 @@
     "link": "stocks/ASIANPAINT/index.html"
   },
   {
-    "total_trades": 23,
-    "winrate": 73.91,
-    "avg_r": 0.9158,
-    "profit_factor": 7.49,
+    "total_trades": 24,
+    "winrate": 70.83,
+    "avg_r": 0.8398,
+    "profit_factor": 5.85,
     "max_dd": -130.4,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 100.0,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 80.0,
     "symbol": "ASTERDM",
     "link": "stocks/ASTERDM/index.html"
   },
@@ -726,13 +726,13 @@
     "link": "stocks/BANDHANBNK/index.html"
   },
   {
-    "total_trades": 101,
-    "winrate": 64.36,
-    "avg_r": 0.6047,
-    "profit_factor": 4.67,
-    "max_dd": -170.3,
-    "last_1_year_winrate": 40.0,
-    "last_3_year_winrate": 56.25,
+    "total_trades": 102,
+    "winrate": 63.73,
+    "avg_r": 0.5894,
+    "profit_factor": 4.42,
+    "max_dd": -184.16,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 52.94,
     "symbol": "BANKBARODA",
     "link": "stocks/BANKBARODA/index.html"
   },
@@ -2282,7 +2282,7 @@
     "avg_r": 0.6376,
     "profit_factor": 6.11,
     "max_dd": -140.37,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 42.86,
     "symbol": "HINDALCO",
     "link": "stocks/HINDALCO/index.html"
@@ -2513,7 +2513,7 @@
     "avg_r": 0.4832,
     "profit_factor": 3.32,
     "max_dd": -193.31,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 57.14,
     "symbol": "IIFL",
     "link": "stocks/IIFL/index.html"
@@ -3696,13 +3696,13 @@
     "link": "stocks/NAVINFLUOR/index.html"
   },
   {
-    "total_trades": 40,
-    "winrate": 42.5,
-    "avg_r": 0.1461,
-    "profit_factor": 1.4,
+    "total_trades": 41,
+    "winrate": 41.46,
+    "avg_r": 0.1238,
+    "profit_factor": 1.33,
     "max_dd": -380.25,
-    "last_1_year_winrate": 16.67,
-    "last_3_year_winrate": 46.15,
+    "last_1_year_winrate": 14.29,
+    "last_3_year_winrate": 42.86,
     "symbol": "NBCC",
     "link": "stocks/NBCC/index.html"
   },
@@ -3993,13 +3993,13 @@
     "link": "stocks/ONESOURCE/index.html"
   },
   {
-    "total_trades": 91,
-    "winrate": 59.34,
-    "avg_r": 0.8494,
+    "total_trades": 92,
+    "winrate": 59.78,
+    "avg_r": 0.8402,
     "profit_factor": 5.93,
     "max_dd": -250.73,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 75.0,
+    "last_1_year_winrate": 75.0,
+    "last_3_year_winrate": 77.78,
     "symbol": "ONGC",
     "link": "stocks/ONGC/index.html"
   },
@@ -4273,7 +4273,7 @@
     "avg_r": 0.6324,
     "profit_factor": 4.02,
     "max_dd": -176.91,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 37.5,
     "symbol": "PRESTIGE",
     "link": "stocks/PRESTIGE/index.html"
@@ -4422,13 +4422,13 @@
     "link": "stocks/RHIM/index.html"
   },
   {
-    "total_trades": 33,
-    "winrate": 60.61,
-    "avg_r": 0.1043,
-    "profit_factor": 1.4,
+    "total_trades": 34,
+    "winrate": 58.82,
+    "avg_r": 0.0718,
+    "profit_factor": 1.25,
     "max_dd": -329.03,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 80.0,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 72.73,
     "symbol": "RITES",
     "link": "stocks/RITES/index.html"
   },
@@ -4515,7 +4515,7 @@
     "avg_r": 1.1285,
     "profit_factor": 12.16,
     "max_dd": -89.53,
-    "last_1_year_winrate": 60.0,
+    "last_1_year_winrate": 75.0,
     "last_3_year_winrate": 66.67,
     "symbol": "SAMMAANCAP",
     "link": "stocks/SAMMAANCAP/index.html"
@@ -4576,13 +4576,13 @@
     "link": "stocks/SBICARD/index.html"
   },
   {
-    "total_trades": 18,
-    "winrate": 55.56,
-    "avg_r": 0.4458,
-    "profit_factor": 2.92,
-    "max_dd": -172.29,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 83.33,
+    "total_trades": 19,
+    "winrate": 52.63,
+    "avg_r": 0.382,
+    "profit_factor": 2.47,
+    "max_dd": -176.7,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 71.43,
     "symbol": "SBILIFE",
     "link": "stocks/SBILIFE/index.html"
   },
@@ -5489,13 +5489,13 @@
     "link": "stocks/ZEEL/index.html"
   },
   {
-    "total_trades": 51,
-    "winrate": 49.02,
-    "avg_r": 0.3261,
-    "profit_factor": 1.96,
+    "total_trades": 52,
+    "winrate": 48.08,
+    "avg_r": 0.3072,
+    "profit_factor": 1.88,
     "max_dd": -652.52,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "ZENSARTECH",
     "link": "stocks/ZENSARTECH/index.html"
   },
