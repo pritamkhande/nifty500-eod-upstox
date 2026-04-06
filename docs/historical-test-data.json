@@ -127,7 +127,7 @@
     "profit_factor": 2.89,
     "max_dd": -226.37,
     "last_1_year_winrate": 25.0,
-    "last_3_year_winrate": 33.33,
+    "last_3_year_winrate": 25.0,
     "symbol": "ABSLAMC",
     "link": "stocks/ABSLAMC/index.html"
   },
@@ -434,7 +434,7 @@
     "avg_r": 1.0398,
     "profit_factor": 8.08,
     "max_dd": -106.45,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 60.0,
     "symbol": "APLAPOLLO",
     "link": "stocks/APLAPOLLO/index.html"
@@ -556,7 +556,7 @@
     "profit_factor": 4.68,
     "max_dd": -302.5,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 16.67,
+    "last_3_year_winrate": 20.0,
     "symbol": "ASTRAZEN",
     "link": "stocks/ASTRAZEN/index.html"
   },
@@ -819,7 +819,7 @@
     "avg_r": 1.1707,
     "profit_factor": 7.09,
     "max_dd": -275.8,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 50.0,
     "symbol": "BEML",
     "link": "stocks/BEML/index.html"
@@ -907,7 +907,7 @@
     "avg_r": 0.8089,
     "profit_factor": 5.65,
     "max_dd": -194.68,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 55.56,
     "symbol": "BLS",
     "link": "stocks/BLS/index.html"
@@ -1106,7 +1106,7 @@
     "profit_factor": 7.73,
     "max_dd": -191.31,
     "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "CDSL",
     "link": "stocks/CDSL/index.html"
   },
@@ -1667,7 +1667,7 @@
     "profit_factor": 2.79,
     "max_dd": -315.9,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 88.89,
+    "last_3_year_winrate": 87.5,
     "symbol": "ELGIEQUIP",
     "link": "stocks/ELGIEQUIP/index.html"
   },
@@ -1788,7 +1788,7 @@
     "profit_factor": 1.68,
     "max_dd": -541.33,
     "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 46.15,
+    "last_3_year_winrate": 50.0,
     "symbol": "FEDERALBNK",
     "link": "stocks/FEDERALBNK/index.html"
   },
@@ -2052,7 +2052,7 @@
     "profit_factor": 3.79,
     "max_dd": -104.76,
     "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 54.55,
     "symbol": "GPIL",
     "link": "stocks/GPIL/index.html"
   },
@@ -2085,7 +2085,7 @@
     "profit_factor": 7.41,
     "max_dd": -176.19,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "GRASIM",
     "link": "stocks/GRASIM/index.html"
   },
@@ -2305,7 +2305,7 @@
     "profit_factor": 4.34,
     "max_dd": -381.85,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 55.56,
+    "last_3_year_winrate": 50.0,
     "symbol": "HINDPETRO",
     "link": "stocks/HINDPETRO/index.html"
   },
@@ -2755,7 +2755,7 @@
     "avg_r": -0.2104,
     "profit_factor": 0.28,
     "max_dd": -116.67,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 50.0,
     "symbol": "ITCHOTELS",
     "link": "stocks/ITCHOTELS/index.html"
@@ -2821,7 +2821,7 @@
     "avg_r": 0.4771,
     "profit_factor": 2.83,
     "max_dd": -542.74,
-    "last_1_year_winrate": 80.0,
+    "last_1_year_winrate": 75.0,
     "last_3_year_winrate": 80.0,
     "symbol": "JINDALSAW",
     "link": "stocks/JINDALSAW/index.html"
@@ -2866,7 +2866,7 @@
     "profit_factor": 3.32,
     "max_dd": -463.24,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 62.5,
+    "last_3_year_winrate": 57.14,
     "symbol": "JKTYRE",
     "link": "stocks/JKTYRE/index.html"
   },
@@ -3470,7 +3470,7 @@
     "avg_r": 1.7814,
     "profit_factor": 13.6,
     "max_dd": -149.02,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 62.5,
     "symbol": "MAZDOCK",
     "link": "stocks/MAZDOCK/index.html"
@@ -3493,7 +3493,7 @@
     "profit_factor": 30.17,
     "max_dd": -171.77,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 62.5,
+    "last_3_year_winrate": 71.43,
     "symbol": "MEDANTA",
     "link": "stocks/MEDANTA/index.html"
   },
@@ -3625,7 +3625,7 @@
     "profit_factor": 9.3,
     "max_dd": -129.29,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 83.33,
+    "last_3_year_winrate": 80.0,
     "symbol": "MUTHOOTFIN",
     "link": "stocks/MUTHOOTFIN/index.html"
   },
@@ -4713,7 +4713,7 @@
     "avg_r": 0.8038,
     "profit_factor": 5.85,
     "max_dd": -187.41,
-    "last_1_year_winrate": 25.0,
+    "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 55.56,
     "symbol": "SOBHA",
     "link": "stocks/SOBHA/index.html"
@@ -4780,7 +4780,7 @@
     "profit_factor": 4.89,
     "max_dd": -135.92,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 44.44,
+    "last_3_year_winrate": 50.0,
     "symbol": "SUMICHEM",
     "link": "stocks/SUMICHEM/index.html"
   },
@@ -5044,7 +5044,7 @@
     "profit_factor": 7.99,
     "max_dd": -218.03,
     "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 42.86,
     "symbol": "TEJASNET",
     "link": "stocks/TEJASNET/index.html"
   },
@@ -5132,7 +5132,7 @@
     "profit_factor": 3.21,
     "max_dd": -382.66,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 57.14,
+    "last_3_year_winrate": 50.0,
     "symbol": "TORNTPHARM",
     "link": "stocks/TORNTPHARM/index.html"
   },
@@ -5153,7 +5153,7 @@
     "avg_r": 0.5981,
     "profit_factor": 4.0,
     "max_dd": -184.75,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 50.0,
     "symbol": "TRENT",
     "link": "stocks/TRENT/index.html"
