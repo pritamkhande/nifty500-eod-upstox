@@ -368,7 +368,7 @@
     "avg_r": 0.5109,
     "profit_factor": 2.43,
     "max_dd": -397.36,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 22.22,
     "symbol": "AMBER",
     "link": "stocks/AMBER/index.html"
@@ -3756,7 +3756,7 @@
     "avg_r": 1.9795,
     "profit_factor": 16.97,
     "max_dd": -170.15,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 85.71,
     "symbol": "NEWGEN",
     "link": "stocks/NEWGEN/index.html"
@@ -3844,7 +3844,7 @@
     "avg_r": 0.4798,
     "profit_factor": 3.9,
     "max_dd": -121.43,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 60.0,
     "last_3_year_winrate": 62.5,
     "symbol": "NTPCGREEN",
     "link": "stocks/NTPCGREEN/index.html"
@@ -4845,7 +4845,7 @@
     "avg_r": 0.7314,
     "profit_factor": 4.12,
     "max_dd": -215.29,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 40.0,
     "symbol": "SUZLON",
     "link": "stocks/SUZLON/index.html"
