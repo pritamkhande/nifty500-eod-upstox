@@ -44,13 +44,13 @@
     "link": "stocks/AARTIIND/index.html"
   },
   {
-    "total_trades": 17,
-    "winrate": 52.94,
-    "avg_r": 0.9313,
-    "profit_factor": 5.01,
+    "total_trades": 18,
+    "winrate": 50.0,
+    "avg_r": 0.8368,
+    "profit_factor": 4.19,
     "max_dd": -137.88,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 33.33,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 28.57,
     "symbol": "AAVAS",
     "link": "stocks/AAVAS/index.html"
   },
@@ -561,13 +561,13 @@
     "link": "stocks/ASTRAZEN/index.html"
   },
   {
-    "total_trades": 24,
-    "winrate": 87.5,
-    "avg_r": 1.423,
-    "profit_factor": 45.64,
+    "total_trades": 23,
+    "winrate": 91.3,
+    "avg_r": 1.4971,
+    "profit_factor": 72.2,
     "max_dd": -38.53,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 87.5,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 100.0,
     "symbol": "ATGL",
     "link": "stocks/ATGL/index.html"
   },
@@ -583,13 +583,13 @@
     "link": "stocks/ATHERENERG/index.html"
   },
   {
-    "total_trades": 61,
-    "winrate": 63.93,
-    "avg_r": 0.9794,
-    "profit_factor": 5.69,
+    "total_trades": 62,
+    "winrate": 64.52,
+    "avg_r": 0.9717,
+    "profit_factor": 5.73,
     "max_dd": -201.06,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 66.67,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 71.43,
     "symbol": "ATUL",
     "link": "stocks/ATUL/index.html"
   },
@@ -742,7 +742,7 @@
     "avg_r": 0.8741,
     "profit_factor": 7.11,
     "max_dd": -164.89,
-    "last_1_year_winrate": 25.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 50.0,
     "symbol": "BANKINDIA",
     "link": "stocks/BANKINDIA/index.html"
@@ -1039,7 +1039,7 @@
     "avg_r": 0.4825,
     "profit_factor": 2.96,
     "max_dd": -390.26,
-    "last_1_year_winrate": 83.33,
+    "last_1_year_winrate": 80.0,
     "last_3_year_winrate": 47.37,
     "symbol": "CANBK",
     "link": "stocks/CANBK/index.html"
@@ -1083,7 +1083,7 @@
     "avg_r": 0.3455,
     "profit_factor": 2.49,
     "max_dd": -616.51,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 50.0,
     "symbol": "CASTROLIND",
     "link": "stocks/CASTROLIND/index.html"
@@ -1694,13 +1694,13 @@
     "link": "stocks/EMCURE/index.html"
   },
   {
-    "total_trades": 22,
-    "winrate": 59.09,
-    "avg_r": 1.0765,
-    "profit_factor": 5.84,
+    "total_trades": 21,
+    "winrate": 61.9,
+    "avg_r": 1.1535,
+    "profit_factor": 6.56,
     "max_dd": -155.11,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 57.14,
     "symbol": "ENDURANCE",
     "link": "stocks/ENDURANCE/index.html"
   },
@@ -1710,7 +1710,7 @@
     "avg_r": 0.4696,
     "profit_factor": 3.34,
     "max_dd": -268.26,
-    "last_1_year_winrate": 60.0,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 75.0,
     "symbol": "ENGINERSIN",
     "link": "stocks/ENGINERSIN/index.html"
@@ -2068,13 +2068,13 @@
     "link": "stocks/GRANULES/index.html"
   },
   {
-    "total_trades": 77,
-    "winrate": 50.65,
-    "avg_r": 0.3798,
-    "profit_factor": 2.37,
+    "total_trades": 78,
+    "winrate": 51.28,
+    "avg_r": 0.3912,
+    "profit_factor": 2.43,
     "max_dd": -451.71,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 57.14,
+    "last_3_year_winrate": 62.5,
     "symbol": "GRAPHITE",
     "link": "stocks/GRAPHITE/index.html"
   },
@@ -2502,7 +2502,7 @@
     "avg_r": 0.4538,
     "profit_factor": 3.42,
     "max_dd": -216.02,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 60.0,
     "last_3_year_winrate": 46.15,
     "symbol": "IGL",
     "link": "stocks/IGL/index.html"
@@ -2827,13 +2827,13 @@
     "link": "stocks/JINDALSAW/index.html"
   },
   {
-    "total_trades": 60,
-    "winrate": 61.67,
-    "avg_r": 0.8854,
-    "profit_factor": 5.33,
+    "total_trades": 61,
+    "winrate": 60.66,
+    "avg_r": 0.8677,
+    "profit_factor": 5.24,
     "max_dd": -286.7,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_1_year_winrate": 75.0,
+    "last_3_year_winrate": 60.0,
     "symbol": "JINDALSTEL",
     "link": "stocks/JINDALSTEL/index.html"
   },
@@ -3267,13 +3267,13 @@
     "link": "stocks/LODHA/index.html"
   },
   {
-    "total_trades": 39,
-    "winrate": 53.85,
-    "avg_r": 0.4674,
-    "profit_factor": 3.89,
+    "total_trades": 40,
+    "winrate": 52.5,
+    "avg_r": 0.4307,
+    "profit_factor": 3.36,
     "max_dd": -171.49,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 77.78,
+    "last_1_year_winrate": 75.0,
+    "last_3_year_winrate": 70.0,
     "symbol": "LTFOODS",
     "link": "stocks/LTFOODS/index.html"
   },
@@ -3564,13 +3564,13 @@
     "link": "stocks/MOTHERSON/index.html"
   },
   {
-    "total_trades": 46,
-    "winrate": 56.52,
-    "avg_r": 0.7188,
-    "profit_factor": 3.63,
+    "total_trades": 47,
+    "winrate": 57.45,
+    "avg_r": 0.7158,
+    "profit_factor": 3.67,
     "max_dd": -513.35,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 57.14,
     "symbol": "MOTILALOFS",
     "link": "stocks/MOTILALOFS/index.html"
   },
@@ -3872,13 +3872,13 @@
     "link": "stocks/NUVAMA/index.html"
   },
   {
-    "total_trades": 18,
-    "winrate": 66.67,
-    "avg_r": 0.3764,
-    "profit_factor": 3.02,
+    "total_trades": 19,
+    "winrate": 68.42,
+    "avg_r": 0.3576,
+    "profit_factor": 3.03,
     "max_dd": -175.78,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 70.0,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 72.73,
     "symbol": "NUVOCO",
     "link": "stocks/NUVOCO/index.html"
   },
@@ -4218,7 +4218,7 @@
     "avg_r": 0.2713,
     "profit_factor": 2.26,
     "max_dd": -288.62,
-    "last_1_year_winrate": 80.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 72.73,
     "symbol": "POWERGRID",
     "link": "stocks/POWERGRID/index.html"
@@ -4416,7 +4416,7 @@
     "avg_r": 0.8838,
     "profit_factor": 5.44,
     "max_dd": -147.78,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 83.33,
     "symbol": "RHIM",
     "link": "stocks/RHIM/index.html"
@@ -4482,7 +4482,7 @@
     "avg_r": 0.6889,
     "profit_factor": 6.33,
     "max_dd": -64.62,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 80.0,
     "symbol": "SAGILITY",
     "link": "stocks/SAGILITY/index.html"
@@ -4631,13 +4631,13 @@
     "link": "stocks/SCI/index.html"
   },
   {
-    "total_trades": 46,
-    "winrate": 58.7,
-    "avg_r": 1.1289,
-    "profit_factor": 5.29,
+    "total_trades": 47,
+    "winrate": 57.45,
+    "avg_r": 1.0998,
+    "profit_factor": 5.18,
     "max_dd": -301.89,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 33.33,
+    "last_1_year_winrate": 33.33,
+    "last_3_year_winrate": 28.57,
     "symbol": "SHREECEM",
     "link": "stocks/SHREECEM/index.html"
   },
@@ -4691,7 +4691,7 @@
     "avg_r": 0.2832,
     "profit_factor": 2.87,
     "max_dd": -190.26,
-    "last_1_year_winrate": 75.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 66.67,
     "symbol": "SJVN",
     "link": "stocks/SJVN/index.html"
@@ -5390,13 +5390,13 @@
     "link": "stocks/VOLTAS/index.html"
   },
   {
-    "total_trades": 67,
-    "winrate": 59.7,
-    "avg_r": 0.5438,
-    "profit_factor": 3.57,
+    "total_trades": 68,
+    "winrate": 58.82,
+    "avg_r": 0.5307,
+    "profit_factor": 3.49,
     "max_dd": -409.62,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 87.5,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 77.78,
     "symbol": "VTL",
     "link": "stocks/VTL/index.html"
   },
