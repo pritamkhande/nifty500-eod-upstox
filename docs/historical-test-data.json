@@ -242,13 +242,13 @@
     "link": "stocks/AEGISVOPAK/index.html"
   },
   {
-    "total_trades": 5,
-    "winrate": 60.0,
-    "avg_r": 0.2982,
-    "profit_factor": 3.45,
+    "total_trades": 6,
+    "winrate": 66.67,
+    "avg_r": 0.3144,
+    "profit_factor": 4.1,
     "max_dd": -60.84,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "AFCONS",
     "link": "stocks/AFCONS/index.html"
   },
@@ -632,7 +632,7 @@
     "avg_r": 0.8513,
     "profit_factor": 6.04,
     "max_dd": -162.14,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 66.67,
     "symbol": "AXISBANK",
     "link": "stocks/AXISBANK/index.html"
@@ -1001,12 +1001,12 @@
     "link": "stocks/BSE/index.html"
   },
   {
-    "total_trades": 66,
-    "winrate": 56.06,
-    "avg_r": 0.7204,
-    "profit_factor": 3.95,
+    "total_trades": 68,
+    "winrate": 55.88,
+    "avg_r": 0.7162,
+    "profit_factor": 4.01,
     "max_dd": -321.56,
-    "last_1_year_winrate": 0.0,
+    "last_1_year_winrate": 25.0,
     "last_3_year_winrate": 50.0,
     "symbol": "BSOFT",
     "link": "stocks/BSOFT/index.html"
@@ -1045,13 +1045,13 @@
     "link": "stocks/CANBK/index.html"
   },
   {
-    "total_trades": 37,
-    "winrate": 62.16,
-    "avg_r": 0.7038,
-    "profit_factor": 5.78,
+    "total_trades": 38,
+    "winrate": 60.53,
+    "avg_r": 0.6619,
+    "profit_factor": 4.97,
     "max_dd": -113.34,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 55.56,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "CANFINHOME",
     "link": "stocks/CANFINHOME/index.html"
   },
@@ -1138,7 +1138,7 @@
     "avg_r": 0.603,
     "profit_factor": 2.98,
     "max_dd": -964.2,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 75.0,
     "symbol": "CENTURYPLY",
     "link": "stocks/CENTURYPLY/index.html"
@@ -1281,7 +1281,7 @@
     "avg_r": 0.6119,
     "profit_factor": 7.94,
     "max_dd": -100.0,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 62.5,
     "symbol": "COALINDIA",
     "link": "stocks/COALINDIA/index.html"
@@ -1320,13 +1320,13 @@
     "link": "stocks/COHANCE/index.html"
   },
   {
-    "total_trades": 66,
-    "winrate": 56.06,
-    "avg_r": 0.5594,
-    "profit_factor": 3.82,
+    "total_trades": 67,
+    "winrate": 55.22,
+    "avg_r": 0.5402,
+    "profit_factor": 3.62,
     "max_dd": -291.52,
-    "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 57.14,
     "symbol": "COLPAL",
     "link": "stocks/COLPAL/index.html"
   },
@@ -1611,7 +1611,7 @@
     "avg_r": 1.0049,
     "profit_factor": 7.08,
     "max_dd": -245.09,
-    "last_1_year_winrate": 75.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 55.56,
     "symbol": "ECLERX",
     "link": "stocks/ECLERX/index.html"
@@ -1639,13 +1639,13 @@
     "link": "stocks/EIDPARRY/index.html"
   },
   {
-    "total_trades": 85,
-    "winrate": 58.82,
-    "avg_r": 0.4253,
-    "profit_factor": 3.36,
+    "total_trades": 84,
+    "winrate": 59.52,
+    "avg_r": 0.4379,
+    "profit_factor": 3.51,
     "max_dd": -196.56,
-    "last_1_year_winrate": 80.0,
-    "last_3_year_winrate": 81.82,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 90.0,
     "symbol": "EIHOTEL",
     "link": "stocks/EIHOTEL/index.html"
   },
@@ -3058,13 +3058,13 @@
     "link": "stocks/KEC/index.html"
   },
   {
-    "total_trades": 58,
-    "winrate": 55.17,
-    "avg_r": 0.541,
-    "profit_factor": 3.42,
+    "total_trades": 57,
+    "winrate": 54.39,
+    "avg_r": 0.5429,
+    "profit_factor": 3.38,
     "max_dd": -310.7,
-    "last_1_year_winrate": 25.0,
-    "last_3_year_winrate": 44.44,
+    "last_1_year_winrate": 0.0,
+    "last_3_year_winrate": 37.5,
     "symbol": "KEI",
     "link": "stocks/KEI/index.html"
   },
@@ -3855,7 +3855,7 @@
     "avg_r": 0.4912,
     "profit_factor": 3.74,
     "max_dd": -268.44,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 50.0,
     "symbol": "NTPC",
     "link": "stocks/NTPC/index.html"
@@ -3971,13 +3971,13 @@
     "link": "stocks/OLAELEC/index.html"
   },
   {
-    "total_trades": 44,
-    "winrate": 54.55,
-    "avg_r": 0.6611,
-    "profit_factor": 3.95,
+    "total_trades": 42,
+    "winrate": 54.76,
+    "avg_r": 0.6952,
+    "profit_factor": 4.16,
     "max_dd": -184.89,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 57.14,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 60.0,
     "symbol": "OLECTRA",
     "link": "stocks/OLECTRA/index.html"
   },
@@ -5054,7 +5054,7 @@
     "avg_r": 0.3969,
     "profit_factor": 51.03,
     "max_dd": -2.38,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 66.67,
     "symbol": "THELEELA",
     "link": "stocks/THELEELA/index.html"
