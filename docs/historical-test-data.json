@@ -644,7 +644,7 @@
     "profit_factor": 8.28,
     "max_dd": -148.21,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 60.0,
     "symbol": "BAJAJ-AUTO",
     "link": "stocks/BAJAJ-AUTO/index.html"
   },
@@ -3163,7 +3163,7 @@
     "profit_factor": 2.5,
     "max_dd": -356.6,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 75.0,
+    "last_3_year_winrate": 85.71,
     "symbol": "KSB",
     "link": "stocks/KSB/index.html"
   },
@@ -4274,7 +4274,7 @@
     "profit_factor": 4.12,
     "max_dd": -176.91,
     "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 55.56,
+    "last_3_year_winrate": 62.5,
     "symbol": "PRESTIGE",
     "link": "stocks/PRESTIGE/index.html"
   },
@@ -5418,7 +5418,7 @@
     "profit_factor": 4.87,
     "max_dd": -173.92,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 55.56,
+    "last_3_year_winrate": 50.0,
     "symbol": "WELCORP",
     "link": "stocks/WELCORP/index.html"
   },
