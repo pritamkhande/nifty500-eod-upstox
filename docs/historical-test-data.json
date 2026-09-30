@@ -1007,7 +1007,7 @@
     "profit_factor": 4.03,
     "max_dd": -321.56,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 54.55,
+    "last_3_year_winrate": 50.0,
     "symbol": "BSOFT",
     "link": "stocks/BSOFT/index.html"
   },
@@ -1039,7 +1039,7 @@
     "avg_r": 0.4668,
     "profit_factor": 2.89,
     "max_dd": -390.26,
-    "last_1_year_winrate": 57.14,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 42.86,
     "symbol": "CANBK",
     "link": "stocks/CANBK/index.html"
@@ -1215,7 +1215,7 @@
     "avg_r": 1.0924,
     "profit_factor": 10.17,
     "max_dd": -246.24,
-    "last_1_year_winrate": 25.0,
+    "last_1_year_winrate": 33.33,
     "last_3_year_winrate": 55.56,
     "symbol": "CHENNPETRO",
     "link": "stocks/CHENNPETRO/index.html"
@@ -1336,7 +1336,7 @@
     "avg_r": 1.2988,
     "profit_factor": 7.96,
     "max_dd": -68.13,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 66.67,
     "symbol": "CONCORDBIO",
     "link": "stocks/CONCORDBIO/index.html"
@@ -2651,13 +2651,13 @@
     "link": "stocks/INOXWIND/index.html"
   },
   {
-    "total_trades": 36,
-    "winrate": 69.44,
-    "avg_r": 1.0038,
-    "profit_factor": 12.19,
+    "total_trades": 35,
+    "winrate": 68.57,
+    "avg_r": 1.0291,
+    "profit_factor": 12.15,
     "max_dd": -120.08,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 85.71,
+    "last_3_year_winrate": 83.33,
     "symbol": "INTELLECT",
     "link": "stocks/INTELLECT/index.html"
   },
@@ -2788,7 +2788,7 @@
     "avg_r": 0.4632,
     "profit_factor": 2.96,
     "max_dd": -743.39,
-    "last_1_year_winrate": 75.0,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 53.85,
     "symbol": "J&KBANK",
     "link": "stocks/J&KBANK/index.html"
@@ -2810,7 +2810,7 @@
     "avg_r": 0.4698,
     "profit_factor": 3.4,
     "max_dd": -285.75,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 62.5,
     "symbol": "JBMA",
     "link": "stocks/JBMA/index.html"
@@ -3680,7 +3680,7 @@
     "profit_factor": 3.57,
     "max_dd": -237.79,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 75.0,
+    "last_3_year_winrate": 71.43,
     "symbol": "NAVA",
     "link": "stocks/NAVA/index.html"
   },
@@ -4114,13 +4114,13 @@
     "link": "stocks/PGHH/index.html"
   },
   {
-    "total_trades": 57,
-    "winrate": 63.16,
-    "avg_r": 0.3896,
-    "profit_factor": 2.96,
+    "total_trades": 56,
+    "winrate": 64.29,
+    "avg_r": 0.4082,
+    "profit_factor": 3.14,
     "max_dd": -169.92,
-    "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 57.14,
     "symbol": "PHOENIXLTD",
     "link": "stocks/PHOENIXLTD/index.html"
   },
@@ -4230,7 +4230,7 @@
     "profit_factor": 5.82,
     "max_dd": -171.28,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 40.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "POWERINDIA",
     "link": "stocks/POWERINDIA/index.html"
   },
@@ -4664,10 +4664,10 @@
     "link": "stocks/SHYAMMETL/index.html"
   },
   {
-    "total_trades": 54,
-    "winrate": 62.96,
-    "avg_r": 1.1419,
-    "profit_factor": 6.16,
+    "total_trades": 52,
+    "winrate": 63.46,
+    "avg_r": 1.191,
+    "profit_factor": 6.57,
     "max_dd": -284.91,
     "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 50.0,
@@ -4829,13 +4829,13 @@
     "link": "stocks/SUNTV/index.html"
   },
   {
-    "total_trades": 60,
-    "winrate": 48.33,
-    "avg_r": 0.1802,
-    "profit_factor": 1.52,
+    "total_trades": 59,
+    "winrate": 49.15,
+    "avg_r": 0.1975,
+    "profit_factor": 1.59,
     "max_dd": -510.65,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 60.0,
     "symbol": "SUPREMEIND",
     "link": "stocks/SUPREMEIND/index.html"
   },
@@ -5087,7 +5087,7 @@
     "avg_r": 0.7816,
     "profit_factor": 6.56,
     "max_dd": -138.77,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 42.86,
     "symbol": "TIMKEN",
     "link": "stocks/TIMKEN/index.html"
