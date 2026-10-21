@@ -1018,7 +1018,7 @@
     "profit_factor": 10.28,
     "max_dd": -92.86,
     "last_1_year_winrate": 60.0,
-    "last_3_year_winrate": 76.92,
+    "last_3_year_winrate": 75.0,
     "symbol": "CAMPUS",
     "link": "stocks/CAMPUS/index.html"
   },
@@ -1678,7 +1678,7 @@
     "profit_factor": 4.8,
     "max_dd": -502.65,
     "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 62.5,
+    "last_3_year_winrate": 71.43,
     "symbol": "EMAMILTD",
     "link": "stocks/EMAMILTD/index.html"
   },
@@ -1799,7 +1799,7 @@
     "profit_factor": 3.78,
     "max_dd": -617.4,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 71.43,
+    "last_3_year_winrate": 83.33,
     "symbol": "FINCABLES",
     "link": "stocks/FINCABLES/index.html"
   },
@@ -3779,7 +3779,7 @@
     "profit_factor": 7.04,
     "max_dd": -104.74,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 80.0,
     "symbol": "NH",
     "link": "stocks/NH/index.html"
   },
@@ -4010,7 +4010,7 @@
     "profit_factor": 5.22,
     "max_dd": -156.47,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 75.0,
     "symbol": "PAGEIND",
     "link": "stocks/PAGEIND/index.html"
   },
@@ -4043,7 +4043,7 @@
     "profit_factor": 5.41,
     "max_dd": -103.72,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "PCBL",
     "link": "stocks/PCBL/index.html"
   },
@@ -4857,7 +4857,7 @@
     "profit_factor": 3.13,
     "max_dd": -113.21,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 57.14,
     "symbol": "SWANCORP",
     "link": "stocks/SWANCORP/index.html"
   },
