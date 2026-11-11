@@ -94,7 +94,7 @@
     "profit_factor": 3.79,
     "max_dd": -137.92,
     "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 45.45,
     "symbol": "ABFRL",
     "link": "stocks/ABFRL/index.html"
   },
@@ -754,7 +754,7 @@
     "profit_factor": 3.24,
     "max_dd": -246.41,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 80.0,
+    "last_3_year_winrate": 75.0,
     "symbol": "BASF",
     "link": "stocks/BASF/index.html"
   },
@@ -809,7 +809,7 @@
     "profit_factor": 1.77,
     "max_dd": -233.33,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "BEL",
     "link": "stocks/BEL/index.html"
   },
@@ -1612,7 +1612,7 @@
     "profit_factor": 6.28,
     "max_dd": -245.09,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 44.44,
+    "last_3_year_winrate": 37.5,
     "symbol": "ECLERX",
     "link": "stocks/ECLERX/index.html"
   },
@@ -2613,7 +2613,7 @@
     "profit_factor": 12.11,
     "max_dd": -84.26,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 75.0,
+    "last_3_year_winrate": 71.43,
     "symbol": "INDUSTOWER",
     "link": "stocks/INDUSTOWER/index.html"
   },
@@ -3185,7 +3185,7 @@
     "profit_factor": 6.6,
     "max_dd": -103.95,
     "last_1_year_winrate": 25.0,
-    "last_3_year_winrate": 50.0,
+    "last_3_year_winrate": 57.14,
     "symbol": "LATENTVIEW",
     "link": "stocks/LATENTVIEW/index.html"
   },
@@ -3658,7 +3658,7 @@
     "profit_factor": 3.21,
     "max_dd": -380.08,
     "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 83.33,
+    "last_3_year_winrate": 81.82,
     "symbol": "NATIONALUM",
     "link": "stocks/NATIONALUM/index.html"
   },
@@ -3976,7 +3976,7 @@
     "avg_r": 0.6638,
     "profit_factor": 3.89,
     "max_dd": -184.89,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 50.0,
     "symbol": "OLECTRA",
     "link": "stocks/OLECTRA/index.html"
@@ -5220,7 +5220,7 @@
     "profit_factor": 3.5,
     "max_dd": -301.14,
     "last_1_year_winrate": 50.0,
-    "last_3_year_winrate": 66.67,
+    "last_3_year_winrate": 62.5,
     "symbol": "UBL",
     "link": "stocks/UBL/index.html"
   },
