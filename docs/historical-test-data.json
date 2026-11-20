@@ -137,7 +137,7 @@
     "avg_r": 0.6653,
     "profit_factor": 4.02,
     "max_dd": -222.67,
-    "last_1_year_winrate": 33.33,
+    "last_1_year_winrate": 50.0,
     "last_3_year_winrate": 50.0,
     "symbol": "ACC",
     "link": "stocks/ACC/index.html"
@@ -1138,7 +1138,7 @@
     "avg_r": 0.603,
     "profit_factor": 2.98,
     "max_dd": -964.2,
-    "last_1_year_winrate": 50.0,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 75.0,
     "symbol": "CENTURYPLY",
     "link": "stocks/CENTURYPLY/index.html"
@@ -1320,13 +1320,13 @@
     "link": "stocks/COHANCE/index.html"
   },
   {
-    "total_trades": 68,
-    "winrate": 55.88,
-    "avg_r": 0.5561,
-    "profit_factor": 3.69,
+    "total_trades": 67,
+    "winrate": 56.72,
+    "avg_r": 0.5785,
+    "profit_factor": 3.96,
     "max_dd": -291.52,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 57.14,
+    "last_1_year_winrate": 100.0,
+    "last_3_year_winrate": 66.67,
     "symbol": "COLPAL",
     "link": "stocks/COLPAL/index.html"
   },
@@ -2387,13 +2387,13 @@
     "link": "stocks/HUDCO/index.html"
   },
   {
-    "total_trades": 5,
-    "winrate": 80.0,
-    "avg_r": 0.8117,
-    "profit_factor": 5.06,
+    "total_trades": 4,
+    "winrate": 75.0,
+    "avg_r": 0.7854,
+    "profit_factor": 4.14,
     "max_dd": -100.0,
-    "last_1_year_winrate": 66.67,
-    "last_3_year_winrate": 80.0,
+    "last_1_year_winrate": 50.0,
+    "last_3_year_winrate": 75.0,
     "symbol": "HYUNDAI",
     "link": "stocks/HYUNDAI/index.html"
   },
@@ -3283,7 +3283,7 @@
     "avg_r": 0.6636,
     "profit_factor": 5.16,
     "max_dd": -206.82,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 61.54,
     "symbol": "LTF",
     "link": "stocks/LTF/index.html"
@@ -5115,13 +5115,13 @@
     "link": "stocks/TITAN/index.html"
   },
   {
-    "total_trades": 79,
-    "winrate": 69.62,
-    "avg_r": 1.1558,
-    "profit_factor": 10.37,
+    "total_trades": 77,
+    "winrate": 68.83,
+    "avg_r": 1.1606,
+    "profit_factor": 10.17,
     "max_dd": -148.32,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 50.0,
     "symbol": "TMPV",
     "link": "stocks/TMPV/index.html"
   },
