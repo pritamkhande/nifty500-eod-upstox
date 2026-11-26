@@ -55,10 +55,10 @@
     "link": "stocks/AAVAS/index.html"
   },
   {
-    "total_trades": 35,
-    "winrate": 42.86,
-    "avg_r": 0.5653,
-    "profit_factor": 2.98,
+    "total_trades": 34,
+    "winrate": 44.12,
+    "avg_r": 0.5967,
+    "profit_factor": 3.13,
     "max_dd": -306.52,
     "last_1_year_winrate": 0.0,
     "last_3_year_winrate": 0.0,
@@ -187,13 +187,13 @@
     "link": "stocks/ADANIENT/index.html"
   },
   {
-    "total_trades": 27,
-    "winrate": 74.07,
-    "avg_r": 1.8244,
-    "profit_factor": 13.98,
+    "total_trades": 26,
+    "winrate": 73.08,
+    "avg_r": 1.8914,
+    "profit_factor": 13.96,
     "max_dd": -153.67,
     "last_1_year_winrate": 100.0,
-    "last_3_year_winrate": 80.0,
+    "last_3_year_winrate": 77.78,
     "symbol": "ADANIGREEN",
     "link": "stocks/ADANIGREEN/index.html"
   },
@@ -330,13 +330,13 @@
     "link": "stocks/AKZOINDIA/index.html"
   },
   {
-    "total_trades": 22,
-    "winrate": 68.18,
-    "avg_r": 1.3585,
-    "profit_factor": 6.68,
+    "total_trades": 21,
+    "winrate": 71.43,
+    "avg_r": 1.4486,
+    "profit_factor": 7.44,
     "max_dd": -160.41,
     "last_1_year_winrate": 0.0,
-    "last_3_year_winrate": 60.0,
+    "last_3_year_winrate": 75.0,
     "symbol": "ALKEM",
     "link": "stocks/ALKEM/index.html"
   },
@@ -2480,7 +2480,7 @@
     "avg_r": 0.41,
     "profit_factor": 2.62,
     "max_dd": -257.19,
-    "last_1_year_winrate": 57.14,
+    "last_1_year_winrate": 66.67,
     "last_3_year_winrate": 46.67,
     "symbol": "IFCI",
     "link": "stocks/IFCI/index.html"
@@ -2491,7 +2491,7 @@
     "avg_r": 0.5835,
     "profit_factor": 10.63,
     "max_dd": -36.34,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 83.33,
     "symbol": "IGIL",
     "link": "stocks/IGIL/index.html"
@@ -2596,13 +2596,13 @@
     "link": "stocks/INDIGO/index.html"
   },
   {
-    "total_trades": 67,
-    "winrate": 61.19,
-    "avg_r": 1.0704,
-    "profit_factor": 5.98,
+    "total_trades": 68,
+    "winrate": 60.29,
+    "avg_r": 1.0542,
+    "profit_factor": 5.96,
     "max_dd": -230.0,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 25.0,
+    "last_3_year_winrate": 44.44,
     "symbol": "INDUSINDBK",
     "link": "stocks/INDUSINDBK/index.html"
   },
@@ -2744,7 +2744,7 @@
     "avg_r": 0.6145,
     "profit_factor": 4.48,
     "max_dd": -139.18,
-    "last_1_year_winrate": 60.0,
+    "last_1_year_winrate": 75.0,
     "last_3_year_winrate": 58.33,
     "symbol": "IRFC",
     "link": "stocks/IRFC/index.html"
@@ -4499,13 +4499,13 @@
     "link": "stocks/SAILIFE/index.html"
   },
   {
-    "total_trades": 99,
-    "winrate": 57.58,
-    "avg_r": 0.5022,
-    "profit_factor": 3.91,
+    "total_trades": 100,
+    "winrate": 57.0,
+    "avg_r": 0.4966,
+    "profit_factor": 3.9,
     "max_dd": -201.77,
-    "last_1_year_winrate": 25.0,
-    "last_3_year_winrate": 50.0,
+    "last_1_year_winrate": 20.0,
+    "last_3_year_winrate": 47.06,
     "symbol": "SAIL",
     "link": "stocks/SAIL/index.html"
   },
@@ -4544,12 +4544,12 @@
   },
   {
     "total_trades": 38,
-    "winrate": 52.63,
-    "avg_r": 0.6654,
-    "profit_factor": 3.72,
+    "winrate": 55.26,
+    "avg_r": 0.7311,
+    "profit_factor": 4.04,
     "max_dd": -185.49,
-    "last_1_year_winrate": 33.33,
-    "last_3_year_winrate": 62.5,
+    "last_1_year_winrate": 66.67,
+    "last_3_year_winrate": 75.0,
     "symbol": "SAREGAMA",
     "link": "stocks/SAREGAMA/index.html"
   },
@@ -4669,7 +4669,7 @@
     "avg_r": 1.1807,
     "profit_factor": 6.63,
     "max_dd": -284.91,
-    "last_1_year_winrate": 66.67,
+    "last_1_year_winrate": 100.0,
     "last_3_year_winrate": 60.0,
     "symbol": "SIEMENS",
     "link": "stocks/SIEMENS/index.html"
